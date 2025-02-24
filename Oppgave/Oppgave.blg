@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Oppgave.aux
+The style file: unsrtnat.bst
+A level-1 auxiliary file: Seksjoner/Introduksjon.aux
+A level-1 auxiliary file: Seksjoner/Forkunnskaper.aux
+A level-1 auxiliary file: Seksjoner/PersMod.aux
+A level-1 auxiliary file: Seksjoner/PersHom.aux
+A level-1 auxiliary file: Seksjoner/Alg_Stab.aux
+Database file #1: Referanser.bib
+You've used 2 entries,
+            2481 wiz_defined-function locations,
+            573 strings with 4879 characters,
+and the built_in function-call counts, 862 in all, are:
+= -- 82
+> -- 22
+< -- 3
++ -- 10
+- -- 6
+* -- 53
+:= -- 131
+add.period$ -- 8
+call.type$ -- 2
+change.case$ -- 3
+chr.to.int$ -- 2
+cite$ -- 2
+duplicate$ -- 47
+empty$ -- 80
+format.name$ -- 10
+if$ -- 189
+int.to.chr$ -- 1
+int.to.str$ -- 3
+missing$ -- 3
+newline$ -- 20
+num.names$ -- 6
+pop$ -- 18
+preamble$ -- 1
+purify$ -- 2
+quote$ -- 0
+skip$ -- 34
+stack$ -- 0
+substring$ -- 54
+swap$ -- 14
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 11
+warning$ -- 0
+while$ -- 7
+width$ -- 0
+write$ -- 37

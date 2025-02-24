@@ -1,0 +1,28 @@
+\section{Multimengder og Barkoder}
+
+\subsection{Multimengder}
+Mengder er begrenset i og med at de ikke inneholder repitisjoner, mengden $\{a,a,b\}$ er regnet som mengden $\{a,b\}$. For oss vil vi ha muligheten for at en mengde kan inneholde mange like elementer.
+
+Dermed definerer vi en multimengde.
+\begin{definition}\label{Def:label}
+    Vi definerer en multimengde som et par $\Scal = (S,m)$, hvor $S$ er en mengde og en funksjon $m: S\to\N$.
+\end{definition}
+
+Multimengder er derimot vanskelige å jobbe med, derfor jobber vi med deres representasjoner
+\[\Rep(\Scal) = \{(s,k)\in S\times\N\;|\; k \leq m(s)\}.\]
+
+\subsection{Barkoder}
+En barkode $\Bcal$ er en representasjon av en multimengde av intervaller. Elementer i en barkode er dermed par $(I,k)$ der $I$ er et intervall og $k\in\N$. Ofte når indeksen $k$ er nødvendig skriver vi bare $I$ for et intervall i barkoden.
+
+I \cite{Bauer2015a} sier forfatte at gitt en persistensmodul $M$ som kan skrives
+\[M\cong\bigoplus_{I\in\Bcal_M}C(I)\]
+Da er $\Bcal_M$ unikt bestemt.
+
+Dette er en konsekvens av følgende teorem
+
+\begin{theorem}\label{Thrm:label}
+    Hvis $\bigoplus_{I\in\Bcal}C(I)\cong\bigoplus_{J\in\Ccal} C(J)$ så er $\Bcal\cong\Ccal$
+\end{theorem}
+\begin{proof}
+Anta at det ikke eksisterer en bijeksjon mellom $\Bcal$ og $\Ccal$ f.eks. 
+\end{proof}

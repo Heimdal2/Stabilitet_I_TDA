@@ -1,0 +1,145 @@
+\section{Forkunnskaper}
+Her går vi igjennom noen nødvendige definisjoner
+
+\subsection{Topologiske rom}\label{Sec:Top}
+\begin{definition}\label{Def:TopRom}
+    Et par $(X,\Tcal)$ hvor $X$ er en mengde og $\Tcal\subset\Pcal(X)$ slik at 
+    \begin{itemize}
+        \item $X,\es\in\Tcal$
+        \item Gitt en vilkårelig samling av mengder $\{U_\alpha\}_{\alpha}$ så er $\bigcup_\alpha U_\alpha\in\Tcal$
+        \item For en endelig samling av mengder $\{U_1,\dots,U_n\}\in\Tcal$ så er snittet $U_1\cap\dots\cap U_n\in\Tcal$
+    \end{itemize}
+    Vi kaller mengden $\Tcal$ for topologien på $X$ og mengdene i $\Tcal$ for åpne mengder.
+\end{definition}
+
+Når topologien $\Tcal$ på en mengde $X$ er kjent eller ikke viktig lar vi være å skrive det topologiske rommet som et par $(X,\Tcal)$ og skriver bare $X$. Alle funksjoner mellom topologiske rom vil være kontinuerlige. Til slutt så vil et "rom" bety et topologisk rom.
+
+\begin{example}\label{Ex:EukRom}
+    Euklidisk rom $(\R^n,\Tcal)$ er et topologisk rom med åpne mengder unioner av vilkårlig mange mengder av typen
+    \[\Bcal(x,\delta) = \{y\in\R^n\;|\; \|x-y\|<\delta\}\]
+    kalt åpne baller. Euklidisk rom er som regel alltid bare skrevet $\R^n$ siden det er den topologien på $\R^n$ som er antatt.
+\end{example}
+
+\begin{definition}\label{Def:KontFunk}
+    La $(X,\Tcal_X)$ og $(Y,\Tcal_Y)$ være topologiske rom. En funksjon $f: X\to Y$ er kalt kontinuerlig hvis for en hver \(V\in\Tcal_Y\) så er \(f^{-1}(V)\in\Tcal_X\).
+\end{definition}
+
+\begin{example}\label{Ex:KontFunk}
+    La $f: \R\to \R$ være funksjonen $f(x)=2x+1$, da er $f$ kontinuerlig. La $V = (a,b)$ et opent intervall, da blir $f^{-1}(V) = \{x\in\R\;|\;2x+1\in V\}=\bp{\frac{a}{2}-1,\frac{b}{2}-1}$ som også er et åpent intervall.
+\end{example}
+
+\begin{definition}\label{Def:label}
+    La $(X,\Tcal)$ være et topologisk rom og la $A\subset X$ da er det en naturlig topologi $\Tcal_A$ vi kan sette på $A$ definert ved
+    \[U\in\Tcal_A \iff \exists\, V\in\Tcal\quad\text{s.a}\quad V\cap A = U\]
+    Vi kaller $(A,\Tcal_A)$ et underrom av $(X,\Tcal)$ og vi kaller $\Tcal_A$ underromstopologien på $A$.
+\end{definition}
+
+Når vi senere ser på punktskyer i $\R^n$ og spesifkt simplisial kompleksene %\ref{Sec:SimpKomp}
+
+\subsection{Homotopi}\label{sec:Homotopi}
+\begin{definition}\label{Def:Homotopi}
+    La $X$ og $Y$ være topologiske rom og la $f,g: X\to Y$ være funksjoner. En homotopi mellom $f$ og $g$ er en funksjon
+    \[F: X\times[0,1]\to Y.\]
+    Slik at $F(x,0)=f(x)$ og $F(x,1)=g(x)$.
+    Hvis det eksisterer en homotopi mellom en funksjon $f$ og $g$ sier vi at de er homotope og vi skriver at $f\simeq g$.
+\end{definition}
+
+\begin{definition}\label{Def:HomotopiEkv}
+    To topologiske rom $X$ og $Y$ er homotopiekvivalente hvis det eksisterer funksjoner $f: X\to Y$ og $g: Y\to X$ slik at
+    \[g\circ f\simeq\id_X\quad f\circ g \simeq \id_Y\]
+\end{definition}
+
+
+
+\subsection{$\Delta$-Komplekser}\label{sec:SimpKomp}
+En måte å lage topologiske rom er å starte med enkle byggeklosser og lime dem sammen. Dette kan vi gjøre ved å bruke $n$-dimensjonale trekanter kalt $n$-simplekser.
+
+definisjonene er fra \cite{Hatcher2002}
+
+\begin{definition}\label{Def:StndrdSimpKomp}
+    Standardsimplekset $\Delta^n$ er definert ved
+    \[\Delta^n = \{ \xbold\in\R^{n + 1} \mid \sum_{i = 0}^{n + 1}x_i=1, x_i\geq 0\;\forall i=0,\dots,n\}\]
+\end{definition}
+
+En side på et $n$-simpleks er en $(n-1)$-simpleks. 
+
+\begin{definition}\label{Def:Deltastrkt}
+    En $\Delta$-kompleks struktur på et rom $X$ er en samling av kontinuerlige funksjoner $\sigma_\alpha: \Delta^n\to X$ med $n$ avhengig av $\alpha$ slik at:
+    \begin{enumerate}
+        \item Restriksjonen $\sigma_\alpha\mid\mathring{\Delta}^n$ er injektiv og hvert punkt i $X$ er i bildet av nøyaktig en slik Restriksjon.
+        \item Hver restriksjon av $\sigma_\alpha$ til en side av $\Delta^n$ er en av funksjonene $\sigma_\beta: \Delta^{n-1}\to X$
+        \item En mengde $A\subset X$ er åpen hvis og bare hvis $\sigma_\alpha^{-1}(A)$ er åpen for hver $\sigma_\alpha$
+    \end{enumerate}
+\end{definition}
+
+\subsection{Vektorrom}\label{Sec:Vekt}
+For å definere hva et vektorrom er må vi først gå igjennom hva en kropp er.
+
+\begin{definition}\label{Def:Kropp}
+   En mengde $K$ sammen med binære operatorer $+,\cdot: K\times K\to K$ er en kropp hvis gitt $a,b,c\in K$ så holder det følgende
+   \begin{itemize}
+    \item $(a+b)+c = a+(b+c)$
+    \item $a+b = b+a$
+    \item $a\cdot(b+c)=a\cdot b + a\cdot c$
+    \item Det eksisterer et element $0\in K$ slik at $a+0=a=0+a$
+    \item Det eksisterer et element $1\in K$ slik at $a\cdot 1 = a = 1\cdot a$
+    \item Det eksisterer et element $-a\in K$ slik at $a+ (-a) = 0$
+    \item Det eksisterer et element $a^{-1}\in K$ slik at $a\cdot a^{-1}=1$.
+   \end{itemize} 
+\end{definition}
+Ofte lar vi være å skrive $a+(-b)$ og skriver heller $a-b$ vi lar også være å skrive $a\cdot b$ og skriver heller $ab$
+
+\begin{definition}\label{Def:Vektrom}
+    Et vektorrom $V$ over en kropp $K$ er en mengde med binære operatorer $+:V\times V\to V$ og $\cdot: K\times V\to V$, kalt skalarmultiplikasjon, slik at for elementer $u,v,w\in V$ og $a,b,c\in K$ så holder det følgende
+    \begin{itemize}
+    \item $(u+v)+w = u+(v+w)$
+    \item $u+v=v+u$
+    \item Det eksisterer et element $0\in V$ slik at $u+0=u=0+u$
+    \item Det eksisterer et element $-u\in V$ slik at $u+(-u)=0$
+    \item $(a+b)\cdot u = a\cdot u + b\cdot u$
+    \item $a\cdot(u+v) = a\cdot u + a\cdot v$
+    \item $a\cdot (b\cdot u) = (ab)\cdot u$.
+    \end{itemize}
+    Vi kaller elementer $v\in V$ for vektorer og elementer $a\in K$ for skalarer.
+\end{definition}
+Igjen skriver vi ofte $v+(-u)$ som $v-u$ og $a\cdot v$ som $av$.
+
+\begin{definition}\label{Def:LinAvb}
+    La $V$ og $W$ være vektorrom over en kropp $K$ og la $f: V\to W$ være en funksjon. Vi kaller $f$ lineær hvis for vektorer $u,v\in V$ og en skalar $a\in K$ så holder det følgende
+    \begin{itemize}
+    \item $f(u+v) = f(u)+f(v)$
+    \item $f(av) af(v)$
+    \end{itemize}
+    Vi kaller også slike funksjoner lineære avbildinger/transformasjoner/funksjoner
+\end{definition}
+
+\begin{example}\label{Ex:label}
+    Rommet $V = \R^n$ over kroppen $\R$ er et vektorrom med punktvis addisjon, og skalarmultiplikasjon
+    \[(a_1,\dots,a_n)+(b_1,\dots,b_n) = (a_1+b_1,\dots,a_n+b_n)\]
+    og
+    \[c(a_1,\dots,a_n)=(ca_1,\dots,ca_n).\]
+\end{example}
+
+\begin{example}\label{Ex:label}
+    funksjonen $f:\R^2\to\R^2$ definert ved $f(v) = 2v$ er lineær siden gitt $u,v\in V$ og $a\in\R$ så er
+    \begin{itemize}
+        \item $f(u+v) = 2(u+v) = 2u+2v = f(u)+f(v)$
+        \item $f(av) = 2(av) = (2a)v = (a\cdot2)v = af(v)$
+    \end{itemize}
+\end{example}
+
+\subsection{Homologi}\label{Sec:Homologi}
+Det er mange spørsmål om topologiske rom som er vanskelige å svare på om man ikke har de rette verktøyene.
+
+Et eksempel på et teorem som er vanskelig å bevise rent topologisk er Borsuk-Ulam teoremet
+
+\begin{theorem}\label{Thrm:BUtrm}
+    La $f: S^n\to\R^n$ være en kontinuerlig funksjon, da eksisterer det et punkt $x\in S^n$ slik at $f(x)=f(-x)$.
+\end{theorem}
+
+Vi kan studere topologiske rom ved bruk av algebra. Dette kan vi gjøre med homologigruppene
+
+\begin{definition}\label{Def:label}
+    La $X$ være et simplisialkompleks og la
+    \[C_n(X) = \langle [v_0,\dots,v_n]\in X\rangle_k\]
+\end{definition}
