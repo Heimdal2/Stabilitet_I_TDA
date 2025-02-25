@@ -1,0 +1,250 @@
+\section{Forkunnskaper}
+Her går vi igjennom noen nødvendige definisjoner
+
+\subsection{Topologiske rom}\label{Sec:Top}
+\begin{definition}\label{Def:TopRom}
+    Et par $(X,\Tcal)$ hvor $X$ er en mengde og $\Tcal\subset\Pcal(X)$ slik at 
+    \begin{itemize}
+        \item $X,\es\in\Tcal$
+        \item Gitt en vilkårelig samling av mengder $\{U_\alpha\}_{\alpha}$ så er $\bigcup_\alpha U_\alpha\in\Tcal$
+        \item For en endelig samling av mengder $\{U_1,\dots,U_n\}\in\Tcal$ så er snittet $U_1\cap\dots\cap U_n\in\Tcal$
+    \end{itemize}
+    Vi kaller mengden $\Tcal$ for topologien på $X$ og mengdene i $\Tcal$ for åpne mengder.
+\end{definition}
+
+Når topologien $\Tcal$ på en mengde $X$ er kjent eller ikke viktig lar vi være å skrive det topologiske rommet som et par $(X,\Tcal)$ og skriver bare $X$. Alle funksjoner mellom topologiske rom vil være kontinuerlige. Til slutt så vil et "rom" bety et topologisk rom.
+
+\begin{example}\label{Ex:EukRom}
+    Euklidisk rom $(\R^n,\Tcal)$ er et topologisk rom med åpne mengder unioner av vilkårlig mange mengder av typen
+    \[\Bcal(x,\delta) = \{y\in\R^n\;|\; \|x-y\|<\delta\}\]
+    kalt åpne baller. Euklidisk rom er som regel alltid bare skrevet $\R^n$ siden det er den topologien på $\R^n$ som er antatt.
+\end{example}
+
+\begin{definition}\label{Def:KontFunk}
+    La $(X,\Tcal_X)$ og $(Y,\Tcal_Y)$ være topologiske rom. En funksjon $f: X\to Y$ er kalt kontinuerlig hvis for en hver \(V\in\Tcal_Y\) så er \(f^{-1}(V)\in\Tcal_X\).
+\end{definition}
+
+\begin{example}\label{Ex:KontFunk}
+    La $f: \R\to \R$ være funksjonen $f(x)=2x+1$, da er $f$ kontinuerlig. La $V = (a,b)$ et opent intervall, da blir $f^{-1}(V) = \{x\in\R\;|\;2x+1\in V\}=\bp{\frac{a}{2}-1,\frac{b}{2}-1}$ som også er et åpent intervall.
+\end{example}
+
+\begin{definition}\label{Def:label}
+    La $(X,\Tcal)$ være et topologisk rom og la $A\subset X$ da er det en naturlig topologi $\Tcal_A$ vi kan sette på $A$ definert ved
+    \[U\in\Tcal_A \iff \exists\, V\in\Tcal\quad\text{s.a}\quad V\cap A = U\]
+    Vi kaller $(A,\Tcal_A)$ et underrom av $(X,\Tcal)$ og vi kaller $\Tcal_A$ underromstopologien på $A$.
+\end{definition}
+
+Når vi senere ser på punktskyer i $\R^n$ og spesifkt simplisial kompleksene %\ref{Sec:SimpKomp}
+
+\subsection{Homotopi}\label{sec:Homotopi}
+\begin{definition}\label{Def:Homotopi}
+    La $X$ og $Y$ være topologiske rom og la $f,g: X\to Y$ være funksjoner. En homotopi mellom $f$ og $g$ er en funksjon
+    \[F: X\times[0,1]\to Y.\]
+    Slik at $F(x,0)=f(x)$ og $F(x,1)=g(x)$.
+    Hvis det eksisterer en homotopi mellom en funksjon $f$ og $g$ sier vi at de er homotope og vi skriver at $f\simeq g$.
+\end{definition}
+
+\begin{definition}\label{Def:HomotopiEkv}
+    To topologiske rom $X$ og $Y$ er homotopiekvivalente hvis det eksisterer funksjoner $f: X\to Y$ og $g: Y\to X$ slik at
+    \[g\circ f\simeq\id_X\quad f\circ g \simeq \id_Y\]
+\end{definition}
+
+
+
+\subsection{$\Delta$-Komplekser}\label{sec:SimpKomp}
+En måte å lage topologiske rom er å starte med enkle byggeklosser og lime dem sammen. Dette kan vi gjøre ved å bruke $n$-dimensjonale trekanter kalt $n$-simplekser.
+
+Definisjonene er fra \cite{Hatcher2002}
+
+\begin{definition}\label{Def:StndrdSimpKomp}
+    Standardsimplekset $\Delta^n$ er definert ved
+    \[\Delta^n = \{ \xbold\in\R^{n + 1} \mid \sum_{i = 0}^{n + 1}x_i=1, x_i\geq 0\;\forall i=0,\dots,n\}\]
+\end{definition}
+
+En side på et $n$-simpleks er en $(n-1)$-simpleks.
+\begin{definition}\label{Def:Deltastrkt}
+    Et $\Delta$-kompleks struktur på et rom $X$ er en samling av kontinuerlige funksjoner $\sigma_\alpha: \Delta^n\to X$ med $n$ avhengig av $\alpha$ slik at:
+    \begin{enumerate}
+        \item Restriksjonen $\sigma_\alpha\mid\mathring{\Delta}^n$ er injektiv og hvert punkt i $X$ er i bildet av nøyaktig en slik Restriksjon.
+        \item Hver restriksjon av $\sigma_\alpha$ til en side av $\Delta^n$ er en av funksjonene $\sigma_\beta: \Delta^{n-1}\to X$
+        \item En mengde $A\subset X$ er åpen hvis og bare hvis $\sigma_\alpha^{-1}(A)$ er åpen for hver $\sigma_\alpha$.
+    \end{enumerate}
+\end{definition}
+Disse kriteriene gir oss en måte å lage forskjellige topologiske rom ved enkle byggeklosser.
+
+\begin{example}[ex:SirkelDkomp]
+    Vi kan lage et $\Delta$ for sirkelen $S^1$ ved følgende:
+    \begin{itemize}
+        \item La $\sigma_0:\Delta^0=\{\ast\}\to S^1$ være en avbilding som sender $\ast$ til et punkt i $S^1$.
+        \item La $\sigma_1: \Delta^1\to X$ være avbildingen som sender $\partial \Delta^1$ til punktet $\sigma_0(\ast)$ og alle andre punkter $x\in\inter{\Delta}^1$ sendes injektiv til $S^1$.
+    \end{itemize}
+    Her er $\{\sigma_0,\sigma_1\}$ et $\Delta$-kompleks på $S^1$. Intuitivt kan en tenke på $\sigma_1$ som at man limer fast endepunktene til linjen som gir oss sirkelen.
+\end{example}
+
+\subsection{Vektorrom}\label{Sec:Vekt}
+For å definere hva et vektorrom er må vi først gå igjennom hva en kropp er.
+
+\begin{definition}\label{Def:Kropp}
+   En mengde $K$ sammen med binære operatorer $+,\cdot: K\times K\to K$ er en kropp hvis gitt $a,b,c\in K$ så holder det følgende
+   \begin{itemize}
+    \item $(a+b)+c = a+(b+c)$
+    \item $a+b = b+a$
+    \item $a\cdot(b+c)=a\cdot b + a\cdot c$
+    \item Det eksisterer et element $0\in K$ slik at $a+0=a=0+a$
+    \item Det eksisterer et element $1\in K$ slik at $a\cdot 1 = a = 1\cdot a$
+    \item Det eksisterer et element $-a\in K$ slik at $a+ (-a) = 0$
+    \item Det eksisterer et element $a^{-1}\in K$ slik at $a\cdot a^{-1}=1$.
+   \end{itemize} 
+\end{definition}
+Ofte lar vi være å skrive $a+(-b)$ og skriver heller $a-b$ vi lar også være å skrive $a\cdot b$ og skriver heller $ab$
+
+\begin{definition}\label{Def:Vektrom}
+    Et vektorrom $V$ over en kropp $K$ er en mengde med binære operatorer $+:V\times V\to V$ og $\cdot: K\times V\to V$, kalt skalarmultiplikasjon, slik at for elementer $u,v,w\in V$ og $a,b,c\in K$ så holder det følgende
+    \begin{itemize}
+    \item $(u+v)+w = u+(v+w)$
+    \item $u+v=v+u$
+    \item Det eksisterer et element $0\in V$ slik at $u+0=u=0+u$
+    \item Det eksisterer et element $-u\in V$ slik at $u+(-u)=0$
+    \item $(a+b)\cdot u = a\cdot u + b\cdot u$
+    \item $a\cdot(u+v) = a\cdot u + a\cdot v$
+    \item $a\cdot (b\cdot u) = (ab)\cdot u$.
+    \end{itemize}
+    Vi kaller elementer $v\in V$ for vektorer og elementer $a\in K$ for skalarer.
+\end{definition}
+Igjen skriver vi ofte $v+(-u)$ som $v-u$ og $a\cdot v$ som $av$.
+
+\begin{definition}\label{Def:LinAvb}
+    La $V$ og $W$ være vektorrom over en kropp $K$ og la $f: V\to W$ være en funksjon. Vi kaller $f$ lineær hvis for vektorer $u,v\in V$ og en skalar $a\in K$ så holder det følgende
+    \begin{itemize}
+    \item $f(u+v) = f(u)+f(v)$
+    \item $f(av) af(v)$
+    \end{itemize}
+    Vi kaller også slike funksjoner lineære avbildinger/transformasjoner/funksjoner
+\end{definition}
+
+\begin{example}\label{Ex:label}
+    Rommet $V = \R^n$ over kroppen $\R$ er et vektorrom med punktvis addisjon, og skalarmultiplikasjon
+    \[(a_1,\dots,a_n)+(b_1,\dots,b_n) = (a_1+b_1,\dots,a_n+b_n)\]
+    og
+    \[c(a_1,\dots,a_n)=(ca_1,\dots,ca_n).\]
+\end{example}
+
+\begin{example}\label{Ex:label}
+    funksjonen $f:\R^2\to\R^2$ definert ved $f(v) = 2v$ er lineær siden gitt $u,v\in V$ og $a\in\R$ så er
+    \begin{itemize}
+        \item $f(u+v) = 2(u+v) = 2u+2v = f(u)+f(v)$
+        \item $f(av) = 2(av) = (2a)v = (a\cdot2)v = af(v)$
+    \end{itemize}
+\end{example}
+
+\subsection{Kategoriteori}\label{Sec:Katgoriteori}
+Et samlende rammeverk i matematikk er en vanskelig oppgave å få laget, men et rammeverk som gjør en god jobb og som brukes heletiden nå til dags er kategoriteori. Kategoriteori gir en formulering på de forskjellige områdene i matematikk som f.eks. topologi og algebra.
+
+\begin{definition}\label{Def:Kategori}
+    En kategori $\Ccal$ er et par $(\ob(\Ccal),\hom(\Ccal))$ av klasser. Elementene i $\ob(\Ccal)$ er kalt objekter og elementene i $\hom(\Ccal)$ er kalt morfier. Morfiene i $\Ccal$ kan bli sett på som piler mellom objektene i $\Ccal$, en morfi $f$ mellom objekter $A$ og $B$ skrives $f:A\to B$.
+    For morfier $f: A\to B$ og $g: B\to C$ har vi en morfi $g\circ f: A\to C$ som vi kaller komposisjonen av $f$ med $g$.
+    For ethvert objekt $A\in\ob(\Ccal)$ har vi en morfi $\id_A: A\to A$ som vi kaller identitetsmorfien som tilfredstiller for enhver morfi $f:A\to B$:
+    \[f\circ\id_A = f,\quad \id_B\circ f = f.\]
+\end{definition}
+
+I en kategori er det noen spesielle morfier som kalles isomorfier.
+\begin{definition}\label{Def:Iso}
+    En isomorfi i en kategori $\Ccal$ er en morfi $f:A\to B$ mellom to objekter $A,B\in\ob(\Ccal)$ hvor det eksisterer en morfi $g:B\to A$ slik at følgende holder
+    \[f\circ g = \id_B,\quad g\circ f = \id_A.\]
+    Vi kaller $g$ inversen til $f$. Hvis to objekter $A$ og $B$ er ismorfe skriver vi $A\cong B$.
+\end{definition}
+
+\begin{remark}\label{Rem:IdIso}
+    Identitetsmorfien er en isomorfi siden $\id_A\circ\id_A = \id_A$. Altså er $\id_A$ sin egen invers.
+\end{remark}
+
+Andre spesielle morfier er følgende:
+\begin{definition}\label{Def:Epi}
+    En morfi $f: A\to B$ er kalt en epimorfi hvis for ethvert par med mofier $g,h: B\to C$ så holder
+    \[g\circ f = h\circ f \implies g = h\]
+    En skriver $f:A\epito B$ for en epimorfi når det er viktig å notere.
+\end{definition}
+
+\begin{definition}\label{Def:Mono}
+    En morfi $f: A\to B$ er kalt en monomorfi hvis for ethvert par $g,h: C\to A$ så holder
+    \[f\circ g = f\circ h \implies g=h\]
+    En skriver $f: A\monicto B$ for en monomorfi hvis det er viktig å notere.
+\end{definition}
+
+Noen eksempler på kategorier, deres isomorfier, epimorfier og monomorfier er følgende
+\begin{example}\label{Ex:Set}
+    Kategorien $\Set$ har mengder som objekter og funksjoner som morfier. Her er bijektive funksjoner isomorfier, surjektive funksjoner epimorfier og injektive funksjoner er monomorfier.
+\end{example}
+
+\begin{example}\label{Ex:TopKat}
+    Kategorien $\Top$ er kategorien hvor objektene er topologiske rom og morfiene er kontinuerlige funksjoner. Isomorfier i $\Top$, kalt homeomorfier, er bijektive og kontinuerlig funksjoner med en kontinuerlig invers, epimorfi er surjektive og kontinuerlige funksjoner og monomorfier er injektive og kontinuerlige funksjoner. 
+\end{example}
+
+\begin{example}\label{Ex:VektKat}
+    Kategorien $\Vect_K$ er kategorien av vektorrom over en kropp $K$ som objekter og lineære avbildinger som morfier. Isomorfier i $\Vect_K$, kalt vektorromisomorfier, er bijektive og lineære avbildinger, inversen vil automatisk være lineær så vi trenger ikke inverskriteriet som vi gjør i $\Top$. Epimorfiene er surjektive lineære avbildinger og monomorfiene er injektive lineære avbildinger.
+\end{example}
+
+Morfiene i en kategori trenger ikke å være funksjoner, her er et eksempel på en kategori hvor morfiene ikke er funksjoner.
+\begin{example}\label{Ex:RPoset}
+    Kategorien $\Rbold$ har de reelle tall $\R$ som objekter og $\leq$ relasjonen som morfier. Komposisjon er gitt ved transitivitet og identitetsmorfiene er gitt ved $s=s$. Identitetsmorfiene er også de eneste isomorfiene fordi hvis $a\leq b$ er en isomorfi så er $b\leq a$ dens invers, men hvis $a\leq b$ og $b\leq a$ så er $a=b$. Her er alle morfier epimorfier og monomorfier.
+\end{example}
+
+En flott ting med kategoriteori formuleringen av forskjellige strukturer er at en kan studere en kategori ved hjelp av en annen kategori
+
+\begin{definition}\label{Def:Funktor}
+    La $\Ccal$ og $\Dcal$ være kategorier en funktor $F:\Ccal\to\Dcal$ er funksjoner $\ob(\Ccal)\to\ob(\Dcal)$ og $\hom(\Ccal)\to \hom(\Dcal)$ slik at for morfier $f: A\to B$ og $g: B\to C$ i $\Ccal$ så er $F(f): F(A)\to F(B)$, $F(g\circ f) = F(g)\circ F(f)$ og for ethvert objekt $A\in\ob(\Ccal)$ så er $F(\id_A)=\id_{F(A)}$.
+\end{definition}
+
+\begin{remark}\label{Rem:FunktorIso}
+    Gitt en funktor $F:\Ccal\to\Dcal$ og en isomorfi $f:A\to B$ i $\Ccal$ så er $F(f)$ en isomorfi i $\Dcal$. Siden $f$ er en isomorfi så eksisterer det en $g: B\to A$ med egenskapene i \bref{Definisjon}{Def:Iso}. Dette gir 
+    \[\id_{F(A)} = F(\id_A) = F(f\circ g) = F(f)\circ F(g).\]
+    På samme måte får vi $F(f\circ g) = \id_{F(B)}$. Dermed blir $F(g)$ en invers av $F(f)$ som betyr at den er en isomorfi.
+\end{remark}
+
+\begin{example}\label{Ex:label}
+    Vi kan definere en funktor $F:\Set\to\Top$ som setter den diskrete topologien på en mengde $X$, her blir alle funksjoner $f: X\to Y$ sendt til $F(f)=f:(X,\Pcal(X))\to (Y,\Pcal(Y))$, den er kontinuerlig siden for enhver delmengde $A\in \Pcal(Y)$ så er $f^{-1}(A)\in\Pcal(X)$.
+\end{example}
+På samme måte har vi en funktor $F:\Set\to\Top$ som setter den trivielle topologien på en mengde og bevarer funksjonene.
+
+\begin{example}\label{Ex:Glemmefunktor}
+    Vi har også en funktor $F:\Top\to\Set$ definert ved $F((X,\Tcal)) = X$ og $F(f:(X,\Tcal)\to (Y,\Tcal')) = f: X\to Y$. Denne funktoren kaller vi for glemmefunktoren siden den glemmer all struktur til rommet. En kan også gjøre dette for andre kategorier som $\Vect_K$ og $\Rbold$.
+\end{example}
+
+En kan også definere en pil mellom to funktorer
+\begin{definition}\label{Def:label}
+    La $\Ccal$ og $\Dcal$ være kategorier og la $F,G: \Ccal\to\Dcal$ funktorer. En naturlig transformasjoner er en pil $\eta: F\to G$ slik at for ethvert objekt $A\in \Ccal$ har vi en morfi $\eta_A: F(A)\to G(A)$ og for enhver morfi $f: A\to B$ i $\Ccal$ har vi at diagrammet
+    \[\begin{tikzcd}
+	{F(A)} && {G(A)} \\
+	\\
+	{F(B)} && {G(B)}
+	\arrow["{\eta_A}", from=1-1, to=1-3]
+	\arrow["{F(f)}"', from=1-1, to=3-1]
+	\arrow["{G(f)}"', from=1-3, to=3-3]
+	\arrow["{\eta_B}", from=3-1, to=3-3]
+\end{tikzcd}\]
+kommuterer.
+\end{definition}
+Disse to tingene gir oss en ny type kategori
+
+\begin{definition}\label{Def:FunkKat}
+    For kategorier $\Ccal$ og $\Dcal$ er kategorien $\Ccal^\Dcal$, med funktorer $F:\Ccal\to \Dcal$ som objekter og naturlige transformasjoner som morfier, kalt en funktorkategori
+\end{definition}
+
+\subsection{Simplisialhomologi}\label{Sec:Homologi}
+Det er mange spørsmål om topologiske rom som er vanskelige å svare på om man ikke har de rette verktøyene.
+
+Et eksempel på et teorem som er vanskelig å bevise rent topologisk er Borsuk-Ulam teoremet
+
+\begin{theorem}\label{Thrm:BUtrm}
+    La $f: S^n\to\R^n$ være en kontinuerlig funksjon, da eksisterer det et punkt $x\in S^n$ slik at $f(x)=f(-x)$.
+\end{theorem}
+
+Vi kan studere topologiske rom ved bruk av algebra. Dette kan vi gjøre med homologigruppene.
+
+Fra \cite{Hatcher2002} har vi følgende definisjon på et $n$-kjedekompleks med forskjell at $n$-kjedene er frie abelske grupper, mens her er de vektorrom.
+\begin{definition}\label{Def:label}
+    For et $\Delta$-kompleks $X$ kan vi lage et fritt vektorrom $\Delta_n(X)$ ved å la basisen av $\Delta_n(X)$ være alle $n$-simpleksene til $X$. Elementene i $\Delta_n(X)$ er kalt $n$-kjeder og er formelle summer $\sum_\alpha n_\alpha\sigma_\alpha$ hvor $n_\alpha\in K$ og $\sigma_\alpha: \Delta^n\to X$.
+\end{definition}
+Sammen med disse $n$-kjedekompleksene er det også avbildinger
+\[d_n: \Delta_n(X)\to\Delta_{n-1}(X)\]
+gitt ved %Dette må endres på%
