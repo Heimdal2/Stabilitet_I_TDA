@@ -8,13 +8,8 @@
 \usepackage{blindtext}
 \usepackage{titlesec}
 \usepackage{mathtools}
-\usepackage{tikz,pgf,tikz-cd}
-\usepackage{graphicx}
-\usepackage{natbib}
-\usepackage{doi}
-
-% \usepackage{biblatex}
-% \usepackage{enumitem}
+\usepackage{tikz,pgf,tikz-cd,graphicx}
+\usepackage{natbib,doi}
 
 \bibliographystyle{unsrtnat}
 
@@ -46,16 +41,20 @@
 \newcommand{\xto}[1]{\xrightarrow{#1}}
 \newcommand{\bset}[1]{\left\{#1\right\}}
 
+\newcommand{\ob}{\textnormal{ob}}
 \newcommand{\Rep}{\textnormal{Rep}}
 \newcommand{\p}{\varphi}
 
+\newcommand{\bref}[2]{\textnormal{\textbf{#1 \ref{#2}}}}
+
 \newcommand{\id}{\textnormal{id}}
 
+\newcommand{\Vect}{\textnormal{\textbf{Vect}}}
 \newcommand{\vect}{\textnormal{\textbf{vect}}}
 \newcommand{\Top}{\textnormal{\textbf{Top}}}
 \newcommand{\Filt}[1]{\textnormal{\textbf{Filt($#1$)}}}
-\newcommand{\Rbold}{\textbf{R}}
-
+\newcommand{\Set}{\textnormal{\textbf{Set}}}
+\newcommand{\Rbold}{\textnormal{\textbf{R}}}
 \newcommand{\xbold}{\textbf{x}}
 
 \newcommand{\Topinc}{\Top^\textnormal{\textbf{ink}}}
@@ -69,9 +68,11 @@
 \newcommand{\Dcal}{\mathcal{D}}
 \newcommand{\Ccal}{\mathcal{C}}
 
+\newcommand{\inter}[1]{\mathring{#1}}
+
 \makeatletter
-\newcommand{\pto}{}% just for safety
-\newcommand{\pgets}{}% just for safety
+\newcommand{\pto}{}
+\newcommand{\pgets}{}
 
 \DeclareRobustCommand{\pto}{\mathrel{\mathpalette\p@to@gets\to}}
 \DeclareRobustCommand{\pgets}{\mathrel{\mathpalette\p@to@gets\gets}}
@@ -82,8 +83,6 @@
 
 \makeatother
 
-% \newcommand{\Mchto}{\pfun}
-
 \newcommand{\inklsek}[1]{\include{Seksjoner/#1}}
 
 \newtheorem{theorem}{Teorem}[subsection]
@@ -91,6 +90,7 @@
 \newtheorem{corollary}{Korollar}[subsection]
 \newtheorem{proposition}{Proposisjon}[subsection]
 \newtheorem{example}{Eksempel}[subsection]
+\newtheorem{remark}{Bemerk}[subsection]
 
 \renewcommand{\Im}{\text{Im}\;}
 \renewcommand{\Re}{\text{Re}\;}

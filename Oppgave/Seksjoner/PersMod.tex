@@ -107,9 +107,9 @@ Multimengder er derimot vanskelige å jobbe med, derfor jobber vi med deres repr
 \subsection{Barkoder}
 En barkode $\Bcal$ er en representasjon av en multimengde av intervaller. Elementer i en barkode er dermed par $(I,k)$ der $I$ er et intervall og $k\in\N$. Ofte når indeksen $k$ er nødvendig skriver vi bare $I$ for et intervall i barkoden.
 
-I \cite{Bauer2015a} sier forfatte at gitt en persistensmodul $M$ som kan skrives
+I \cite{Bauer2015a} sier forfatter at gitt en persistensmodul $M$ som kan skrives
 \[M\cong\bigoplus_{I\in\Bcal_M}C(I)\]
-Da er $\Bcal_M$ unikt bestemt.
+Da er $\Bcal_M$ unikt bestemt. Vi kaller slike persistensmoduler intervalldekomponerbare.
 
 Dette er en konsekvens av følgende teorem
 
@@ -119,3 +119,14 @@ Dette er en konsekvens av følgende teorem
 \begin{proof}
 Anta at det ikke eksisterer en bijeksjon mellom $\Bcal$ og $\Ccal$ f.eks. 
 \end{proof}
+
+I følge \cite{Bauer2015a} har vi følgende teorem
+\begin{theorem}\label{Thrm:thrm2.1}
+	Enhver p.e.d. persistensmodul er intervalldekomponerbar.
+\end{theorem}
+\begin{proof}
+	La $M$ være en p.e.d. peristensmodul. Mengden $I_n = \{s\in\R\;\mid\;\dim M_s=n\}$ er en disjunkt union av intervaller $I_{n_1}\sqcup I_{n_2}\sqcup\dots$, vi kan la $C(I_{n_1}\sqcup I_{n_2}\sqcup\dots)=C(I_{n_1})\oplus C(I_{n_2})\oplus\dots$ og få
+	\[M\cong \bigoplus_{n,k\in\in\N} C(I_{n_k}).\]
+	Da blir $\Bcal_M = \{I_{n_j}\;\mid\; n,j\in\N\}$, en kan la $I_{n_j}=\es$ når den ikke påvirker unionen $I_n$. 
+\end{proof}
+
