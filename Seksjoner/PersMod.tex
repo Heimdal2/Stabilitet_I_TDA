@@ -25,7 +25,7 @@ Gitt to persistensmoduler $M$ og $N$ kan vi definere en morfi $f: M\to N$ som en
 	\arrow["{f(t)}", from=3-1, to=3-3]
 \end{tikzcd}
 \]
-kommuterer. Vi kan komponere morfiene på den åpenbare måten; gitt morfier $f:M\to N$ og $g:M\to P$ er $g\circ f$ definert som samlingen $\{g_s\circ f_s: M_s\to P_s\;|\;s\in\R\}$.
+kommuterer. Vi kan komponere morfiene på den følgende måten; gitt morfier $f:M\to N$ og $g:M\to P$ er $g\circ f$ definert som samlingen $\{g_s\circ f_s: M_s\to P_s\;|\;s\in\R\}$.
 
 Siden vi har objekter, persistensmoduler, og vi har morfier mellom dem kan vi definere kategorien av persistens moduler
 
@@ -130,3 +130,24 @@ I følge \cite{Bauer2015a} har vi følgende teorem
 	Da blir $\Bcal_M = \{I_{n_j}\;\mid\; n,j\in\N\}$, en kan la $I_{n_j}=\es$ når den ikke påvirker unionen $I_n$. 
 \end{proof}
 
+Liknende for persistensmoduler har barkoder sin egen metrikk, men for å komme fram til denne metrikken må en gå gjennom noen definisjoner
+
+\subsection{Matching-kategorien}
+Definisjonen på en matching er gitt i \cite{Bauer2015a} seksjon 2.2
+\begin{definition}\label{Def:Matching}
+	En matching mellom mengder $S$ og $T$ (skrevet $\sigma:S\pto T$) er en bijeksjon $\sigma: S'\to T'$ mellom delmengder $S'\subset S$ og $T'\subset T$. Vi skriver $T'$ som $\im\sigma$ og $S' = \coim\sigma$.
+\end{definition}
+Fra \cite{Bauer2015a} har vi også følgende definisjon: "En kan tenke på en matching $\sigma$ som en relasjon $\sigma\subset S\times T$ slik at $(s,t)\in \sigma$ hvis og bare hvis $s\in\coim\sigma$ og $\sigma(s)=t$."
+\cite{Bauer2015a} nevner også revers-matchingen $\rev\sigma$, men skriver bare at den er definert på den åpenbare måten. Her er en rask og litt grundigere definisjon på $\rev$ siden den vil bli brukt senere.
+
+\begin{definition}\label{Def:rev}
+	For en matching $\sigma: S\pto T$ er et element $(t,s)\in\rev\sigma$ hvis og bare hvis $(s,t)\in\sigma$.
+\end{definition}
+
+Vi kan også komponere matchinger som definert i \cite{Bauer2015a}. La $\sigma: S\pto T$ og $\tau: T\pto U$ være matchinger da kan vi definere komposisjonen
+
+\[\tau\circ\sigma = \{(s,u)\;\mid\; \exists t\in T\sa (s,t)\in\sigma, (t,u)\in\tau\}\]
+
+Dette gjør matchinger av mengder om til en kategori $\Mch$, hvor objektene er mengder og morfiene er matchinger.
+
+\subsection{Dekorerte endepunkter}

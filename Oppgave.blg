@@ -7,11 +7,12 @@ A level-1 auxiliary file: Seksjoner/Forkunnskaper.aux
 A level-1 auxiliary file: Seksjoner/PersMod.aux
 A level-1 auxiliary file: Seksjoner/PersHom.aux
 A level-1 auxiliary file: Seksjoner/Alg_Stab.aux
+A level-1 auxiliary file: Seksjoner/Anvendelser.aux
 Database file #1: Referanser.bib
 Warning--I didn't find a database entry for "Hatcher2002"
 You've used 1 entry,
             2481 wiz_defined-function locations,
-            566 strings with 4773 characters,
+            567 strings with 4798 characters,
 and the built_in function-call counts, 587 in all, are:
 = -- 58
 > -- 15

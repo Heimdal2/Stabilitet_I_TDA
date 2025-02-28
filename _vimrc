@@ -1,0 +1,1 @@
+command -nargs=1 Athm execute "normal! i\\begin{theorem}\\label{Thrm:<args>}\n\n\\end{theorem}"

@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.2)  25 FEB 2025 05:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.2)  28 FEB 2025 13:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/Andreass/Elkjøp Cloud/UIB/Bacheloroppgave/Latex/Oppgave/Stabilitet_I_TDA-1/Oppgave/Oppgave.tex"
-(c:/Users/Andreass/Elkjøp Cloud/UIB/Bacheloroppgave/Latex/Oppgave/Stabilitet_I_TDA-1/Oppgave/Oppgave.tex
+**c:/Users/Andreass/Stabilitet_I_TDA/Oppgave.tex
+(c:/Users/Andreass/Stabilitet_I_TDA/Oppgave.tex
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-09-10>
 (c:/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -559,8 +559,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip69
 ))
-LaTeX Info: Redefining \pto on input line 77.
-LaTeX Info: Redefining \pgets on input line 78.
+LaTeX Info: Redefining \pto on input line 90.
+LaTeX Info: Redefining \pgets on input line 91.
 \c@theorem=\count348
 \c@definition=\count349
 \c@corollary=\count350
@@ -591,27 +591,27 @@ LaTeX Warning: Label `Def:label' multiply defined.
 
 LaTeX Warning: Label `Ex:label' multiply defined.
 
-) (./Seksjoner/Alg_Stab.aux))
+) (./Seksjoner/Alg_Stab.aux) (./Seksjoner/Anvendelser.aux))
 \openout1 = `Oppgave.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
  (c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count354
@@ -631,26 +631,26 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (c:/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 101.
+Package hyperref Info: Link coloring OFF on input line 116.
  (./Oppgave.out) (./Oppgave.out)
 \@outlinefile=\write4
 \openout4 = `Oppgave.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 104.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 119.
  (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 104.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 119.
  (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<./Bilder/UiB_PositivEmblem.png, id=79, 351.3125pt x 351.3125pt>
+<./Bilder/UiB_PositivEmblem.png, id=91, 351.3125pt x 351.3125pt>
 File: ./Bilder/UiB_PositivEmblem.png Graphic file (type png)
 <use ./Bilder/UiB_PositivEmblem.png>
-Package pdftex.def Info: ./Bilder/UiB_PositivEmblem.png  used on input line 104.
+Package pdftex.def Info: ./Bilder/UiB_PositivEmblem.png  used on input line 119.
 (pdftex.def)             Requested size: 351.31163pt x 351.31163pt.
 
-Overfull \hbox (21.31163pt too wide) in paragraph at lines 104--105
+Overfull \hbox (21.31163pt too wide) in paragraph at lines 119--120
 [][] 
  []
 
@@ -747,14 +747,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--94
 
 
 
-[12])
+[12]
 
-[13]
+[13])
+
+[14]
 \openout2 = `Seksjoner/PersHom.aux'.
 
  (./Seksjoner/PersHom.tex
 
-[14
+[15
 
 
 
@@ -770,12 +772,21 @@ Overfull \hbox (140.68585pt too wide) detected at line 52
 
 )
 
-[15]
+[16]
 \openout2 = `Seksjoner/Alg_Stab.aux'.
 
  (./Seksjoner/Alg_Stab.tex)
 
-[16
+[17
+
+
+
+]
+\openout2 = `Seksjoner/Anvendelser.aux'.
+
+ (./Seksjoner/Anvendelser.tex)
+
+[18
 
 
 
@@ -785,10 +796,10 @@ Package natbib Warning: There were undefined citations.
 
 
 
-[17
+[19
 
 
-] (./Oppgave.aux (./Seksjoner/Introduksjon.aux) (./Seksjoner/Forkunnskaper.aux) (./Seksjoner/PersMod.aux) (./Seksjoner/PersHom.aux) (./Seksjoner/Alg_Stab.aux))
+] (./Oppgave.aux (./Seksjoner/Introduksjon.aux) (./Seksjoner/Forkunnskaper.aux) (./Seksjoner/PersMod.aux) (./Seksjoner/PersHom.aux) (./Seksjoner/Alg_Stab.aux) (./Seksjoner/Anvendelser.aux))
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-09-10>
@@ -798,21 +809,21 @@ L3 programming layer <2024-09-10>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Oppgave.out' has not changed.
-(rerunfilecheck)             Checksum: 603DF2CA249913539CF3976E94C27A79;2434.
+(rerunfilecheck)             Checksum: 57E5F97F0FDCC68E3CB5F8050F9DDF45;2852.
  ) 
 Here is how much of TeX's memory you used:
- 23513 strings out of 473579
- 445397 string characters out of 5732263
- 823192 words of memory out of 5000000
- 45888 multiletter control sequences out of 15000+600000
+ 23555 strings out of 473579
+ 446271 string characters out of 5732263
+ 824038 words of memory out of 5000000
+ 45916 multiletter control sequences out of 15000+600000
  569007 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,15n,107p,639b,1117s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,15n,107p,579b,1117s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Oppgave.pdf (17 pages, 310596 bytes).
+Output written on Oppgave.pdf (19 pages, 315543 bytes).
 PDF statistics:
- 359 PDF objects out of 1000 (max. 8388607)
- 293 compressed objects within 3 object streams
- 86 named destinations out of 1000 (max. 500000)
- 162 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 395 PDF objects out of 1000 (max. 8388607)
+ 326 compressed objects within 4 object streams
+ 93 named destinations out of 1000 (max. 500000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 

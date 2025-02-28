@@ -1,8 +1,8 @@
-PWD c:/Users/Andreass/Elkjøp Cloud/UIB/Bacheloroppgave/Latex/Oppgave/Stabilitet_I_TDA-1/Oppgave
+PWD c:/Users/Andreass/Stabilitet_I_TDA
 INPUT c:/texlive/2024/texmf.cnf
 INPUT c:/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/Andreass/Elkjøp Cloud/UIB/Bacheloroppgave/Latex/Oppgave/Stabilitet_I_TDA-1/Oppgave/Oppgave.tex
+INPUT c:/Users/Andreass/Stabilitet_I_TDA/Oppgave.tex
 OUTPUT Oppgave.log
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -259,6 +259,9 @@ INPUT Seksjoner/PersHom.aux
 INPUT ./Seksjoner/Alg_Stab.aux
 INPUT ./Seksjoner/Alg_Stab.aux
 INPUT Seksjoner/Alg_Stab.aux
+INPUT ./Seksjoner/Anvendelser.aux
+INPUT ./Seksjoner/Anvendelser.aux
+INPUT Seksjoner/Anvendelser.aux
 OUTPUT Oppgave.aux
 INPUT c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -363,6 +366,12 @@ OUTPUT Seksjoner/Alg_Stab.aux
 INPUT ./Seksjoner/Alg_Stab.tex
 INPUT ./Seksjoner/Alg_Stab.tex
 INPUT Seksjoner/Alg_Stab.tex
+INPUT ./Seksjoner/Anvendelser.tex
+INPUT ./Seksjoner/Anvendelser.tex
+OUTPUT Seksjoner/Anvendelser.aux
+INPUT ./Seksjoner/Anvendelser.tex
+INPUT ./Seksjoner/Anvendelser.tex
+INPUT Seksjoner/Anvendelser.tex
 INPUT ./Oppgave.bbl
 INPUT ./Oppgave.bbl
 INPUT Oppgave.bbl
@@ -382,6 +391,9 @@ INPUT Seksjoner/PersHom.aux
 INPUT ./Seksjoner/Alg_Stab.aux
 INPUT ./Seksjoner/Alg_Stab.aux
 INPUT Seksjoner/Alg_Stab.aux
+INPUT ./Seksjoner/Anvendelser.aux
+INPUT ./Seksjoner/Anvendelser.aux
+INPUT Seksjoner/Anvendelser.aux
 INPUT ./Oppgave.out
 INPUT ./Oppgave.out
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
