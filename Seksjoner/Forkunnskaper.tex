@@ -1,6 +1,102 @@
 \section{Forkunnskaper}
 Her går vi igjennom noen nødvendige definisjoner
 
+\subsection{Relasjoner og ordensrelasjoner}
+Noe som kommer til å være viktig gjennom oppgaven er relasjoner og spesielt ordensrelasjoner.
+\begin{definition}\label{Def:label}
+    En relasjon $R$ på en mengde $A$ er en undermengde av $A\times A$.
+\end{definition}
+Når et element $a\in A$ er relatert til et element $b\in A$ via en relasjon $R\subset A\times A$ skriver vi ofte $aRb$.
+
+Noen egenskaper relasjoner kan ha er følgende:
+
+For en relasjon $R\subset A\times A$, kan den ha
+\begin{itemize}
+    \item Refleksivitet: Alle elementer i $A$ er relaterte til seg selv.
+    \item Symmetri: Hvis $a$ er relatert til $b$ så er $b$ relatert til $a$.
+    \item Transitivitet: Hvis $a$ er relatert til $b$ og $b$ er relatert til $c$ så er $a$ relatert til $c$.
+    \item Antisymmetri: Hvis $a$ er relatert til $b$ og $b$ er relatert til $a$ så er $a=b$.
+    \item Strengt sammenhengendhet: $a$ er relatert til $b$ eller $b$ er relatert til $a$.
+    \item Asymmetri: Hvis $a$ er relatert til $b$ så er aldri $b$ relatert til $a$.
+    \item Irrefleksivitet: Ingen elementer er relatert til seg selv.
+\end{itemize}
+
+\begin{example}\label{Ex:LikRel}
+    For en mengde $A$ er likhet $=$ en relasjon som er refleksiv, symmetrisk og transitiv
+\end{example}
+
+\begin{example}\label{Ex:MinLikRel}
+    Mindre enn eller lik $\leq$ på $\R$ er refleksiv, symmetrisk, transitiv, og antisymmetrisk. Samme er sant for større enn eller likhetstegnet.
+\end{example}
+
+Noen typer relasjoner som likhetstegnet og mindre enn eller likhetstegnet har samme egenskaper og brukes såpass ofte at de får sine egne navn
+
+\begin{definition}\label{Def:EkvivRel}
+    En relasjon er kalt en ekvivalensrelasjon hvis den er refleksiv, symmetrisk og transitiv.
+\end{definition}
+
+En annen type relasjon er ordensrelasjoner. Det er en slik relasjon $\leq$ er. ordensrelasjoner kommer i mange former her er de tre største
+
+\begin{definition}\label{Def:Preord}
+    En preorden er en relasjon som er refleksiv og som er transitiv. En mengde med en preordensrelasjon er kalt en "preordnet mengde" "promengder."
+\end{definition}
+
+\begin{definition}\label{Def:Partord}
+    En delvis orden er en preorden som også er antisymmetrisk. En mengde med en delvis ordensrelasjon er kalt en "devis ordnet mengde" ofte forkortet til "pomengde" fra det engelske ordet "partial order".
+\end{definition}
+
+Tilslutt har vi en total orden
+
+\begin{definition}\label{Def:Totord}
+    En total orden er en delvis orden som også er strengt sammenhengende. En mengde med en total orden er en kalt en "totalt ordnet mengde."
+\end{definition}
+
+\begin{definition}\label{Def:Strengord}
+    En relasjon er en streng ordensrelasjon hvis den er assymmetrisk, irrefleksiv og transitiv.
+\end{definition}
+
+\begin{remark}\label{Rem:OrdRelHiriarki}
+Per definisjon er alle total ordensrelasjoner en delvis orden og alle delvis ordensrelasjoner er en preordensrelasjon.
+\end{remark}
+
+\begin{remark}\label{Rem:Strengord}
+    Delvis ordensrelasjoner induserer en streng orden ved relasjonen $<$ på følgende måte for en delvis ordensrelasjoner $\leq$
+    \[a<b \text{ hvis og bare hvis } a\leq b \text{ og } a\neq b.\]
+    Denne type streng orden bruker vi nå hvor ordensrelasjonene med $\leq$ vil være delvis ordner, mens ordensrelasjonene med $<$ vil være strenger ordner.
+\end{remark}
+
+Et viktig eksempel for denne oppgaven er den leksikografiske ordenen.
+
+\begin{example}\label{Ex:LeksOrd}
+    For delvis ordnede mengder $A$ med orden $\leq_A$ og $B$ med orden $\leq_B$ kan vi sette den følgende ordenen $\leq$ på $A\times B$ ved å la $(a,b)\leq (a',b')$ hvis og bare hvis $a<_A a'$ eller hvis $a=a'$ og $b\leq_B b'$. 
+\end{example}
+
+\begin{proposition}\label{prop:LeksOrd}
+    Den leksikografiske ordenen er en delvis orden.
+\end{proposition}
+\begin{proof}
+    La $A$ og $B$ være delvis ordnede mengder med ordner $\leq_A$ og $\leq_B$ hhv. og la $\leq$ være den leksikografiske ordnen på $A\times B$. 
+
+    \textbf{Refleksivitet}\\
+    Refleksivitet er sant for gitt $(a,b)\in A\times B$ så er $a=a$ og $b\leq_B b$ ved \bref{definisjon}{Def:Partord}, dermed er $(a,b)\leq (a,b)$.
+
+    \textbf{Transitivitet}\\
+    La $(a,b)\leq (a',b')$ og $(a',b')\leq (a'',b'')$. Enten så er $a<_A a'$ eller er $a=a'$ og $b\leq_B b'$, vi ser på disse tilfellene individuelt.\\\\
+    "$a<_A a'$": Siden $(a',b')\leq (a'',b'')$ har vi at $a'<_A a''$ eller $a'=a''$ og $b'\leq_B b''$. 
+    Hvis $a'<_A a''$ har vi ved transitivitet $a<_A a''$ og hvis $a'=a''$ og $b'\leq_B b''$ så har vi at $a<_A a''$.\\\\
+    "$a=a'$ og $b\leq b'$": Likt som over, siden $(a',b')\leq (a'',b'')$ så er $a'<_A a''$ eller $a'=a''$ og $b'\leq_B b''$. Hvis $a'<_A a''$ har vi at $a=a'$ som betyr at $a<_A a''$. Hvis $a'=a''$ og $b'\leq_B b''$ så har vi at $a=a'$ og $a'=a''$ så ved transitivitet av $=$ så er $a=a''$, ved transitivitet av $\leq_B$, siden $b\leq_B b'$ og $b'\leq_B b''$ så er $b'\leq_B b''$.\\
+
+    \textbf{Antisymmetri}\\
+    Til slutt må en vise at hvis $(a,b)\leq(a',b')$ og $(a',b')\leq (a,b)$ så er $(a,b)=(a',b')$.
+    Dette gjør vi ved et kontrapositivt bevis. Anta at $(a,b)\neq (a',b')$, da viser vi at $(a,b)\not\leq (a',b')$ eller $(a',b')\not\leq (a,b)$.
+    Siden $(a,b)\neq (a',b')$ så er $a\neq a$ som betyr at hvis $(a,b)\leq (a',b')$ må dette være fordi $a<_A a'$, men da kan ikke $a'<_A a$ ved antisymmetri av $\leq_A$ altså er $(a',b')\leq (a,b)$ og på samme måte kan ikke $(a,b)\leq (a',b')$ hvis $(a',b')\leq (a,b)$.
+
+    %Her bryter vi også opp beviset i deler. Siden $(a,b)\leq (a',b')$ så er $a\leq_A a'$ eller $a=a'$ og $b\leq_B b'$.\\\\
+    %"$a\leq_A a'$": Siden $(a',b')\leq (a,b)$, er $a'\leq_A a$ eller $a'=a$ og $b'\leq_B b$. For begge tilfellene er $a=a'$, hvis $a'\leq_A a$ så er $a=a'$ ved antisymmetri, det andre tilfellet er automatisk sant. Siden $a=a'$ så må $b'\leq_B b$, men siden
+\end{proof}
+
+Ordensrelasjoner gir oss en rekkefølge på elementer i mengden. 
+
 \subsection{Topologiske rom}\label{Sec:Top}
 \begin{definition}\label{Def:TopRom}
     Et par $(X,\Tcal)$ hvor $X$ er en mengde og $\Tcal\subset\Pcal(X)$ slik at 
@@ -14,7 +110,7 @@ Her går vi igjennom noen nødvendige definisjoner
 
 Når topologien $\Tcal$ på en mengde $X$ er kjent eller ikke viktig lar vi være å skrive det topologiske rommet som et par $(X,\Tcal)$ og skriver bare $X$. Alle funksjoner mellom topologiske rom vil være kontinuerlige. Til slutt så vil et "rom" bety et topologisk rom.
 
-\begin{example}\label{Ex:EukRom}
+\begin{example}\label{Ex:EukTRom}
     Euklidisk rom $(\R^n,\Tcal)$ er et topologisk rom med åpne mengder unioner av vilkårlig mange mengder av typen
     \[\Bcal(x,\delta) = \{y\in\R^n\;|\; \|x-y\|<\delta\}\]
     kalt åpne baller. Euklidisk rom er som regel alltid bare skrevet $\R^n$ siden det er den topologien på $\R^n$ som er antatt.
@@ -28,7 +124,7 @@ Når topologien $\Tcal$ på en mengde $X$ er kjent eller ikke viktig lar vi vær
     La $f: \R\to \R$ være funksjonen $f(x)=2x+1$, da er $f$ kontinuerlig. La $V = (a,b)$ et opent intervall, da blir $f^{-1}(V) = \{x\in\R\;|\;2x+1\in V\}=\bp{\frac{a}{2}-1,\frac{b}{2}-1}$ som også er et åpent intervall.
 \end{example}
 
-\begin{definition}\label{Def:label}
+\begin{definition}\label{Def:UnderTop}
     La $(X,\Tcal)$ være et topologisk rom og la $A\subset X$ da er det en naturlig topologi $\Tcal_A$ vi kan sette på $A$ definert ved
     \[U\in\Tcal_A \iff \exists\, V\in\Tcal\quad\text{s.a}\quad V\cap A = U\]
     Vi kaller $(A,\Tcal_A)$ et underrom av $(X,\Tcal)$ og vi kaller $\Tcal_A$ underromstopologien på $A$.
@@ -114,15 +210,15 @@ Ofte lar vi være å skrive $a+(-b)$ og skriver heller $a-b$ vi lar også være 
 Igjen skriver vi ofte $\v+(-\u)$ som $\v-\u$ og $a\cdot \v$ som $a\v$.
 
 \begin{definition}\label{Def:LinAvb}
-    La $V$ og $W$ være vektorrom over en kropp $K$ og la $f: V\to W$ være en funksjon. Vi kaller $f$ lineær hvis for vektorer $u,v\in V$ og en skalar $a\in K$ så holder det følgende
+    La $V$ og $W$ være vektorrom over en kropp $K$ og la $f: V\to W$ være en funksjon. Vi kaller $f$ lineær hvis for vektorer $\u,\v\in V$ og en skalar $a\in K$ så holder det følgende
     \begin{itemize}
-    \item $f(u+v) = f(u)+f(v)$
-    \item $f(av) af(v)$
+    \item $f(\u+\v) = f(\u)+f(\v)$
+    \item $f(a\v) = af(\v)$
     \end{itemize}
     Vi kaller også slike funksjoner lineære avbildinger/transformasjoner/funksjoner
 \end{definition}
 
-\begin{example}\label{Ex:label}
+\begin{example}\label{Ex:EukVRom}
     Rommet $V = \R^n$ over kroppen $\R$ er et vektorrom med punktvis addisjon, og skalarmultiplikasjon
     \[(a_1,\dots,a_n)+(b_1,\dots,b_n) = (a_1+b_1,\dots,a_n+b_n)\]
     og
@@ -130,10 +226,10 @@ Igjen skriver vi ofte $\v+(-\u)$ som $\v-\u$ og $a\cdot \v$ som $a\v$.
 \end{example}
 
 \begin{example}\label{Ex:label}
-    funksjonen $f:\R^2\to\R^2$ definert ved $f(v) = 2v$ er lineær siden gitt $u,v\in V$ og $a\in\R$ så er
+    funksjonen $f:\R^2\to\R^2$ definert ved $f(v) = 2\v$ er lineær siden gitt $\u,\v\in V$ og $a\in\R$ så er
     \begin{itemize}
-        \item $f(u+v) = 2(u+v) = 2u+2v = f(u)+f(v)$
-        \item $f(av) = 2(av) = (2a)v = (a\cdot2)v = af(v)$
+        \item $f(\u+\v) = 2(\u+\v) = 2\u+2\v = f(\u)+f(\v)$
+        \item $f(a\v) = 2(a\v) = (2a)\v = (a\cdot2)\v = af(\v)$
     \end{itemize}
 \end{example}
 
