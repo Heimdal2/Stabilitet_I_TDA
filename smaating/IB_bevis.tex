@@ -1,15 +1,24 @@
 \documentclass{article}
 
+\usepackage{amsmath}
+\usepackage{amssymb}
+
 \newcommand{\C}{\mathcal{C}}
 \newcommand{\D}{\mathcal{D}}
 \newcommand{\mchto}{\nrightarrow}
 \newcommand{\Mch}{\textnormal{\textbf{Mch}}}
-\newcommand{\MchR}{\textnormal{\textbf{Mch}}^\textnormal{\textbf{R}}}}
+\newcommand{\MchR}{\textnormal{\textbf{Mch}}^\textnormal{\textbf{R}}}
+\newcommand{\coker}{\textnormal{coker}\;}
 
-\begin{article}
+\begin{document}
 
 \section{$\delta$-matchinger og $\delta$-inflettinger}
 Her er et bevis på at en $\delta$-matching mellom barkoder som objekter i $\Mch$ og
 $\delta$-inflettinger av barkoder som objekter i $\MchR$ er helt like. Vi bruker
-proposisjon 2.7 
-\end{article}
+  resultater fra Bauer og Lesnick "Persistence Diagrams as Diagrams". Vi starter med
+  å anta at kjernen og kokjernen til $f:\C\to\D(\delta)$ er $2\delta$-trivielle. Siden $\ker f$ er
+  $2\delta$-triviell, har vi ved proposisjon 2.7 at for ethvert par $(I,J)\in f$,
+  begrenser $J$ $I(\delta)$ over. Dette betyr at gitt en $s\in I(\delta)$ eksisterer det
+  en $t\in J$ slik at $s\leq t$. Ekvivalent kan vi si at for enhver $s\in I$ eksisterer
+  det en $t\in J$ slik at $s-\delta\leq t$. Dette leder til $s-t\leq \delta$.
+\end{document}

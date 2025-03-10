@@ -157,6 +157,23 @@ La $D = \{-,+\}$ være en totalt ordnet mengde med $-\leq+$. La $\E = \R\times
 D\cup\{-\infty,\infty\}$ være mengden av dekorerte endepunkter. For en $t\in\R$
 skriver vi $t^+$ og $t^-$ istedet for å skrive $(t,+)$ og $(t,-)$ hhv. Den
 leksikografiske ordenen definert i \bref{eksempel}{Ex:LeksOrd} induserer en total orden på
-$\E$ definert ved
+$\E$. Vi kan definere en addisjonsoperator $+:\E\times\R\to\E$ ved $s^\pm+t=(s+t)^\pm$ og
+en subtraksjonsoperator $-:\E\times\R\to\E$ ved $e-t=e+(-t)$ for $(e,t)\in\E\times\R$.
+Definisjonen på $\E$ gir en bijeksjon mellom mengden $\{(b,d)\in\E\times\E\mid b<d\}$ og
+mengden $\IR$ av intervaller i $\R$ gitt ved tabellen
 
-\[s^\pm\leq t^\pm\\leq t^\pm\]
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{c|ccc}
+      & $t^-$ & $t^+$ & $\infty$\\
+    \hline
+    $-\infty$ & $(-\infty,t)$ & $\lopen{-\infty}{t}$ & $(-\infty,\infty)$\\
+    $s^-$ & $\ropen{s}{t}$ & $[s,t]$ & $\ropen{s}{\infty}$\\
+    $s^+$ & $(s,t)$ & $\lopen{s}{t}$ & $(s,\infty)$
+  \end{tabular}
+   \label{tab:IntEndBij}
+\end{table}
+
+Vi vil alltid skrive intervallet spesifisert ved $b<d$ som
+$\GInt{b,d}$.b,d}$.b,d}$.b,d}$.b,d}$.b,d}$.
