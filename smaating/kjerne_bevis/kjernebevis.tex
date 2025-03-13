@@ -1,0 +1,143 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{tasks}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{blindtext}
+\usepackage{titlesec}
+\usepackage{mathtools}
+\usepackage{tikz,pgf,tikz-cd,graphicx}
+\usepackage{natbib,doi}
+\usepackage{pgfplots}
+\usepackage{pgfkeys}
+\usepackage{quiver}
+
+\newcommand{\lopen}[2]{\ensuremath{(#1,#2]}}
+\newcommand{\ropen}[2]{\ensuremath{[#1,#2)}}
+
+\newcommand{\monicto}{\hookrightarrow}
+\newcommand{\epito}{\twoheadrightarrow}
+
+\newcommand{\longeq}{\scalebox{2}[1]{=}}
+\newcommand{\longreq}{\scalebox{3}[1]{=}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Lim}[2]{\lim\limits_{#1\to#2}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Bup}[2]{\bigcup\limits_{#1}^{#2}}
+\newcommand{\pd}{\partial}
+\newcommand{\sm}{\setminus}
+\newcommand{\es}{\emptyset}
+\newcommand{\Arg}{\text{Arg}\;}
+\newcommand{\bp}[1]{\left(#1\right)}
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\xto}[1]{\xrightarrow{#1}}
+\newcommand{\bset}[1]{\left\{#1\right\}}
+
+\newcommand{\GInt}[1]{\langle #1\rangle}
+
+\newcommand{\ob}{\textnormal{ob}}
+\newcommand{\Rep}{\textnormal{Rep}}
+\newcommand{\p}{\varphi}
+
+\newcommand{\bref}[2]{\textnormal{\textbf{#1 \ref{#2}}}}
+
+\newcommand{\id}{\textnormal{id}}
+
+\renewcommand{\u}{\textnormal{\textbf{u}}}
+\renewcommand{\v}{\textnormal{\textbf{v}}}
+\newcommand{\w}{\textnormal{\textbf{w}}}
+
+\newcommand{\Vect}{\textnormal{\textbf{Vect}}}
+\newcommand{\vect}{\textnormal{\textbf{vect}}}
+\newcommand{\Top}{\textnormal{\textbf{Top}}}
+\newcommand{\Filt}[1]{\textnormal{\textbf{Filt($#1$)}}}
+\newcommand{\Set}{\textnormal{\textbf{Set}}}
+\newcommand{\Rbold}{\textnormal{\textbf{R}}}
+\newcommand{\Topinc}{\Top_\textnormal{\textbf{inc}}}
+\newcommand{\Pers}{\vect_k^\Rbold}
+\newcommand{\Mch}{\textnormal{\textbf{Mch}}}
+
+\newcommand{\xbold}{\textbf{x}}
+
+\newcommand{\Rcal}{\mathcal{R}}
+\newcommand{\Scal}{\mathcal{S}}
+\newcommand{\Tcal}{\mathcal{T}}
+\newcommand{\Pcal}{\mathcal{P}}
+\newcommand{\Bcal}{\mathcal{B}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\Kcal}{\mathcal{K}}
+\newcommand{\IR}{\mathcal{I}_\R}
+
+\newcommand{\im}{\textnormal{im\;}}
+\newcommand{\coim}{\textnormal{coim\;}}
+\newcommand{\rev}{\textnormal{rev\;}}
+\newcommand{\coker}{\textnormal{coker\;}}
+
+\newcommand{\inter}[1]{\mathring{#1}}
+
+\makeatletter
+\newcommand{\pto}{}
+\newcommand{\pgets}{}
+
+\DeclareRobustCommand{\pto}{\mathrel{\mathpalette\p@to@gets\to}}
+\DeclareRobustCommand{\pgets}{\mathrel{\mathpalette\p@to@gets\gets}}
+
+\newcommand{\p@to@gets}[2]{%
+  \ooalign{\hidewidth$\m@th#1\mapstochar\mkern5mu$\hidewidth\cr$\m@th#1\to$\cr}%
+}
+
+\newcommand{\sa}{\quad\textnormal{s.a}\quad}
+
+\makeatother
+
+\newcommand{\inklsek}[1]{\include{Seksjoner/#1}}
+
+\newtheorem{theorem}{Teorem}[subsection]
+\newtheorem{definition}{Definisjon}[subsection]
+\newtheorem{corollary}{Korollar}[subsection]
+\newtheorem{proposition}{Proposisjon}[subsection]
+\newtheorem{example}{Eksempel}[subsection]
+\newtheorem{remark}{Bemerk}[subsection]
+
+\renewcommand{\Im}{\text{Im}\;}
+\renewcommand{\Re}{\text{Re}\;}
+
+\title{Tittel}
+\author{Andreas M. Kristensen}
+
+\begin{document}
+\maketitle
+Her definerer vi hva kjernen, kokjernen og hva bildet til en overlapp-matching er.
+
+La $\sigma:\Ccal\to\Dcal$ være en overlapp-matching dette betyr at hvis $\sigma(I)=J$ så har vi
+
+\begin{itemize}
+  \item $I\cap J\neq\es$
+  \item $I$ begrenser $J$ over
+  \item $J$ begrenser $I$ over
+\end{itemize}
+
+Kjernen til $\sigma$ er definert ved diagrammet
+
+\[\begin{tikzcd}
+	& \Ccal \\
+	\\
+	& \Kcal && \Dcal \\
+	{\Kcal'}
+	\arrow["\sigma", from=1-2, to=3-4]
+	\arrow["j", from=3-2, to=1-2]
+	\arrow["{\es_{\Kcal\Dcal}}"', from=3-2, to=3-4]
+	\arrow["\gamma"{description}, dashed, from=3-2, to=4-1]
+	\arrow["{j'}", from=4-1, to=1-2]
+	\arrow["{\es_{\Kcal'\Dcal}}"', curve={height=12pt}, from=4-1, to=3-4]
+\end{tikzcd}\]
+
+\end{document}
