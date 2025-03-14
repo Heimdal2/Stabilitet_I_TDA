@@ -15,12 +15,15 @@
 
 \graphicspath{{./Bilder/}}
 
-
+\newcommand{\lngl}{\langle}
+\newcommand{\rngl}{\rangle}
 \newcommand{\lopen}[2]{\ensuremath{(#1,#2]}}
 \newcommand{\ropen}[2]{\ensuremath{[#1,#2)}}
 
 \newcommand{\monicto}{\hookrightarrow}
 \newcommand{\epito}{\twoheadrightarrow}
+
+\newcommand{\Hom}{\textnormal{Hom}}
 
 \newcommand{\longeq}{\scalebox{2}[1]{=}}
 \newcommand{\longreq}{\scalebox{3}[1]{=}}
@@ -66,6 +69,8 @@
 \newcommand{\Pers}{\vect_k^\Rbold}
 \newcommand{\Mch}{\textnormal{\textbf{Mch}}}
 
+\newcommand{\op}[1]{#1^\textnormal{op}}
+
 \newcommand{\xbold}{\textbf{x}}
 
 
@@ -76,6 +81,7 @@
 \newcommand{\Bcal}{\mathcal{B}}
 \newcommand{\Dcal}{\mathcal{D}}
 \newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\Jcal}{\mathcal{J}}
 \newcommand{\IR}{\mathcal{I}_\R}
 
 \newcommand{\im}{\textnormal{im\;}}
@@ -96,10 +102,12 @@
 }
 
 \newcommand{\sa}{\quad\textnormal{s.a}\quad}
+\newcommand{\inklsek}[1]{\include{Seksjoner/#1}}
+
+\newcommand{\nord}[1]{\textit{#1}}
 
 \makeatother
 
-\newcommand{\inklsek}[1]{\include{Seksjoner/#1}}
 
 \newtheorem{theorem}{Teorem}[subsection]
 \newtheorem{definition}{Definisjon}[subsection]

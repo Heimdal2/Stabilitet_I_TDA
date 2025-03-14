@@ -128,16 +128,12 @@ La $\sigma:\Ccal\to\Dcal$ være en overlapp-matching dette betyr at hvis $\sigma
 Kjernen til $\sigma$ er definert ved diagrammet
 
 \[\begin{tikzcd}
-	& \Ccal \\
+	\Ccal \\
 	\\
-	& \Kcal && \Dcal \\
-	{\Kcal'}
-	\arrow["\sigma", from=1-2, to=3-4]
-	\arrow["j", from=3-2, to=1-2]
-	\arrow["{\es_{\Kcal\Dcal}}"', from=3-2, to=3-4]
-	\arrow["\gamma"{description}, dashed, from=3-2, to=4-1]
-	\arrow["{j'}", from=4-1, to=1-2]
-	\arrow["{\es_{\Kcal'\Dcal}}"', curve={height=12pt}, from=4-1, to=3-4]
+	\Kcal && \Dcal
+	\arrow["\sigma", from=1-1, to=3-3]
+	\arrow["\gamma", from=3-1, to=1-1]
+	\arrow["\es"', from=3-1, to=3-3]
 \end{tikzcd}\]
 
 \end{document}
