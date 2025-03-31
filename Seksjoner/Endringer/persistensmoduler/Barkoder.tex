@@ -17,27 +17,59 @@ Anta at det ikke eksisterer en bijeksjon mellom $\Bcal$ og $\Ccal$ f.eks.
 
 I følge \cite{Bauer2015a} har vi følgende teorem
 \begin{teorem}\label{Thrm:thrm2.1}
-	Enhver p.e.d. persistensmodul er intervalldekomponerbar.
+Enhver p.e.d. persistensmodul er intervalldekomponerbar.
 \end{teorem}
 \begin{proof}
-	La $M$ være en p.e.d. peristensmodul. Mengden $I_n = \{s\in\Rbb\;\mid\;\dim M_s=n\}$ er en disjunkt union av intervaller $I_{n_1}\sqcup I_{n_2}\sqcup\dots$, vi kan la $C(I_{n_1}\sqcup I_{n_2}\sqcup\dots)=C(I_{n_1})\oplus C(I_{n_2})\oplus\dots$ og få
-	\[M\cong \bigoplus_{n,k\in\in\Nbb} C(I_{n_k}).\]
-	Da blir $\Bcal_M = \{I_{n_j}\;\mid\; n,j\in\Nbb\}$, en kan la $I_{n_j}=\es$ når den ikke påvirker unionen $I_n$. 
+La $M$ være en p.e.d. peristensmodul. Mengden $I_n = \{s\in\Rbb\;\mid\;\dim M_s=n\}$ er en disjunkt union av intervaller $I_{n_1}\sqcup I_{n_2}\sqcup\dots$, vi kan la $C(I_{n_1}\sqcup I_{n_2}\sqcup\dots)=C(I_{n_1})\oplus C(I_{n_2})\oplus\dots$ og få
+\[M\cong \bigoplus_{n,k\in\in\Nbb} C(I_{n_k}).\]
+Da blir $\Bcal_M = \{I_{n_j}\;\mid\; n,j\in\Nbb\}$, en kan la $I_{n_j}=\es$ når den ikke påvirker unionen $I_n$. 
 \end{proof}
 
-Barkoder kan også gjøres om til en kategori med morfier kalt overlapp-matchinger. For å definere en
-overlapp-matching må vi først definere hva en matching av mengder er.
+Barkoder kan også gjøres om til en kategori med morfier kalt overlapp-koblinger. For å definere en 
+overlapp-kobling må vi først definere hva det betyr at et intervall overlapper et annet intervall over og hva en parvis kobling av mengder er.
+\pagebreak
+\begin{definisjon}
+    Et intervall $I$ overlapper et annet intervall $J$ over (hhv. overlapper $J$  $I$ under) hvis følgende holder
+    \begin{itemize}
+        \item $I\cap J\neq\es$.
+        \item For enhver $s\in J$ eksisterer det en $t\in I$ slik at $t\leq s$. Vi sier at $I$ begrenser $J$ over.
+        \item For enhver $s\in I$ eksisterer det en $t\in J$ slik at $t\leq s$. Vi sier at $J$ begrenser $I$ under.
+    \end{itemize}
+\end{definisjon}
 
-\begin{definisjon}\label{def:Matching}
-  En matching mellom mengder $S$ og $T$ (skrevet $\sigma:S\to T$) er en bijeksjon $\sigma: S'\to T'$ mellom delmengder $S'\subset S$ og $T'\subset T$.
+\begin{definisjon}\label{def:Parvis-Kobling}
+  En parvis kobling mellom mengder $S$ og $T$ (skrevet $\sigma:S\to T$) er en bijeksjon $\sigma: S'\to T'$ mellom delmengder $S'\subset S$ og $T'\subset T$. Formelt er $\sigma\subset S\times T$ en relasjon slik at $(s,t)\in \sigma$ hvis og bare hvis $s\in S'$ og $\sigma(s)=t$. Komposisjonen av to parvis koblinger $\sigma: S\to T$ og $\tau: T\to U$ er definert som relasjonen
+  \[\tau\circ\sigma=\bset{(s,u)}{(s,t)\in \sigma, (t,u)\in \tau\;\;\text{for en $t\in T$}}\]
 \end{definisjon}
 
 \begin{definisjon}\label{def:OverlappMch}
-  En matching $\sigma: \Ccal\to \Dcal$ av barkoder er en overlapp-matching hvis gitt $\sigma(I)=J$ oppfylles
-  følgende:
-  \begin{itemize}
-    \item $I\cap J \neq \es$.
-    \item $I$ begrenser $J$ over.
-    \item $J$ begrenser $I$ under.
-  \end{itemize}
+  En parvis kobling $\sigma: \Ccal\to \Dcal$ av barkoder er en overlapp-kobling hvis gitt $\sigma(I)=J$ så overlapper $I$ $J$ over.
 \end{definisjon}
+
+Komposisjonen av overlapp-koblinger som parvis koblinger resulterer ikke alltid i en overlapp-kobling. Vi endrer komposisjonen på følgende måte 
+
+\begin{definisjon}\label{def:OK-Komp}
+    La $\sigma: \Bcal\to \Ccal$ og $\tau:\Ccal\to\Dcal$ være overlapp-koblinger. Komposisjonen blir da definert som
+    \[\tau\bullet\sigma = \bset{(I,J)\in\tau\circ\sigma}{\text{$I$ overlapper $J$}}\]
+    Her er $\tau\circ\sigma$ komposisjonen som parvis koblinger.
+\end{definisjon}
+
+\begin{proposisjon}{prop:ID-OK}
+For enhver barkode $\Dcal$ eksisterer det alltid en overlapp-kobling $\sigma:\Dcal\to\Dcal$ gitt ved $\sigma = \bset{(I,I)}{I\in\Dcal}$.
+\end{proposisjon}
+\begin{proof}
+Første punktet er å vise at $I\cap\sigma(I)\neq\es$. Dette er sant siden $\sigma(I)=I$ altså er $I\cap\sigma(I)=I\cap I$ som er lik $I\neq\es$. Andre punktet er å vise at $I$ overlapper seg selv over. Velg en $s\in I$ da har vi $s\leq s$ dermed begrenser $I$ seg selv over og under. Dette betyr at $\sigma$ er en overlapp-kobling.
+\end{proof}
+
+\begin{teorem}
+    Klassen av barkoder sammen med overlapp-koblinger skaper en kategori
+\end{teorem}
+\begin{proof}
+    Objektene er barkodene og morfiene er overlapp-koblingene. Vi lar identiteten til en barkode være overlapp-koblingen $\id_\Dcal:\Dcal\to\Dcal$ gitt i \bref{proposisjon}{prop:ID-OK} Komposisjonen er den definert i \bref{definisjon}{def:OK-Komp}. Vi må vise at $\bullet$ komposisjonen er assosiativ og respekterer identiteter.
+    
+    Vi starter med identitetene. La $\sigma: \Dcal\to\Ccal$ være en overlapp-kobling da har vi
+    \[\sigma\bullet\id_\Ccal = \bset{(I,J)\in\sigma\circ\id_\Ccal}{\text{$I$ overlapper $J$ over}}.\]
+    La $(I,J)\in \sigma\bullet\id_\Ccal$, Da eksisterer det en $K\in\Ccal$ slik at $(I,K)\in\id_\Ccal$ og $(K,J)\in\sigma$ og $I$ overlapper $J$ over. Siden $\id_\Ccal(I)=I$ så må $K=I$ altså er $\sigma(K)=\sigma(I)=J$, derfor har vi at $(I,J)\in\sigma$. Dette betyr at $\sigma\bullet\id_\Ccal\subset\sigma$ og gitt et par $(I,J)\in\sigma$ har vi paret $(I,I)\in\id_\Ccal$ slik at $J = \sigma(I) = \sigma\bullet\id_\Ccal(I)$ dermed har vi også at $\sigma\subset\sigma\bullet\id_\Ccal$ det vil si at $\sigma=\sigma\bullet\id_\Ccal$. På samme måte kan vi vise at $\sigma = \id_\Dcal\bullet\sigma$.
+
+    La $\sigma:\Bcal\to\Ccal$, $\tau:\Ccal\to\Dcal$ og $\psi:\Dcal\to\Ecal$. La $(I,K)$ være et par i komposisjonen $(\psi\bullet\tau)\bullet\sigma$. Dette betyr at det eksisterer et intervall $J\in\Ccal$ slik at $(I,J)\in\sigma$ og $(J,K)\in\psi\bullet\tau$ og at $I$ overlapper $K$ over. Siden $(J,K)\in\psi\bullet\tau$ må det også finnes et intervall $L\in\Dcal$ slik at $(J,L)\in\tau$ og $(L,K)\in\psi$ og $J$ må overlappe $K$ over. Fordi $(I,J)\in\sigma$ og $(J,L)\in\tau$ og siden $I$ overlapper $
+\end{proof}
