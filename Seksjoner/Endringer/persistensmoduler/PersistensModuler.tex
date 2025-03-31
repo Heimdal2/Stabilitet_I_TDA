@@ -1,0 +1,92 @@
+\section{Varighetsmoduler}
+
+% Når vi skal studere homologien filtrasjonene av topologiske rom og Čech-/Rips-komplekser er det gunstig å kunne samle alle vektorrommene gitt av homologiene av filtrasjonen av rommet.
+
+% For dette er det naturlig å bruke varighetsmoduler
+Et sentralt tema for å kunne forstå stabilitet og topologisk dataanalyse er ideen om varighetsmoduler. I dette kapitellet går vi gjennom en litt abstrakt introduksjon og så ser vi på hvorfor de er viktige innenfor topologisk dataanalyse. Definisjonen på en varighetsmodul er kort og enkel.
+
+\begin{definisjon}\label{Def:PersMod}
+    En varighetsmodul $M$ er en funktor $M:\Rbld\to\vect_k$.
+\end{definisjon}
+
+Vi skriver $M_t$ for vektorromet $M(t)$ (det $t$-ende vektorromet) for å unngå fremtidig forvirring.
+Siden en varighetsmodul $M$ er en funktor fra pomengden $\Rbld$ til $\vect_k$ så har vi for hver $s\leq t$ en lineær avbilding $\p_M(s,t): M_s\to M_t$ som vi kaller overgangsavbildinger.
+
+Gitt to varighetsmoduler $M$ og $N$ kan vi definere en morfi $f: M\to N$ som en samling av lineære avbildinger
+$\{f(s): M_s\to N_s\;|\; s\in\Rbb\}$ slik at diagrammet
+\[
+\begin{tikzcd}
+	{M_s} && {N_s} \\
+	\\
+	{M_t} && {N_t}
+	\arrow["{f(s)}", from=1-1, to=1-3]
+	\arrow["{\p_M(s,t)}", from=1-1, to=3-1]
+	\arrow["{\p_N(s,t)}", from=1-3, to=3-3]
+	\arrow["{f(t)}", from=3-1, to=3-3]
+\end{tikzcd}
+\]
+kommuterer. Vi kan komponere morfiene på den følgende måten; gitt morfier $f:M\to N$ og $g:M\to P$ er $g\circ f$
+definert som samlingen $\{g_s\circ f_s: M_s\to P_s\;|\;s\in\Rbb\}$.
+
+Siden vi har objekter, varighetsmoduler, og vi har morfier mellom dem kan vi definere kategorien av varighets moduler
+
+\begin{definisjon}\label{Def:KatPMod}
+    Kategorien $\vect_k^\Rbld$ er kategorien av varighetsmodulene med varighetsmodul-morfier mellom dem.
+\end{definisjon}
+
+Et eksempel på en særlig enkel, men viktig varighetsmodul er interval-varighetsmodulen definert som følgende.
+La $I\subset\Rbb$ være et intervall da definerer vi intervall-varighetsmodulen $C(I)$ som følger:
+
+\[C(I)_t = 
+\begin{cases}
+    k,\quad t\in I\\
+0,\quad\text{ellers}
+\end{cases}
+\]
+
+med overgangsavbildinger definert ved
+
+\[\p_{C(I)}(s,t) = 
+\begin{cases}
+id_k,\quad s,t\in I\\
+0, \quad\text{ellers}
+\end{cases}
+\]
+Denne varighetsmodulen er nyttig når vi skal definere barkoder snart.
+
+\subsection{Inflettingsavstand}
+Stabilitet av varighetsmoduler innebærer relasjonen mellom to typer distanser, Bottleneck distansen mellom barkoder
+og inflettingsavstanden mellom varighetsmoduler. Her definerer vi inflettingsavstanden mellom to varighetsmoduler.
+
+For å definere distansen må vi gjennom noen få steg.
+\begin{definisjon}\label{Def:DShift}
+	En $\delta$-forskyvning av en varighetsmodul er en funktor
+	\[(\cdot)(\delta): \Pers\to \Pers\]
+	Som tar en varighetsmodul $M$ til $M(\delta)$ hvor $M(\delta)_t = M_{t+\delta}$ og tar varighetsmodulmorfier $f:M\to N$ til $f(\delta):M(\delta)\to N(\delta)$.
+\end{definisjon}
+
+Denne funktorer gir oss konseptet av $\delta$-infletting.
+
+\begin{definisjon}\label{Def:infletting}
+	La $M$ og $N$ være varighetsmoduler. Vi sier at $M$ og $N$ er $\delta$-interleavet hvis det eksisterer varighetsmodulmorfier $f:M\to N(\delta)$ og $g:N\to M(\delta)$ slik at
+	\[g(\delta)\circ f = \p_M(t,t+2\delta),\quad f(\delta)\circ g = \p_N(t,t+2\delta)\]
+\end{definisjon}
+Vi kaller $\p^\eps_M(t) = \p_M(t,t+\eps)$. Bemerk at $\p^0_M=\id_M$ fordi $\p^0_M(t) = \p_M(t,t+0)=\p_M(t,t)=\id_M$.
+
+\begin{definisjon}\label{Def:label}
+	For $M$ og $N$ varighetsmoduler definerer vi inflettingsavstanden $d_I$ ved
+	\[d_I(M,N) = \inf\{\delta\in \ropen{0}{\infty}\mid \text{$M$ og $N$ er $\delta$-interleavet}\}\]
+\end{definisjon}
+Denne avstanden gir et tall på hvor "isomorfe" to varighetsmoduler er.
+
+\begin{proposisjon}\label{Cor:label}
+	For $M$ og $N$ varighetsmoduler så holder
+	\[d_I(M,N) = 0 \iff M\cong N\]
+\end{proposisjon}
+\begin{proof}
+	"$\implies$"\\\\
+	Hvis $d_I(M,N) = 0$ så finnes det en $0$-infletting mellom $M$ og $N$ altså det eksisterer varighetsmodulmorfier $f: M \to N(0)=N$ og $g: N\to M(0)=M$ slik at $g(0)\circ f = g\circ f = \p_M^0=\id_M$ og $f(0)\circ g = \p_N^0=\id_N$. Dermed er $f$ og $g$ inverser av hverandre og er dermed isomorfier.\\\\
+	"$\impliedby$"\\\\
+	Hvis $M\cong N$ så eksisterer det varighetsmodulmorfier $f:M\to N$ og $g:N\to M$ slik at $g\circ f = \id_M=\p_M^0$ og $f\circ g=\id_N=\p_N^0$. Så det eksisterer en $0$-infletting og dermed er $d_I(M,N) = 0$.
+\end{proof}
+

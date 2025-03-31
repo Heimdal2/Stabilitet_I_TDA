@@ -1,0 +1,82 @@
+\subsection{Topologiske rom}\label{Sec:Top}
+\begin{definisjon}\label{Def:TopRom}
+    Et par $(X,\Tcal)$ hvor $X$ er en mengde og $\Tcal\subset\Pcal(X)$ slik at 
+    \begin{itemize}
+        \item $X,\es\in\Tcal$
+        \item Gitt en vilkårelig samling av mengder $\{U_\alpha\}_{\alpha}$ så er $\bigcup_\alpha U_\alpha\in\Tcal$
+        \item For en endelig samling av mengder $\{U_1,\dots,U_n\}\in\Tcal$ så er snittet $U_1\cap\dots\cap U_n\in\Tcal$
+    \end{itemize}
+    Vi kaller mengden $\Tcal$ for topologien på $X$ og mengdene i $\Tcal$ for åpne mengder.
+\end{definisjon}
+
+Når topologien $\Tcal$ på en mengde $X$ er kjent eller ikke viktig lar vi være å skrive det topologiske rommet som et par $(X,\Tcal)$ og skriver bare $X$. Alle funksjoner mellom topologiske rom vil være kontinuerlige. Til slutt så vil et "rom" bety et topologisk rom.
+
+\begin{eksempel}\label{Ex:EukTRom}
+    Euklidisk rom $(\Rbld^n,\Tcal)$ er et topologisk rom med åpne mengder unioner av vilkårlig mange mengder av typen
+    \[\Bcal(x,\delta) = \{y\in\Rbld^n\;|\; \|x-y\|<\delta\}\]
+    kalt åpne baller. Euklidisk rom er som regel alltid bare skrevet $\Rbld^n$ siden det er den topologien på
+$\Rbld^n$ som er antatt.
+\end{eksempel}
+
+\begin{definisjon}\label{Def:KontFunk}
+    La $(X,\Tcal_X)$ og $(Y,\Tcal_Y)$ være topologiske rom. En funksjon $f: X\to Y$ er kalt kontinuerlig hvis for en hver \(V\in\Tcal_Y\) så er \(f^{-1}(V)\in\Tcal_X\).
+\end{definisjon}
+
+\begin{eksempel}\label{Ex:KontFunk}
+    La $f: \Rbld\to \Rbld$ være funksjonen $f(x)=2x+1$, da er $f$ kontinuerlig. La $V = (a,b)$ et opent intervall,
+da blir $f^{-1}(V) = \{x\in\Rbld\;|\;2x+1\in V\}=\bp{\frac{a}{2}-1,\frac{b}{2}-1}$ som også er et åpent intervall.
+\end{eksempel}
+
+\begin{definisjon}\label{Def:UnderTop}
+    La $(X,\Tcal)$ være et topologisk rom og la $A\subset X$ da er det en naturlig topologi $\Tcal_A$ vi kan sette på $A$ definert ved
+    \[U\in\Tcal_A \iff \exists\, V\in\Tcal\quad\text{s.a}\quad V\cap A = U\]
+    Vi kaller $(A,\Tcal_A)$ et underrom av $(X,\Tcal)$ og vi kaller $\Tcal_A$ underromstopologien på $A$.
+\end{definisjon}
+
+Når vi senere ser på punktskyer i $\Rbld^n$ og spesifkt simplisial kompleksene %\ref{Sec:SimpKomp}
+
+\subsection{Homotopi}\label{sec:Homotopi}
+\begin{definisjon}\label{Def:Homotopi}
+    La $X$ og $Y$ være topologiske rom og la $f,g: X\to Y$ være funksjoner. En homotopi mellom $f$ og $g$ er en funksjon
+    \[F: X\times[0,1]\to Y.\]
+    Slik at $F(x,0)=f(x)$ og $F(x,1)=g(x)$.
+    Hvis det eksisterer en homotopi mellom en funksjon $f$ og $g$ sier vi at de er homotope og vi skriver at $f\simeq g$.
+\end{definisjon}
+
+\begin{definisjon}\label{Def:HomotopiEkv}
+    To topologiske rom $X$ og $Y$ er homotopiekvivalente hvis det eksisterer funksjoner $f: X\to Y$ og $g: Y\to X$ slik at
+    \[g\circ f\simeq\id_X\quad f\circ g \simeq \id_Y\]
+\end{definisjon}
+
+
+
+\subsection{$\Delta$-Komplekser}\label{sec:SimpKomp}
+En måte å lage topologiske rom er å starte med enkle byggeklosser og lime dem sammen. Dette kan vi gjøre ved å bruke $n$-dimensjonale trekanter kalt $n$-simplekser.
+
+Definisjonene er fra \cite{Hatcher2002}
+
+\begin{definisjon}\label{Def:StndrdSimpKomp}
+    Standardsimplekset $\Delta^n$ er definert ved
+    \[\Delta^n = \{ \vct{x}\in\Rbld^{n + 1} \mid \sum_{i = 0}^{n + 1}x_i=1, x_i\geq 0\;\forall i=0,\dots,n\}\]
+\end{definisjon}
+
+En side på et $n$-simpleks er en $(n-1)$-simpleks.
+\begin{definisjon}\label{Def:Deltastrkt}
+    Et $\Delta$-kompleks struktur på et rom $X$ er en samling av kontinuerlige funksjoner $\sigma_\alpha: \Delta^n\to X$ med $n$ avhengig av $\alpha$ slik at:
+    \begin{enumerate}
+        \item Restriksjonen $\sigma_\alpha\mid\mathring{\Delta}^n$ er injektiv og hvert punkt i $X$ er i bildet av nøyaktig en slik Restriksjon.
+        \item Hver restriksjon av $\sigma_\alpha$ til en side av $\Delta^n$ er en av funksjonene $\sigma_\beta: \Delta^{n-1}\to X$
+        \item En mengde $A\subset X$ er åpen hvis og bare hvis $\sigma_\alpha^{-1}(A)$ er åpen for hver $\sigma_\alpha$.
+    \end{enumerate}
+\end{definisjon}
+Disse kriteriene gir oss en måte å lage forskjellige topologiske rom ved enkle byggeklosser.
+
+\begin{eksempel}[ex:SirkelDkomp]
+    Vi kan lage et $\Delta$ for sirkelen $S^1$ ved følgende:
+    \begin{itemize}
+        \item La $\sigma_0:\Delta^0=\{\ast\}\to S^1$ være en avbilding som sender $\ast$ til et punkt i $S^1$.
+        \item La $\sigma_1: \Delta^1\to X$ være avbildingen som sender $\partial \Delta^1$ til punktet $\sigma_0(\ast)$ og alle andre punkter $x\in\inter{\Delta}^1$ sendes injektiv til $S^1$.
+    \end{itemize}
+    Her er $\{\sigma_0,\sigma_1\}$ et $\Delta$-kompleks på $S^1$. Intuitivt kan en tenke på $\sigma_1$ som at man limer fast endepunktene til linjen som gir oss sirkelen.
+\end{eksempel}
+

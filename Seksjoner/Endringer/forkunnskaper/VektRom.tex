@@ -1,0 +1,58 @@
+\subsection{Vektorrom}\label{Sec:Vekt}
+For å definere hva et vektorrom er må vi først gå igjennom hva en kropp er.
+
+\begin{definisjon}\label{Def:Kropp}
+   En mengde $K$ sammen med binære operatorer $+,\cdot: K\times K\to K$ er en kropp hvis gitt $a,b,c\in K$ så holder det følgende
+   \begin{itemize}
+    \item $(a+b)+c = a+(b+c)$
+    \item $a+b = b+a$
+    \item $a\cdot(b+c)=a\cdot b + a\cdot c$
+    \item Det eksisterer et element $0\in K$ slik at $a+0=a=0+a$
+    \item Det eksisterer et element $1\in K$ slik at $a\cdot 1 = a = 1\cdot a$
+    \item Det eksisterer et element $-a\in K$ slik at $a+ (-a) = 0$
+    \item Det eksisterer et element $a^{-1}\in K$ slik at $a\cdot a^{-1}=1$.
+   \end{itemize} 
+\end{definisjon}
+Ofte lar vi være å skrive $a+(-b)$ og skriver heller $a-b$ vi lar også være å skrive $a\cdot b$ og skriver heller $ab$
+
+\begin{definisjon}\label{Def:Vektrom}
+    Et vektorrom $V$ over en kropp $K$ er en mengde med binære operatorer $+:V\times V\to V$ og $\cdot: K\times
+V\to V$, kalt skalarmultiplikasjon, slik at for elementer $\vct{u},\vct{v},\vct{w}\in V$ og $a,b,c\in K$ så holder det følgende
+    \begin{itemize}
+    \item $(\vct{u}+\vct{v})+\vct{w} = \vct{u}+(\vct{v}+\vct{w})$
+    \item $\vct{u}+\vct{v}=\vct{v}+\vct{u}$
+    \item Det eksisterer et element $\vct{0}\in V$ slik at $\vct{u}+\vct{0}=\vct{u}=\vct{0}+\vct{u}$
+    \item Det eksisterer et element $-\vct{u}\in V$ slik at $\vct{u}+(-\vct{u})=\vct{0}$
+    \item $(a+b)\cdot \vct{u} = a\cdot \vct{u} + b\cdot \vct{u}$
+    \item $a\cdot(\vct{u}+\vct{v}) = a\cdot \vct{u} + a\cdot \vct{v}$
+    \item $a\cdot (b\cdot \vct{u}) = (ab)\cdot \vct{u}$.
+    \end{itemize}
+    Vi kaller elementer $\vct{v}\in V$ for vektorer og elementer $a\in K$ for skalarer.
+\end{definisjon}
+Igjen skriver vi ofte $\vct{v}+(-\vct{u})$ som $\vct{v}-\vct{u}$ og $a\cdot \vct{v}$ som $a\vct{v}$.
+
+\begin{definisjon}\label{Def:LinAvb}
+    La $V$ og $W$ være vektorrom over en kropp $K$ og la $f: V\to W$ være en funksjon. Vi kaller $f$ lineær hvis
+for vektorer $\vct{u},\vct{v}\in V$ og en skalar $a\in K$ så holder det følgende
+    \begin{itemize}
+    \item $f(\vct{u}+\vct{v}) = f(\vct{u})+f(\vct{v})$
+    \item $f(a\vct{v}) = af(\vct{v})$
+    \end{itemize}
+    Vi kaller også slike funksjoner lineære avbildinger/transformasjoner/funksjoner
+\end{definisjon}
+
+\begin{eksempel}\label{Ex:EukVRom}
+    Rommet $V = \Rbb^n$ over kroppen $\Rbb$ er et vektorrom med punktvis addisjon, og skalarmultiplikasjon
+    \[(a_1,\dots,a_n)+(b_1,\dots,b_n) = (a_1+b_1,\dots,a_n+b_n)\]
+    og
+    \[c(a_1,\dots,a_n)=(ca_1,\dots,ca_n).\]
+\end{eksempel}
+
+\begin{eksempel}\label{Ex:label}
+    funksjonen $f:\Rbb^2\to\Rbb^2$ definert ved $f(\vct{v}) = 2\vct{v}$ er lineær siden gitt $\vct{u},\vct{v}\in V$
+og $a\in\Rbb$ så er
+    \begin{itemize}
+        \item $f(\vct{u}+\vct{v}) = 2(\vct{u}+\vct{v}) = 2\vct{u}+2\vct{v} = f(\vct{u})+f(\vct{v})$
+        \item $f(a\vct{v}) = 2(a\vct{v}) = (2a)\vct{v} = (a\cdot2)\vct{v} = af(\vct{v})$
+    \end{itemize}
+\end{eksempel}

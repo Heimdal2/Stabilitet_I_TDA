@@ -243,6 +243,14 @@ Et samlende rammeverk i matematikk er en vanskelig oppgave å få laget, men et 
     \[f\circ\id_A = f,\quad \id_B\circ f = f.\]
 \end{definition}
 
+\begin{remark}\label{rem:smaakat}
+  Objektene og morfiene til noen kategorier som f.eks. $\Set$ som
+  vi senere snakker raskt om kan ikke være inneholdt i det vi
+  kaller mengder og er heller elementer av en klasse. Vi kaller
+  kategorier hvor objektene og morfiene er elementer av en mengde
+  små kategorier eller at en kategori er liten. Disse kategoriene kommer til å bli brukt senere i definisjonen på et diagram.
+\end{remark}
+
 I en kategori er det noen spesielle morfier som kalles isomorfier.
 \begin{definition}\label{Def:Iso}
     En isomorfi i en kategori $\Ccal$ er en morfi $f:A\to B$ mellom to objekter $A,B\in\ob(\Ccal)$ hvor det eksisterer en morfi $g:B\to A$ slik at følgende holder
@@ -285,11 +293,47 @@ Morfiene i en kategori trenger ikke å være funksjoner, her er et eksempel på 
     Kategorien $\Rbold$ har de reelle tall $\R$ som objekter og $\leq$ relasjonen som morfier. Komposisjon er gitt ved transitivitet og identitetsmorfiene er gitt ved $s=s$. Identitetsmorfiene er også de eneste isomorfiene fordi hvis $a\leq b$ er en isomorfi så er $b\leq a$ dens invers, men hvis $a\leq b$ og $b\leq a$ så er $a=b$. Her er alle morfier epimorfier og monomorfier.
 \end{example}
 
-En flott ting med kategoriteori formuleringen av forskjellige strukturer er at en kan studere en kategori ved hjelp av en annen kategori
+\begin{remark}\label{rem:OpKat}
+  Gitt en kategori $\Ccal$ eksisterer det en kategori $\op{\Ccal}$
+  kalt den omvendte kategorien av $\Ccal$ med de samme objektene,
+  men med alle morfiene snudd andre vei.
+\end{remark}
+
+I noen kategorier er det spesielle objekter kalt initialobjekt og
+terminalobjekter.
+
+\begin{definition}\label{def:InitOb}
+  I en kategori $\Ccal$ er et initialobjekt $I$ et objekt
+  slik at for ethvert objekt $A\in\Ccal$ eksisterer det en unik
+  morfi $I\to A$.
+\end{definition}
+
+\begin{definition}\label{def:TermOb}
+  I en kategori $\Ccal$ er et terminalobjekt $T$ et
+  objekt slik at for ethvert objekt $A\in\Ccal$ det eksisterer en
+  unik morfi $T\to A$.
+\end{definition}
+
+Et objekt som er både initial og terminal er kalt et nullobjekt 
+
+En flott ting med kategoriteori formuleringen av forskjellige
+strukturer er at en kan studere en kategori ved hjelp av en annen
+kategori.
 
 \begin{definition}\label{Def:Funktor}
     La $\Ccal$ og $\Dcal$ være kategorier en funktor $F:\Ccal\to\Dcal$ er funksjoner $\ob(\Ccal)\to\ob(\Dcal)$ og $\hom(\Ccal)\to \hom(\Dcal)$ slik at for morfier $f: A\to B$ og $g: B\to C$ i $\Ccal$ så er $F(f): F(A)\to F(B)$, $F(g\circ f) = F(g)\circ F(f)$ og for ethvert objekt $A\in\ob(\Ccal)$ så er $F(\id_A)=\id_{F(A)}$.
 \end{definition}
+
+\begin{definition}\label{def:KontraFunktor}
+  En funktor på formen $F:\op{\Ccal}\to\Dcal$ eller
+  $F:\Ccal\to\op{\Dcal}$ er kalt en kontravariant funktor fra
+  $\Ccal$ til $\Dcal$.
+\end{definition}
+
+Ofte skriver vi bare $F:\Ccal\to\Dcal$ for en kontravariant
+funktor og sier at den er kontravariant. En funktor som ikke er
+kontravariant kalles også ofte kovariant, men også bare for en
+funktor.
 
 \begin{remark}\label{Rem:FunktorIso}
     Gitt en funktor $F:\Ccal\to\Dcal$ og en isomorfi $f:A\to B$ i $\Ccal$ så er $F(f)$ en isomorfi i $\Dcal$. Siden $f$ er en isomorfi så eksisterer det en $g: B\to A$ med egenskapene i \bref{Definisjon}{Def:Iso}. Dette gir 
@@ -297,13 +341,23 @@ En flott ting med kategoriteori formuleringen av forskjellige strukturer er at e
     På samme måte får vi $F(f\circ g) = \id_{F(B)}$. Dermed blir $F(g)$ en invers av $F(f)$ som betyr at den er en isomorfi.
 \end{remark}
 
-\begin{example}\label{Ex:label}
+\begin{example}\label{Ex:DiskFunkt}
     Vi kan definere en funktor $F:\Set\to\Top$ som setter den diskrete topologien på en mengde $X$, her blir alle funksjoner $f: X\to Y$ sendt til $F(f)=f:(X,\Pcal(X))\to (Y,\Pcal(Y))$, den er kontinuerlig siden for enhver delmengde $A\in \Pcal(Y)$ så er $f^{-1}(A)\in\Pcal(X)$.
 \end{example}
 På samme måte har vi en funktor $F:\Set\to\Top$ som setter den trivielle topologien på en mengde og bevarer funksjonene.
 
 \begin{example}\label{Ex:Glemmefunktor}
     Vi har også en funktor $F:\Top\to\Set$ definert ved $F((X,\Tcal)) = X$ og $F(f:(X,\Tcal)\to (Y,\Tcal')) = f: X\to Y$. Denne funktoren kaller vi for glemmefunktoren siden den glemmer all struktur til rommet. En kan også gjøre dette for andre kategorier som $\Vect_K$ og $\Rbold$.
+\end{example}
+
+\begin{example}\label{ex:Homfunkt}
+  Et eksempel på en kontravariant funktor er
+  $\Hom(\cdot,W):\Vect_K\to\Vect_K$ som sender et vektorrom
+  $V\in\Vect_K$ til vektorrommet $\Hom(V,W)$ av lineære
+  avbildinger $V\to W$ og den sender lineære avbildinger $T:U\to
+  V$ til $\Hom(T,W):\Hom(V,W)\to\Hom(U,W)$ via
+  $\Hom(T,W)(g)=g\circ T$ for en $g:V\to W$. Her kan man se at
+  funktoren snur på morfien som gjør den kontravariant.
 \end{example}
 
 En kan også definere en pil mellom to funktorer
@@ -324,6 +378,122 @@ Disse to tingene gir oss en ny type kategori
 
 \begin{definition}\label{Def:FunkKat}
     For kategorier $\Ccal$ og $\Dcal$ er kategorien $\Ccal^\Dcal$, med funktorer $F:\Ccal\to \Dcal$ som objekter og naturlige transformasjoner som morfier, kalt en funktorkategori
+\end{definition}
+
+Kategorier er ofte ekstremt store og ofte er vi bare interessert
+i noen få objekter og morfier i kategorien. Derfor kan vi sette
+opp et \nord{diagram}.
+
+\begin{definition}\label{def:Diagram}
+  La $\Jcal$ være en liten kategori. Et diagram av form $\Jcal$
+  i en kategori $\Ccal$ er en funktor $D:\Jcal\to\Ccal$.
+\end{definition}
+Dette er ikke en intuitiv definisjon, men diagrammer er ikke så
+farlige som en skal tro her er noen illustrative eksempler
+
+\begin{example}\label{ex:Diag1}
+  Her er en illustrasjon som viser hvordan formen på kategorien
+  $\Jcal$ gir et diagram i en kategori $\Ccal$
+
+  \[\begin{tikzcd}
+	& \Jcal &&&&&& \Ccal \\
+	\\
+	1 && 2 &&&& A && B \\
+	&&&& {\stackrel{D}{\implies}} \\
+	3 && 4 &&&& C && D
+	\arrow["{\id_1}", from=3-1, to=3-1, loop, in=100, out=170, distance=10mm]
+	\arrow["a", from=3-1, to=3-3]
+	\arrow["d", from=3-1, to=5-1]
+	\arrow["{\id_2}", from=3-3, to=3-3, loop, in=10, out=80, distance=10mm]
+	\arrow["b", from=3-3, to=5-3]
+	\arrow["{\id_A}", from=3-7, to=3-7, loop, in=100, out=170, distance=10mm]
+	\arrow["f", from=3-7, to=3-9]
+	\arrow["i", from=3-7, to=5-7]
+	\arrow["{\id_B}", from=3-9, to=3-9, loop, in=10, out=80, distance=10mm]
+	\arrow["g", from=3-9, to=5-9]
+	\arrow["{\id_3}", from=5-1, to=5-1, loop, in=190, out=260, distance=10mm]
+	\arrow["c", from=5-1, to=5-3]
+	\arrow["{\id_4}", from=5-3, to=5-3, loop, in=280, out=350, distance=10mm]
+	\arrow["{\id_C}", from=5-7, to=5-7, loop, in=190, out=260, distance=10mm]
+	\arrow["h", from=5-7, to=5-9]
+	\arrow["{\id_D}", from=5-9, to=5-9, loop, in=280, out=350, distance=10mm]
+\end{tikzcd}\]
+
+Funktoren $D$ sender $1$ til $A$, $2$ til $B$ osv. Siden $D$ er en funktor
+  sender den $\id_1$ til $\id_{D(1)}=\id_A$ osv. Funktoren sender
+  morfiene til de naturlige morfiene.
+\end{example}
+
+\begin{example}\label{ex:Diag2}
+  I dette eksempelet er $\Jcal$ trekantformet, dette gir
+  diagrammet $D:\Jcal\to\Ccal$
+
+  \[\begin{tikzcd}
+	& \Jcal &&&&& \Ccal \\
+	\\
+	1 && 2 &&& A && B \\
+	&&&& {\stackrel{D}{\implies}} \\
+	&& 3 &&&&& C
+	\arrow["{\id_1}", from=3-1, to=3-1, loop, in=100, out=170, distance=10mm]
+	\arrow["a", from=3-1, to=3-3]
+	\arrow["c", from=3-1, to=5-3]
+	\arrow["{\id_2}", from=3-3, to=3-3, loop, in=10, out=80, distance=10mm]
+	\arrow["b", from=3-3, to=5-3]
+	\arrow["{\id_A}", from=3-6, to=3-6, loop, in=100, out=170, distance=10mm]
+	\arrow["f", from=3-6, to=3-8]
+	\arrow["h", from=3-6, to=5-8]
+	\arrow["{\id_B}", from=3-8, to=3-8, loop, in=10, out=80, distance=10mm]
+	\arrow["g", from=3-8, to=5-8]
+	\arrow["{\id_3}", from=5-3, to=5-3, loop, in=280, out=350, distance=10mm]
+	\arrow["{\id_C}", from=5-8, to=5-8, loop, in=280, out=350, distance=10mm]
+\end{tikzcd}\]
+
+Funktoren $D$ sender $1$ til $A$, $2$ til $B$ og $3$ til $C$ og
+  morfiene blir sendt til de naturlig morfiene.
+\end{example}
+Vi pleier aldri å faktisk tegne opp $\Jcal$ og funktoren $D$
+definisjonen er bare nødvendig for å være presis. Objektenes
+identiteter er alltid tilstede i et diagram, men det er kjedelig
+å tegne og kan gjøre diagrammet rotete, derfor lar vi være å tegne
+identitetspilen til objektene med mindre de er nødvendige.
+
+Siden enhver kategori har en omvendt kategori kan vi lage omvendt
+diagrammer ved en kontravariant funktor $F:\Jcal\to\Ccal$
+
+Vi bruker diagrammer hele tiden i matematikk og spesielt et type
+diagram kalt et kommutativt diagram
+
+\begin{definition}\label{def:KomDiag}
+Et diagram $D:\Jcal\to\Ccal$ er kalt kommutativt hvis alle morfier
+som starter med samme objekt og slutter på samme objekt er like.
+\end{definition}
+
+I \bref{eksempel}{ex:Diag1} er diagrammet kommutativt hvis $g\circ
+f = h\circ i$ og i \bref{eksempel}{ex:Diag2} er diagrammet
+kommutativt hvis $h=g\circ f$.
+
+Ved hjelp av kommutative diagrammer kan vi definere det vi kaller
+det kategoriske produktet skrevet $A\times B$ for to objekter i en
+kategori. Her er definisjonen
+
+\begin{definition}\label{def:Prod}
+  For objekter $A,B$ i en kategori $\Ccal$ er produktet (hvis det
+  eksisterer) et objekt $A\times B\in\Ccal$ sammen med morfier
+  $\pi_1: A\times B\to A$ og $\pi_2: A\times B\to B$ slik at for
+  ethvert objekt $X\in\Ccal$ og morfier $f_1:X\to A$ og $f_2:X\to
+  B$ eksisterer det en unik morfi $\lngl f_1,f_2\rngl: X\to
+  A\times B$ slik at diagrammet
+  \[\begin{tikzcd}
+	&& X \\
+	\\
+	A && {A\times B} && B
+	\arrow["{f_2}"', from=1-3, to=3-1]
+	\arrow["{\lngl f_1,f_2\rngl}"{description}, from=1-3, to=3-3]
+	\arrow["{f_2}", from=1-3, to=3-5]
+	\arrow["{\pi_1}"', from=3-3, to=3-1]
+	\arrow["{\pi_2}", from=3-3, to=3-5]
+\end{tikzcd}\]
+kommuterer.
 \end{definition}
 
 \subsection{Simplisialhomologi}\label{Sec:Homologi}

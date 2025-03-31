@@ -1,0 +1,95 @@
+\subsection{Relasjoner og ordensrelasjoner}
+Noe som kommer til å være viktig gjennom oppgaven er relasjoner og spesielt ordensrelasjoner.
+\begin{definisjon}\label{Def:label}
+    En relasjon $R$ på en mengde $A$ er en undermengde av $A\times A$.
+\end{definisjon}
+Når et element $a\in A$ er relatert til et element $b\in A$ via en relasjon $R\subset A\times A$ skriver vi ofte $aRb$.
+
+Noen egenskaper relasjoner kan ha er følgende:
+
+For en relasjon $R\subset A\times A$, kan den ha
+\begin{itemize}
+    \item Refleksivitet: Alle elementer i $A$ er relaterte til seg selv.
+    \item Symmetri: Hvis $a$ er relatert til $b$ så er $b$ relatert til $a$.
+    \item Transitivitet: Hvis $a$ er relatert til $b$ og $b$ er relatert til $c$ så er $a$ relatert til $c$.
+    \item Antisymmetri: Hvis $a$ er relatert til $b$ og $b$ er relatert til $a$ så er $a=b$.
+    \item Strengt sammenhengendhet: $a$ er relatert til $b$ eller $b$ er relatert til $a$.
+    \item Asymmetri: Hvis $a$ er relatert til $b$ så er aldri $b$ relatert til $a$.
+    \item Irrefleksivitet: Ingen elementer er relatert til seg selv.
+\end{itemize}
+
+\begin{eksempel}\label{Ex:LikRel}
+    For en mengde $A$ er likhet $=$ en relasjon som er refleksiv, symmetrisk og transitiv
+\end{eksempel}
+
+\begin{eksempel}\label{Ex:MinLikRel}
+    Mindre enn eller lik $\leq$ på $\Rbb$ er refleksiv, symmetrisk, transitiv, og antisymmetrisk. Samme er sant for større enn eller likhetstegnet.
+\end{eksempel}
+
+Noen typer relasjoner som likhetstegnet og mindre enn eller likhetstegnet har samme egenskaper og brukes såpass ofte at de får sine egne navn
+
+\begin{definisjon}\label{Def:EkvivRel}
+    En relasjon er kalt en ekvivalensrelasjon hvis den er refleksiv, symmetrisk og transitiv.
+\end{definisjon}
+
+En annen type relasjon er ordensrelasjoner. Det er en slik relasjon $\leq$ er. ordensrelasjoner kommer i mange former her er de tre største
+
+\begin{definisjon}\label{Def:Preord}
+    En preorden er en relasjon som er refleksiv og som er transitiv. En mengde med en preordensrelasjon er kalt en "preordnet mengde" "promengder."
+\end{definisjon}
+
+\begin{definisjon}\label{Def:Partord}
+    En delvis orden er en preorden som også er antisymmetrisk. En mengde med en delvis ordensrelasjon er kalt en "devis ordnet mengde" ofte forkortet til "pomengde" fra det engelske ordet "partial order".
+\end{definisjon}
+
+Tilslutt har vi en total orden
+
+\begin{definisjon}\label{Def:Totord}
+    En total orden er en delvis orden som også er strengt sammenhengende. En mengde med en total orden er en kalt en "totalt ordnet mengde."
+\end{definisjon}
+
+\begin{definisjon}\label{Def:Strengord}
+    En relasjon er en streng ordensrelasjon hvis den er assymmetrisk, irrefleksiv og transitiv.
+\end{definisjon}
+
+\begin{bemerk}\label{Rem:OrdRelHiriarki}
+Per definisjon er alle total ordensrelasjoner en delvis orden og alle delvis ordensrelasjoner er en preordensrelasjon.
+\end{bemerk}
+
+\begin{bemerk}\label{Rem:Strengord}
+    Delvis ordensrelasjoner induserer en streng orden ved relasjonen $<$ på følgende måte for en delvis ordensrelasjoner $\leq$
+    \[a<b \text{ hvis og bare hvis } a\leq b \text{ og } a\neq b.\]
+    Denne type streng orden bruker vi nå hvor ordensrelasjonene med $\leq$ vil være delvis ordner, mens ordensrelasjonene med $<$ vil være strenger ordner.
+\end{bemerk}
+
+Et viktig eksempel for denne oppgaven er den leksikografiske ordenen.
+
+\begin{eksempel}\label{Ex:LeksOrd}
+    For delvis ordnede mengder $A$ med orden $\leq_A$ og $B$ med orden $\leq_B$ kan vi sette den følgende ordenen $\leq$ på $A\times B$ ved å la $(a,b)\leq (a',b')$ hvis og bare hvis $a<_A a'$ eller hvis $a=a'$ og $b\leq_B b'$. 
+\end{eksempel}
+
+\begin{proposisjon}\label{prop:LeksOrd}
+    Den leksikografiske ordenen er en delvis orden.
+\end{proposisjon}
+\begin{proof}
+    La $A$ og $B$ være delvis ordnede mengder med ordner $\leq_A$ og $\leq_B$ hhv. og la $\leq$ være den leksikografiske ordnen på $A\times B$. 
+
+    \textbf{Refleksivitet}\\
+    Refleksivitet er sant for gitt $(a,b)\in A\times B$ så er $a=a$ og $b\leq_B b$ ved \bref{definisjon}{Def:Partord}, dermed er $(a,b)\leq (a,b)$.
+
+    \textbf{Transitivitet}\\
+    La $(a,b)\leq (a',b')$ og $(a',b')\leq (a'',b'')$. Enten så er $a<_A a'$ eller er $a=a'$ og $b\leq_B b'$, vi ser på disse tilfellene individuelt.\\\\
+    "$a<_A a'$": Siden $(a',b')\leq (a'',b'')$ har vi at $a'<_A a''$ eller $a'=a''$ og $b'\leq_B b''$. 
+    Hvis $a'<_A a''$ har vi ved transitivitet $a<_A a''$ og hvis $a'=a''$ og $b'\leq_B b''$ så har vi at $a<_A a''$.\\\\
+    "$a=a'$ og $b\leq b'$": Likt som over, siden $(a',b')\leq (a'',b'')$ så er $a'<_A a''$ eller $a'=a''$ og $b'\leq_B b''$. Hvis $a'<_A a''$ har vi at $a=a'$ som betyr at $a<_A a''$. Hvis $a'=a''$ og $b'\leq_B b''$ så har vi at $a=a'$ og $a'=a''$ så ved transitivitet av $=$ så er $a=a''$, ved transitivitet av $\leq_B$, siden $b\leq_B b'$ og $b'\leq_B b''$ så er $b'\leq_B b''$.\\
+
+    \textbf{Antisymmetri}\\
+    Til slutt må en vise at hvis $(a,b)\leq(a',b')$ og $(a',b')\leq (a,b)$ så er $(a,b)=(a',b')$.
+    Dette gjør vi ved et kontrapositivt bevis. Anta at $(a,b)\neq (a',b')$, da viser vi at $(a,b)\not\leq (a',b')$ eller $(a',b')\not\leq (a,b)$.
+    Siden $(a,b)\neq (a',b')$ så er $a\neq a$ som betyr at hvis $(a,b)\leq (a',b')$ må dette være fordi $a<_A a'$, men da kan ikke $a'<_A a$ ved antisymmetri av $\leq_A$ altså er $(a',b')\leq (a,b)$ og på samme måte kan ikke $(a,b)\leq (a',b')$ hvis $(a',b')\leq (a,b)$.
+
+    %Her bryter vi også opp beviset i deler. Siden $(a,b)\leq (a',b')$ så er $a\leq_A a'$ eller $a=a'$ og $b\leq_B b'$.\\\\
+    %"$a\leq_A a'$": Siden $(a',b')\leq (a,b)$, er $a'\leq_A a$ eller $a'=a$ og $b'\leq_B b$. For begge tilfellene er $a=a'$, hvis $a'\leq_A a$ så er $a=a'$ ved antisymmetri, det andre tilfellet er automatisk sant. Siden $a=a'$ så må $b'\leq_B b$, men siden
+\end{proof}
+
+Ordensrelasjoner gir oss en rekkefølge på elementer i mengden. 

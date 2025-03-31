@@ -1,0 +1,43 @@
+\section{Barkoder}
+En barkode $\Bcal$ er en representasjon av en multimengde av intervaller. Elementer i en barkode er dermed par
+$(I,k)$ der $I$ er et intervall og $k\in\Nbb$. Ofte når indeksen $k$ ikke er nødvendig skriver vi bare $I$ for et intervall i barkoden.
+
+I \cite{Bauer2015a} sier forfatter at gitt en persistensmodul $M$ som kan skrives
+\[M\cong\bigoplus_{I\in\Bcal_M}C(I)\]
+Da er $\Bcal_M$ unikt bestemt. Vi kaller slike persistensmoduler intervalldekomponerbare.
+
+Dette er en konsekvens av følgende teorem
+
+\begin{teorem}\label{Thrm:label}
+    Hvis $\bigoplus_{I\in\Bcal}C(I)\cong\bigoplus_{J\in\Ccal} C(J)$ så er $\Bcal\cong\Ccal$
+\end{teorem}
+\begin{proof}
+Anta at det ikke eksisterer en bijeksjon mellom $\Bcal$ og $\Ccal$ f.eks. 
+\end{proof}
+
+I følge \cite{Bauer2015a} har vi følgende teorem
+\begin{teorem}\label{Thrm:thrm2.1}
+	Enhver p.e.d. persistensmodul er intervalldekomponerbar.
+\end{teorem}
+\begin{proof}
+	La $M$ være en p.e.d. peristensmodul. Mengden $I_n = \{s\in\Rbb\;\mid\;\dim M_s=n\}$ er en disjunkt union av intervaller $I_{n_1}\sqcup I_{n_2}\sqcup\dots$, vi kan la $C(I_{n_1}\sqcup I_{n_2}\sqcup\dots)=C(I_{n_1})\oplus C(I_{n_2})\oplus\dots$ og få
+	\[M\cong \bigoplus_{n,k\in\in\Nbb} C(I_{n_k}).\]
+	Da blir $\Bcal_M = \{I_{n_j}\;\mid\; n,j\in\Nbb\}$, en kan la $I_{n_j}=\es$ når den ikke påvirker unionen $I_n$. 
+\end{proof}
+
+Barkoder kan også gjøres om til en kategori med morfier kalt overlapp-matchinger. For å definere en
+overlapp-matching må vi først definere hva en matching av mengder er.
+
+\begin{definisjon}\label{def:Matching}
+  En matching mellom mengder $S$ og $T$ (skrevet $\sigma:S\to T$) er en bijeksjon $\sigma: S'\to T'$ mellom delmengder $S'\subset S$ og $T'\subset T$.
+\end{definisjon}
+
+\begin{definisjon}\label{def:OverlappMch}
+  En matching $\sigma: \Ccal\to \Dcal$ av barkoder er en overlapp-matching hvis gitt $\sigma(I)=J$ oppfylles
+  følgende:
+  \begin{itemize}
+    \item $I\cap J \neq \es$.
+    \item $I$ begrenser $J$ over.
+    \item $J$ begrenser $I$ under.
+  \end{itemize}
+\end{definisjon}
