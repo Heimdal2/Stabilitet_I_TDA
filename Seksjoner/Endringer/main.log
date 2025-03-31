@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.3.2)  29 MAR 2025 14:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.3.2)  31 MAR 2025 07:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -715,6 +715,24 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 
 (./main.aux
 
+LaTeX Warning: Label `Sec:Vekt' multiply defined.
+
+
+LaTeX Warning: Label `Def:Kropp' multiply defined.
+
+
+LaTeX Warning: Label `Def:Vektrom' multiply defined.
+
+
+LaTeX Warning: Label `Def:LinAvb' multiply defined.
+
+
+LaTeX Warning: Label `Ex:EukVRom' multiply defined.
+
+
+LaTeX Warning: Label `Ex:label' multiply defined.
+
+
 LaTeX Warning: Label `Def:label' multiply defined.
 
 
@@ -870,13 +888,13 @@ Overfull \hbox (5.57796pt too wide) detected at line 211
  []
 
 [11])) (./persistensmoduler/PersistensModuler.tex
-Overfull \hbox (18.8341pt too wide) in paragraph at lines 58--60
+Overfull \hbox (18.8341pt too wide) in paragraph at lines 37--39
 \OT1/cmr/m/n/10 Bot-tle-neck dis-tansen mel-lom barkoder og in-flet-tingsav-s-t
 anden mel-lom varighetsmod-
  []
 
-[12]
-Overfull \hbox (5.03958pt too wide) in paragraph at lines 64--66
+
+Overfull \hbox (5.03958pt too wide) in paragraph at lines 43--45
 \OT1/cmr/m/it/10 Som tar en varighetsmodul $\OML/cmm/m/it/10 M$ \OT1/cmr/m/it/1
 0 til $\OML/cmm/m/it/10 M\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^N\OT1/cmr/m/n/10 )
 $ \OT1/cmr/m/it/10 hvor $\OML/cmm/m/it/10 M\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^
@@ -884,26 +902,27 @@ N\OT1/cmr/m/n/10 )[] = \OML/cmm/m/it/10 M[]$ \OT1/cmr/m/it/10 og tar varighetsm
 odul-
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 87--91
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 87--91
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 66--70
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--91
+Underfull \hbox (badness 10000) in paragraph at lines 66--70
 
  []
 
-) (./persistensmoduler/Barkoder.tex [13]
 
-Package natbib Warning: Citation `Bauer2015a' on page 14 undefined on input lin
+Underfull \hbox (badness 10000) in paragraph at lines 66--70
+
+ []
+
+) (./persistensmoduler/Barkoder.tex
+
+Package natbib Warning: Citation `Bauer2015a' on page 13 undefined on input lin
 e 5.
 
+[13]
 
 Package natbib Warning: Citation `Bauer2015a' on page 14 undefined on input lin
 e 18.
@@ -916,52 +935,40 @@ Package natbib Warning: There were undefined citations.
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: DFAD7CD55D42F27DF2597A8C93DEB155;1080
-(rerunfilecheck)             After:  BD252297953FA982895CFED3E64940CC;1174.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: BD252297953FA982895CFED3E64940CC;1174.
  ) 
 Here is how much of TeX's memory you used:
- 23610 strings out of 478287
- 454834 string characters out of 5849290
- 740674 words of memory out of 5000000
- 41286 multiletter control sequences out of 15000+600000
+ 23609 strings out of 478287
+ 454822 string characters out of 5849290
+ 740748 words of memory out of 5000000
+ 41287 multiletter control sequences out of 15000+600000
  479898 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  100i,17n,104p,513b,1072s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{eksempel.0.6.9} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{eksempel.0.6.8} has been referenced but does not ex
-ist, replaced by a fixed one
-
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf/fonts/type1/public/cm-su
-per/sfrm1000.pfb>
-Output written on main.pdf (14 pages, 266272 bytes).
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf/fonts/type1/public/cm-
+super/sfrm1000.pfb>
+Output written on main.pdf (14 pages, 265356 bytes).
 PDF statistics:
  303 PDF objects out of 1000 (max. 8388607)
  246 compressed objects within 3 object streams
- 97 named destinations out of 1000 (max. 500000)
- 85 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 95 named destinations out of 1000 (max. 500000)
+ 93 words of extra memory for PDF output out of 10000 (max. 10000000)
 
