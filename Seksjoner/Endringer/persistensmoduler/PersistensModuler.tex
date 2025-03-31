@@ -33,6 +33,7 @@ Siden vi har objekter, varighetsmoduler, og vi har morfier mellom dem kan vi def
 \begin{definisjon}\label{Def:KatPMod}
     Kategorien $\vect_k^\Rbld$ er kategorien av varighetsmodulene med varighetsmodul-morfier mellom dem.
 \end{definisjon}
+
 \subsection{Inflettingsavstand}
 Stabilitet av varighetsmoduler innebærer relasjonen mellom to typer distanser, Bottleneck distansen mellom barkoder
 og inflettingsavstanden mellom varighetsmoduler. Her definerer vi inflettingsavstanden mellom to varighetsmoduler.
@@ -52,13 +53,37 @@ Denne funktorer gir oss konseptet av $\delta$-infletting.
 \end{definisjon}
 Vi kaller $\p^\eps_M(t) = \p_M(t,t+\eps)$. Bemerk at $\p^0_M=\id_M$ fordi $\p^0_M(t) = \p_M(t,t+0)=\p_M(t,t)=\id_M$.
 
-\begin{definisjon}\label{Def:label}
+\begin{definisjon}\label{def:UtPsMet}
+   En utvidet pseudometrikk på en klasse $X$ er en
+   funksjon $d: X\times X\to [0,\infty]$ med følgende
+   egenskaper:
+   \begin{itemize}
+     \item $d(x,x) = 0$ for enhver $x\in X$,
+     \item $d(x,y) = d(y,x)$ for enhver $x,y\in X$
+     \item $d(x,z) \leq d(x,y) + d(y,x)$ for enhver
+       $x,y,z\in X$ slik at $d(x,y),d(y,z)\leq\infty$.
+   \end{itemize}
+\end{definisjon}
+
+Forskjellen på en utvidet pseudometrikk og en metrikk er
+at det kan være to elementer $x,y\in X$ slik at $x\neq y$,
+men $d(x,y)=0$ i motsetning til metrikker der $d(x,y)=0$
+hvis og bare hvis $x=y$.
+
+\begin{definisjon}\label{Def:InfAvs}
 	For $M$ og $N$ varighetsmoduler definerer vi inflettingsavstanden $d_I$ ved
 	\[d_I(M,N) = \inf\{\delta\in \ropen{0}{\infty}\mid \text{$M$ og $N$ er $\delta$-interleavet}\}\]
 \end{definisjon}
 Denne avstanden gir et tall på hvor "isomorfe" to varighetsmoduler er.
 
-\begin{proposisjon}\label{Cor:label}
+\begin{teorem}\label{trm:Utvidet-Metrikk}
+  Inflettingsavstanden er en utvidet metrikk
+\end{teorem}
+\begin{proof}
+    
+\end{proof}
+
+\begin{proposisjon}\label{prop:d_I-Iso}
 	For $M$ og $N$ varighetsmoduler så holder
 	\[d_I(M,N) = 0 \iff M\cong N\]
 \end{proposisjon}
@@ -68,4 +93,23 @@ Denne avstanden gir et tall på hvor "isomorfe" to varighetsmoduler er.
 	"$\impliedby$"\\\\
 	Hvis $M\cong N$ så eksisterer det varighetsmodulmorfier $f:M\to N$ og $g:N\to M$ slik at $g\circ f = \id_M=\p_M^0$ og $f\circ g=\id_N=\p_N^0$. Så det eksisterer en $0$-infletting og dermed er $d_I(M,N) = 0$.
 \end{proof}
+
+
+\begin{proposisjon}\label{prop:InfAvs_Metrikk}
+  Hvis $M\cong M'$ er isomorfe varighetsmoduler så er
+  $d_I(M,N) = d_I(M',N)$ for enhver varighetsmodul.
+\end{proposisjon}\begin{proof}
+  Siden $d_I$ er en utvidet metrikk betyr det at den
+  oppfyller den trekantulikheten $d_I(M,N)\leq
+  d_I(M,M')+d_I(M',N)$. Ved
+  \bref{proposisjon}{prop:d_I-Iso} er $d_I(M,M')=0$ altså
+  er $d_I(M,N)\leq d_I(M',N)$. Ved samme argument er
+  $d_I(M',N)\leq d_I(M,N)$. Dermed er
+  $d_I(M,N)=d_I(M',N)$.
+\end{proof}
+
+Resultatet fra \bref{proposisjon}{prop:InfAvs_Metrikk}
+betyr at inflettingsavstanden er en metrikk på
+isomorfiklassene av varighetsmodulene.
+
 
