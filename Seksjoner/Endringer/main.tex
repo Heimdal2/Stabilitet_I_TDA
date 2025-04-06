@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+%\usepackage[norsk]{babel}
 \usepackage{tasks}
 \usepackage{amssymb}
 \usepackage{amsfonts}
@@ -105,6 +106,7 @@
 
 \newcommand{\bp}[1]{\left\{#1\right\}}
 \newcommand{\es}{\emptyset}
+\renewcommand{\empty}{\es}
 
 \newcommand{\lngl}{\langle}
 \newcommand{\rngl}{\rangle}
@@ -129,6 +131,7 @@
 \newcommand{\Rbold}{\textnormal{\textbf{R}}}
 \newcommand{\Topinc}{\Top_\textnormal{\textbf{inc}}}
 \newcommand{\Pers}{\vect_k^\Rbold}
+\newcommand{\Barc}{\textnormal{\textbf{Barc}}}
 
 \newcommand{\op}{\textnormal{op}}
 
@@ -138,6 +141,10 @@
 
 \newcommand{\set}[1]{\left\{#1\right\}}
 \newcommand{\bset}[2]{\set{#1\,\mid\,#2}}
+\newcommand{\bag}[1]{\Lbag #1\Rbag}
+\newcommand{\bbag}[2]{\bag{#1\,\mid\, #2}}
+
+\newcommand{\Rep}{\textnormal{Rep}}
 
 \newtheorem{teorem}{Teorem}[subsection]
 \newtheorem{definisjon}{Definisjon}[subsection]
@@ -145,6 +152,8 @@
 \newtheorem{proposisjon}{Proposisjon}[subsection]
 \newtheorem{eksempel}{Eksempel}[subsection]
 \newtheorem{bemerk}{Bemerk}[subsection]
+
+\newcommand{\bevis}[1]{\begin{proof}[bevis] #1 \end{proof}}
 
 \newcommand{\eps}{\varepsilon}
 

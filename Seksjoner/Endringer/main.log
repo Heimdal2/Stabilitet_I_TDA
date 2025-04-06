@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.3.2)  31 MAR 2025 09:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.3.2)  6 APR 2025 04:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -706,59 +706,43 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip68
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
+Package: stmaryrd 1994/03/03 St Mary's Road symbol package
+\symstmry=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
+(Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
+)
 \c@teorem=\count338
 \c@definisjon=\count339
 \c@korollar=\count340
 \c@proposisjon=\count341
 \c@eksempel=\count342
 \c@bemerk=\count343
-
-(./main.aux
-
-LaTeX Warning: Label `Sec:Vekt' multiply defined.
-
-
-LaTeX Warning: Label `Def:Kropp' multiply defined.
-
-
-LaTeX Warning: Label `Def:Vektrom' multiply defined.
-
-
-LaTeX Warning: Label `Def:LinAvb' multiply defined.
-
-
-LaTeX Warning: Label `Ex:EukVRom' multiply defined.
-
-
-LaTeX Warning: Label `Ex:label' multiply defined.
-
-
-LaTeX Warning: Label `Def:label' multiply defined.
-
+ (./main.aux
 
 LaTeX Warning: Label `Def:label' multiply defined.
 
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count344
@@ -781,7 +765,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 147.
+Package hyperref Info: Link coloring OFF on input line 160.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -794,9 +778,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count350
 )
-LaTeX Info: Redefining \ref on input line 147.
-LaTeX Info: Redefining \pageref on input line 147.
-LaTeX Info: Redefining \nameref on input line 147.
+LaTeX Info: Redefining \ref on input line 160.
+LaTeX Info: Redefining \pageref on input line 160.
+LaTeX Info: Redefining \nameref on input line 160.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
@@ -813,20 +797,24 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 4
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 80--85
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--85
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--85
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
 
  []
 
@@ -861,16 +849,16 @@ Overfull \hbox (6.43752pt too wide) in paragraph at lines 75--76
 0 for sirke-len $\OML/cmm/m/it/10 S[]$ \OT1/cmr/m/it/10 ved f^^\lgende: 
  []
 
-) (./forkunnskaper/VektRom.tex [4] [5]) (./forkunnskaper/VektRom.tex [6])
-(./forkunnskaper/Kategoriteori.tex [7] [8]
+) (./forkunnskaper/VektRom.tex [4] [5]) (./forkunnskaper/Multimengder.tex)
+(./forkunnskaper/Kategoriteori.tex [6] [7] [8]
 Overfull \hbox (10.67928pt too wide) in paragraph at lines 113--114
-[][]\OT1/cmr/bx/n/10 Eksempel 0.7.6. []\OT1/cmr/m/it/10 Vi har ogs^^Wa en funk-
+[][]\OT1/cmr/bx/n/10 Eksempel 1.1.6. []\OT1/cmr/m/it/10 Vi har ogs^^Wa en funk-
 tor $\OML/cmm/m/it/10 F \OT1/cmr/m/n/10 : [] \OMS/cmsy/m/n/10 ! []$ \OT1/cmr/m/
 it/10 de-fin-ert ved $\OML/cmm/m/it/10 F\OT1/cmr/m/n/10 ((\OML/cmm/m/it/10 X; \
 OMS/cmsy/m/n/10 T\OT1/cmr/m/n/10 )) =
  []
 
-[9]
+
 Overfull \hbox (17.92606pt too wide) in paragraph at lines 117--124
 [][] \OMS/cmsy/m/n/10 ! [][]$ \OT1/cmr/m/it/10 som sender et vek-tor-rom $\OML/
 cmm/m/it/10 V \OMS/cmsy/m/n/10 2 [][]$ \OT1/cmr/m/it/10 til vek-tor-rom-met $[]
@@ -882,12 +870,12 @@ Overfull \hbox (30.94373pt too wide) detected at line 182
 []
  []
 
-[10]
+[9]
 Overfull \hbox (5.57796pt too wide) detected at line 211
 []
  []
 
-[11])) (./persistensmoduler/PersistensModuler.tex
+[10])) (./persistensmoduler/PersistensModuler.tex
 Overfull \hbox (18.8341pt too wide) in paragraph at lines 38--40
 \OT1/cmr/m/n/10 Bot-tle-neck dis-tansen mel-lom barkoder og in-flet-tingsav-s-t
 anden mel-lom varighetsmod-
@@ -902,55 +890,83 @@ N\OT1/cmr/m/n/10 )[] = \OML/cmm/m/it/10 M[]$ \OT1/cmr/m/it/10 og tar varighetsm
 odul-
  []
 
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 67--71
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--71
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--71
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
 
  []
 
 
-Overfull \hbox (11.46065pt too wide) in paragraph at lines 75--77
-[][]\OT1/cmr/bx/n/10 Proposisjon 1.1.2. []\OT1/cmr/m/it/10 Hvis $\OML/cmm/m/it/
+Overfull \hbox (11.46065pt too wide) in paragraph at lines 99--101
+[][]\OT1/cmr/bx/n/10 Proposisjon 2.1.2. []\OT1/cmr/m/it/10 Hvis $\OML/cmm/m/it/
 10 M [] M[]$ \OT1/cmr/m/it/10 er iso-morfe varighetsmod-uler s^^Wa er $\OML/cmm
 /m/it/10 d[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 M; N\OT1/cmr/m/n/10 ) =
  []
 
-) (./persistensmoduler/Barkoder.tex
+[12]) (./persistensmoduler/Barkoder.tex
 
 Package natbib Warning: Citation `Bauer2015a' on page 13 undefined on input lin
 e 5.
 
+
+Package natbib Warning: Citation `Bauer2015a' on page 13 undefined on input lin
+e 18.
+
 [13]
 
-Package natbib Warning: Citation `Bauer2015a' on page 14 undefined on input lin
-e 18.
+LaTeX Warning: Reference `prop:ID-OK' on page 14 undefined on input line 130.
+
+[14]
+
+LaTeX Warning: Reference `OK-Komp' on page 15 undefined on input line 175.
+
+
+Overfull \hbox (68.7173pt too wide) detected at line 184
+[] \OML/cmm/m/it/10 ^^[ \OT1/cmr/m/n/10 = \U/stmry/m/n/10 H[] \OT1/cmr/m/n/10 (
+\OML/cmm/m/it/10 ^^[; J\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 6\OT1/cmr/m/n/10 = \O
+MS/cmsy/m/n/10 ;  j  \OML/cmm/m/it/10 J \OMS/cmsy/m/n/10 2 D\U/stmry/m/n/10 I\O
+ML/cmm/m/it/10 ;  ^^V[] \OT1/cmr/m/n/10 = \U/stmry/m/n/10 H\OT1/cmr/m/n/10 (\OM
+L/cmm/m/it/10 J; [] \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^[; J\OT1/cmr/m/n/10 )) 
+ \OMS/cmsy/m/n/10 j  []\U/stmry/m/n/10 I
+ []
+
+[15]
+Overfull \hbox (6.45648pt too wide) in paragraph at lines 233--233
+\OT1/cmr/m/n/10 nen av $\OML/cmm/m/it/10 ^^[$\OT1/cmr/m/n/10 . Barko-den blir m
+ul-ti-meng-den av el-e-menter p^^Wa for-men $\OML/cmm/m/it/10 J \OMS/cmsy/m/n/1
+0 ^^@ \OT1/cmr/m/n/10 ([] (\OML/cmm/m/it/10 ^^[; J\OT1/cmr/m/n/10 )) \OMS/cmsy/
+m/n/10 6\OT1/cmr/m/n/10 =
+ []
 
 )
 
 Package natbib Warning: There were undefined citations.
 
-[14] (./main.aux)
+[16] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BD252297953FA982895CFED3E64940CC;1174.
+(rerunfilecheck)             Checksum: 4C314A4E6E2D92F2C717DC9232B3F950;1193.
  ) 
 Here is how much of TeX's memory you used:
- 23611 strings out of 478287
- 454863 string characters out of 5849290
- 740785 words of memory out of 5000000
- 41288 multiletter control sequences out of 15000+600000
- 479898 words of font info for 67 fonts, out of 8000000 for 9000
+ 23922 strings out of 478287
+ 458812 string characters out of 5849290
+ 742680 words of memory out of 5000000
+ 41574 multiletter control sequences out of 15000+600000
+ 481122 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  100i,17n,104p,509b,1072s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
@@ -971,11 +987,12 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist
 /type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf/fonts/type1/public/cm-
-super/sfrm1000.pfb>
-Output written on main.pdf (14 pages, 265882 bytes).
+super/sfrm1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd/s
+tmary10.pfb>
+Output written on main.pdf (16 pages, 280989 bytes).
 PDF statistics:
- 305 PDF objects out of 1000 (max. 8388607)
- 248 compressed objects within 3 object streams
- 96 named destinations out of 1000 (max. 500000)
+ 332 PDF objects out of 1000 (max. 8388607)
+ 271 compressed objects within 3 object streams
+ 107 named destinations out of 1000 (max. 500000)
  93 words of extra memory for PDF output out of 10000 (max. 10000000)
 

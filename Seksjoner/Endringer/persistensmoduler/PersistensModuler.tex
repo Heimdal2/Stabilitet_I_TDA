@@ -79,26 +79,27 @@ Denne avstanden gir et tall på hvor "isomorfe" to varighetsmoduler er.
 \begin{teorem}\label{trm:Utvidet-Metrikk}
   Inflettingsavstanden er en utvidet metrikk
 \end{teorem}
-\begin{proof}
-    
-\end{proof}
+\bevis{
+
+}
 
 \begin{proposisjon}\label{prop:d_I-Iso}
 	For $M$ og $N$ varighetsmoduler så holder
 	\[d_I(M,N) = 0 \iff M\cong N\]
 \end{proposisjon}
-\begin{proof}
+\bevis{
 	"$\implies$"\\\\
 	Hvis $d_I(M,N) = 0$ så finnes det en $0$-infletting mellom $M$ og $N$ altså det eksisterer varighetsmodulmorfier $f: M \to N(0)=N$ og $g: N\to M(0)=M$ slik at $g(0)\circ f = g\circ f = \p_M^0=\id_M$ og $f(0)\circ g = \p_N^0=\id_N$. Dermed er $f$ og $g$ inverser av hverandre og er dermed isomorfier.\\\\
 	"$\impliedby$"\\\\
 	Hvis $M\cong N$ så eksisterer det varighetsmodulmorfier $f:M\to N$ og $g:N\to M$ slik at $g\circ f = \id_M=\p_M^0$ og $f\circ g=\id_N=\p_N^0$. Så det eksisterer en $0$-infletting og dermed er $d_I(M,N) = 0$.
-\end{proof}
+}
 
 
 \begin{proposisjon}\label{prop:InfAvs_Metrikk}
   Hvis $M\cong M'$ er isomorfe varighetsmoduler så er
   $d_I(M,N) = d_I(M',N)$ for enhver varighetsmodul.
-\end{proposisjon}\begin{proof}
+\end{proposisjon}
+\bevis{
   Siden $d_I$ er en utvidet metrikk betyr det at den
   oppfyller den trekantulikheten $d_I(M,N)\leq
   d_I(M,M')+d_I(M',N)$. Ved
@@ -106,7 +107,7 @@ Denne avstanden gir et tall på hvor "isomorfe" to varighetsmoduler er.
   er $d_I(M,N)\leq d_I(M',N)$. Ved samme argument er
   $d_I(M',N)\leq d_I(M,N)$. Dermed er
   $d_I(M,N)=d_I(M',N)$.
-\end{proof}
+}
 
 Resultatet fra \bref{proposisjon}{prop:InfAvs_Metrikk}
 betyr at inflettingsavstanden er en metrikk på
