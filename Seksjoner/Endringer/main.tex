@@ -1,6 +1,6 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
-%\usepackage[norsk]{babel}
+%\usepackage{babelbib}
 \usepackage{tasks}
 \usepackage{amssymb}
 \usepackage{amsfonts}
@@ -9,13 +9,17 @@
 \usepackage{blindtext}
 \usepackage{titlesec}
 \usepackage{mathtools}
+\usepackage{}
 \usepackage{tikz,pgf,tikz-cd,graphicx}
 \usepackage{natbib,doi}
 \usepackage{stmaryrd}
 
-\bibliographystyle{unsrtnat}
+%\bibliographystyle{unsrtnat}
+\bibliographystyle{norbib/norplain}
 
 \newcommand{\bref}[2]{\textbf{#1 \ref{#2}}}
+
+\renewcommand{\contentsname}{Innhold}
 
 \newcommand{\Acal}{\mathcal{A}}
 \newcommand{\Bcal}{\mathcal{B}}
@@ -152,13 +156,17 @@
 \newtheorem{proposisjon}{Proposisjon}[subsection]
 \newtheorem{eksempel}{Eksempel}[subsection]
 \newtheorem{bemerk}{Bemerk}[subsection]
+\newtheorem{lemma}{Lemma}[subsection]
 
 \newcommand{\bevis}[1]{\begin{proof}[bevis] #1 \end{proof}}
 
 \newcommand{\eps}{\varepsilon}
 
 \begin{document}
+\tableofcontents
 \input{forkunnskaper/Forkunnskaper}
 \input{persistensmoduler/PersistensModuler}
 \input{persistensmoduler/Barkoder}
+\input{persistensmoduler/Varighetshomologi}
+\bibliography{Referanser}
 \end{document}

@@ -1,19 +1,14 @@
-\section{Varighetsmoduler}
-
-% Når vi skal studere homologien filtrasjonene av topologiske rom og Čech-/Rips-komplekser er det gunstig å kunne samle alle vektorrommene gitt av homologiene av filtrasjonen av rommet.
-
-% For dette er det naturlig å bruke varighetsmoduler
+\section{Varighetsmoduler}\label{sek:VarMod}
 Et sentralt tema for å kunne forstå stabilitet og topologisk dataanalyse er ideen om varighetsmoduler. I dette kapitellet går vi gjennom en litt abstrakt introduksjon og så ser vi på hvorfor de er viktige innenfor topologisk dataanalyse. Definisjonen på en varighetsmodul er kort og enkel.
 
 \begin{definisjon}\label{Def:PersMod}
-    En varighetsmodul $M$ er en funktor $M:\Rbld\to\vect_k$.
+    En varighetsmodul $M$ er en funktor $M:\Rbld\to\vect_K$.
 \end{definisjon}
 
-Vi skriver $M_t$ for vektorromet $M(t)$ (det $t$-ende vektorromet) for å unngå fremtidig forvirring.
-Siden en varighetsmodul $M$ er en funktor fra pomengden $\Rbld$ til $\vect_k$ så har vi for hver $s\leq t$ en lineær avbilding $\p_M(s,t): M_s\to M_t$ som vi kaller overgangsavbildinger.
+Vi skriver $M_t$ for vektorromet $M(t)$. Siden en varighetsmodul $M$ er en funktor fra pomengden $\Rbld$ til $\Vect_K$ så har vi for hver $s\leq t$ en lineær avbilding $\p_M(s,t): M_s\to M_t$ som vi kaller overgangsavbildinger.
 
 Gitt to varighetsmoduler $M$ og $N$ kan vi definere en morfi $f: M\to N$ som en samling av lineære avbildinger
-$\{f(s): M_s\to N_s\;|\; s\in\Rbb\}$ slik at diagrammet
+$\bset{f_s: M_s\to N_s}{s\in\Rbb}$ slik at diagrammet
 \[
 \begin{tikzcd}
 	{M_s} && {N_s} \\
@@ -25,33 +20,61 @@ $\{f(s): M_s\to N_s\;|\; s\in\Rbb\}$ slik at diagrammet
 	\arrow["{f(t)}", from=3-1, to=3-3]
 \end{tikzcd}
 \]
-kommuterer. Vi kan komponere morfiene på den følgende måten; gitt morfier $f:M\to N$ og $g:M\to P$ er $g\circ f$
-definert som samlingen $\{g_s\circ f_s: M_s\to P_s\;|\;s\in\Rbb\}$.
+kommuterer. Vi kan komponere morfiene på den følgende måten; gitt morfier $f:M\to N$ og $g:M\to P$ er $g\circ f$ definert som samlingen $\{g_s\circ f_s: M_s\to P_s\;|\;s\in\Rbb\}$.
 
-Siden vi har objekter, varighetsmoduler, og vi har morfier mellom dem kan vi definere kategorien av varighets moduler
+Siden vi har objekter, varighetsmoduler og vi har morfier mellom dem kan vi definere kategorien av varighetsmoduler
 
 \begin{definisjon}\label{Def:KatPMod}
-    Kategorien $\vect_k^\Rbld$ er kategorien av varighetsmodulene med varighetsmodul-morfier mellom dem.
+    Kategorien $\Vect_K^\Rbld$ er kategorien av varighetsmodulene med varighetsmodul-morfier mellom dem.
 \end{definisjon}
 
+Som notasjonen foreslår er kategorien av varighetsmoduler en funktorkategori.
+Et enkelt, men viktig eksempel på en varighetsmodul er intervallmodulen
+
+\begin{eksempel}\label{eks:IntMod}
+For et intervall $I\subset\Rbb$ eksisterer det en varighetsmodul $K^I$ definert på følgende måte i \cite{Bauer2018}
+\[
+K^I_r =
+\begin{cases}
+K, \quad\text{hvis } r\in I\\
+0, \quad\text{ellers.}
+\end{cases}\quad 
+\p_{K^I}(r,s) = 
+\begin{cases}
+\id_K,\quad r,s\in I\\
+0,\quad \text{ellers}
+\end{cases}
+\]
+\end{eksempel}
+
+I denne kategorien kan en varighetsmodul inneholde uendeligdimensjonale vektorrom. Fra teorem 2.8 i \cite{Chazal2016} kan disse ikke bli intervalldekomponert. Dette er et problem når vi skal studere varighetsmodulene som barkodediagrammer. I topologisk dataanalyse er heldigvis vektorrommene i varighetsmodulen alltid endeligdimensjonale i praksis. Varighetsmoduler der vektorromene er alle endeligdimensjonale er kalt punktvis endelig dimensjonale varighetsmoduler eller p.e.d. varighetsmoduler tatt fra \cite{Bauer2015a}. Kategorien av endeligdimensjonale vektorrom over en kropp $k$ skriver vi som $\vect_K$ og kategorien av p.e.d. varighetsmoduler er da skrevet $\vect_K^\Rbld$.
+
 \subsection{Inflettingsavstand}
-Stabilitet av varighetsmoduler innebærer relasjonen mellom to typer distanser, Bottleneck distansen mellom barkoder
+Stabilitet av varighetsmoduler innebærer relasjonen mellom to typer avstander, flaskehalsavstanden mellom barkoder
 og inflettingsavstanden mellom varighetsmoduler. Her definerer vi inflettingsavstanden mellom to varighetsmoduler.
 
 For å definere distansen må vi gjennom noen få steg.
 \begin{definisjon}\label{Def:DShift}
 	En $\delta$-forskyvning av en varighetsmodul er en funktor
 	\[(\cdot)(\delta): \Pers\to \Pers\]
-	Som tar en varighetsmodul $M$ til $M(\delta)$ hvor $M(\delta)_t = M_{t+\delta}$ og tar varighetsmodulmorfier $f:M\to N$ til $f(\delta):M(\delta)\to N(\delta)$.
+	Som tar en varighetsmodul $M$ til $M(\delta)$ hvor $M(\delta)_t = M_{t+\delta}$ og tar varighetsmodulmorfier $f:M\to N$ til $f(\delta):M(\delta)\to N(\delta)$ gitt ved $f(\delta)_t=f_{t+\delta}$.
 \end{definisjon}
 
-Denne funktorer gir oss konseptet av $\delta$-infletting.
+\begin{korollar}\label{kor:Shiftpluss}
+For $\delta,\delta'\in\Rbb$ er $((\cdot)(\delta))(\delta')=(\cdot)(\delta+\delta')$
+\end{korollar}
+\begin{proof}[bevis]
+For en varighetsmodul $M$ er $(M(\delta))(\delta')_t=M(\delta)_{t+\delta'}=M_{t+\delta+\delta'}=M(\delta+\delta')_t$ for enhver $t\in\Rbb$. For samme grunn er $(f(\delta))(\delta')=f(\delta+\delta'
+)$ for enhver varighetsmodulmorfi.
+\end{proof}
+
+Denne funktoren gir oss konseptet av en $\delta$-infletting.
 
 \begin{definisjon}\label{Def:infletting}
-	La $M$ og $N$ være varighetsmoduler. Vi sier at $M$ og $N$ er $\delta$-interleavet hvis det eksisterer varighetsmodulmorfier $f:M\to N(\delta)$ og $g:N\to M(\delta)$ slik at
+	La $M$ og $N$ være varighetsmoduler. Vi sier at $M$ og $N$ er $\delta$-inflettet hvis det eksisterer varighetsmodulmorfier $f:M\to N(\delta)$ og $g:N\to M(\delta)$ slik at
 	\[g(\delta)\circ f = \p_M(t,t+2\delta),\quad f(\delta)\circ g = \p_N(t,t+2\delta).\]
 \end{definisjon}
-Vi kaller $\p^\eps_M(t) = \p_M(t,t+\eps)$. Bemerk at $\p^0_M=\id_M$ fordi $\p^0_M(t) = \p_M(t,t+0)=\p_M(t,t)=\id_M$.
+Vi skriver $\p^\eps_M(t) = \p_M(t,t+\eps)$. Bemerk at $\p^0_M=\id_M$ fordi $\p^0_M(t) = \p_M(t,t+0)=\p_M(t,t)=\id_M$. Vi kaller varighetsmodulmorfiene $f$ og $g$ for $\delta$-inflettingsmorfiene.
 
 \begin{definisjon}\label{def:UtPsMet}
    En utvidet pseudometrikk på en klasse $X$ er en
@@ -72,15 +95,41 @@ hvis og bare hvis $x=y$.
 
 \begin{definisjon}\label{Def:InfAvs}
 	For $M$ og $N$ varighetsmoduler definerer vi inflettingsavstanden $d_I$ ved
-	\[d_I(M,N) = \inf\{\delta\in \ropen{0}{\infty}\mid \text{$M$ og $N$ er $\delta$-interleavet}\}\]
+	\[d_I(M,N) = \inf\{\delta\in \ropen{0}{\infty}\mid \text{$M$ og $N$ er $\delta$-inflettet}\}\]
 \end{definisjon}
 Denne avstanden gir et tall på hvor "isomorfe" to varighetsmoduler er.
+
+Vi går gjennom et lemma gitt i \cite{Bauer2015a} som en bemerkning (\cite[Remark 3.1]{Bauer2015a}).
+
+\begin{lemma}\label{lem:Inf_Sum}
+La $L$, $M$ og $N$ være varighetsmoduler slik at $L$ og $M$ er $\delta$-inflettet og $M$ og $N$ er $\delta'$-inflettet. Da er $L$ og $N$ $(\delta+\delta')$-inflettet.
+\end{lemma}
+\begin{proof}[bevis]
+La $f: L\to M(\delta)$, $g: M\to L(\delta)$ være $\delta$ inflettingsmorfier for $L$ og $M$, la $h: M\to N(\delta')$ og $i: N\to M(\delta')$ være inflettingsmorfier for $M$ og $N$. Vi viser at $F = h(\delta)\circ f:L\to N(\delta+\delta')$ og $G=g(\delta')\circ i: N\to L(\delta+\delta')$ er $(\delta+\delta')$-inflettingsmorfier for $L$ og $N$. Vi har komposisjonen
+\[G(\delta+\delta')\circ F = (g(\delta')\circ i)(\delta+\delta')\circ h(\delta)\circ f.\]
+Ved funktorialitet av $(\cdot)(\delta)$ får vi
+\[(g(\delta')\circ i)(\delta+\delta')\circ h(\delta)\circ f = g(\delta')(\delta+\delta')\circ i(\delta+\delta')\circ h(\delta)\circ f.\]
+Videre ved \bref{korollar}{kor:Shiftpluss} og funktorialitet blir komposisjonen
+\[g(\delta')(\delta+\delta')\circ i(\delta+\delta')\circ h(\delta)\circ f= g(\delta+2\delta')\circ (i(\delta')\circ h)(\delta)\circ f.\]
+Nå har vi komposisjonen $i(\delta')\circ h$ som vi vet er $\p^{2\delta'}_M$ da har vi
+\[g(\delta+2\delta')\circ (i(\delta')\circ h)(\delta)\circ f=g(\delta+2\delta')\circ\p_M^{2\delta'}\circ f.\]
+Fra definisjonen av en varighetsmodulmorfi har vi at $\p_M^{2\delta'}\circ f=f(2\delta')\circ\p_L^{2\delta'}$, dermed får vi
+\[g(\delta+2\delta')\circ\p_M^{2\delta'}\circ f=g(\delta+2\delta')\circ f(2\delta')\circ \p_M^{2\delta'}\]
+Tilslutt får vi da
+\[g(\delta+2\delta')\circ f(2\delta')\circ \p_L^{2\delta'}=(g(\delta)\circ f)(2\delta')\circ\p_L^{2\delta'} = \p_L^{2\delta}(2\delta')\circ \p_L^{2\delta'}\]
+\[=\p_L^{2\delta+2\delta'}\circ \p_L^{2\delta'}=\p_L^{2\delta'+2\delta}.\]
+På samme måte har vi at $F(\delta+\delta')\circ G)=\p_N^{2\delta+2\delta'}$.
+\end{proof}
 
 \begin{teorem}\label{trm:Utvidet-Metrikk}
   Inflettingsavstanden er en utvidet metrikk
 \end{teorem}
 \bevis{
+    Vi starter med første punktet i \bref{definisjon}{def:UtPsMet}. La $M$ være en varighetsmodul. Vi har en $0$-infletting $f,g:M\to M(0)$ gitt ved $f_t,g_t = \p(t,t+0)=\id_{M_t}$. Siden vi ikke kan finne en $\delta$ mindre er $d_I(M,M)=0$.
+    
+    Varighetsmoduler $M$ og $N$ er $\delta$-inflettet hvis og bare hvis $N$ og $M$ er $\delta$-inflettet. Dette betyr at $d_I(M,N)=d_I(N,M)$.
 
+    La $L$, $M$ og $N$ være varighetsmoduler slik at $L$ og $M$ er $\delta$-inflettet og $M$ og $N$ er $\delta'$-inflettet. Vi lar $f: L\to M(\delta)$, $g: M\to L(\delta)$, $h:M\to N(\delta')$ og $i:N\to M(\delta')$ være $\delta$-inflettingsmorfiene.
 }
 
 \begin{proposisjon}\label{prop:d_I-Iso}
@@ -111,5 +160,5 @@ Denne avstanden gir et tall på hvor "isomorfe" to varighetsmoduler er.
 
 Resultatet fra \bref{proposisjon}{prop:InfAvs_Metrikk}
 betyr at inflettingsavstanden er en metrikk på
-isomorfiklassene av varighetsmodulene.
+isomorfiklassene av varighetsmodulene som forfatter i \cite{Bauer2015a} nevner.
 

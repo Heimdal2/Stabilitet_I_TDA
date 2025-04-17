@@ -1,4 +1,4 @@
-\subsection{Kategoriteori}\label{Sec:Katgoriteori}
+\subsection{Kategoriteori}\label{Ssek:Katgoriteori}
 Et samlende rammeverk i matematikk er en vanskelig oppgave å få laget, men et rammeverk som gjør en god jobb og som brukes heletiden nå til dags er kategoriteori. Kategoriteori gir en formulering på de forskjellige områdene i matematikk som f.eks. topologi og algebra.
 
 \begin{definisjon}\label{Def:Kategori}
@@ -230,3 +230,32 @@ I \bref{eksempel}{ex:Diag1} er diagrammet kommutativt hvis $g\circ
 f = h\circ i$ og i \bref{eksempel}{ex:Diag2} er diagrammet
 kommutativt hvis $h=g\circ f$.
 
+
+I en kategori med nullobjekt har morfier en kjerne og kokjerne. Her er definisjonene på kjernen fra \cite{MacLane}
+
+\begin{definisjon}\label{def:kjernen}
+    I en kategori $\Ccal$ med nullobjekt $0$, la $f: A\to B$ være en morfi. Kjernen til $f$ er et objekt $K$ sammen med en morfi $k: K\to A$ slik at $f\circ k=0$ og gitt ethvert objekt $Q$ med morfi $h: Q\to A$ slik at $f\circ h=0$, eksisterer det en unik morfi $u: Q\to K$ slik at diagrammet
+    \[\begin{tikzcd}
+	K \\
+	&& A && B \\
+	Q
+	\arrow["k", from=1-1, to=2-3]
+	\arrow["0", curve={height=-12pt}, from=1-1, to=2-5]
+	\arrow["f", from=2-3, to=2-5]
+	\arrow["{\exists!\,u}", dashed, from=3-1, to=1-1]
+	\arrow["h", from=3-1, to=2-3]
+	\arrow["0"', curve={height=12pt}, from=3-1, to=2-5]
+\end{tikzcd}\]
+kommuterer. 
+\end{definisjon}
+
+\begin{proposisjon}
+    I \Vect_k er kjernen av en lineær avbilding $f: V\to W$ gitt ved $K = \bset{v\in V}{f(v)=0}$ og inkusjonen $k:K\to V$.
+\end{proposisjon}
+\begin{proof}[bevis]
+La $Q$ være et vektorrom med lineær avbilding $h: Q\to V$ med $f\circ h=0$. Vi må finne en $u:Q\to K$ slik at $k\circ u=h$. Siden $f\circ h=0$, har vi for enhver vektor $u\in Q$ er $f(h(u))=0$ altså er $h(u)\in K$. Dermed er $h=k\circ h'$ med $h':Q\to K$ gitt ved $h'(u)=h(u)$
+\end{proof}
+
+\begin{definisjon}\label{def:kokjernen}
+hsdjkfhsdfhs
+\end{definisjon}

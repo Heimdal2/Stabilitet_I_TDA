@@ -1,36 +1,21 @@
 \section{Barkoder}
-En barkode $\Bcal$ er en representasjon av en multimengde av intervaller. Elementer i en barkode er dermed par
-$(I,k)$ der $I$ er et intervall og $k\in\Nbb$. Ofte når indeksen $k$ ikke er nødvendig skriver vi bare $I$ for et intervall i barkoden.
+En barkode er en multimengde av intervaller.
 
-I \cite{Bauer2015a} sier forfatter at gitt en persistensmodul $M$ som kan skrives
-\[M\cong\bigoplus_{I\in\Bcal_M}C(I)\]
-Da er $\Bcal_M$ unikt bestemt. Vi kaller slike persistensmoduler intervalldekomponerbare.
+I \cite{Bauer2015a} skriver forfatter at gitt en varighetsmodul $M$ som kan skrives på formen
+\[M\cong\bigoplus_{I\in\Bcal_M}K^I,\]
+hvor $\Bcal_M$ er en barkode.
+Da er $\Bcal_M$ unikt bestemt. Vi kaller slike varighetsmoduler intervalldekomponerbare.
 
-Dette er en konsekvens av følgende teorem
-
-\begin{teorem}\label{Thrm:label}
-    Hvis $\bigoplus_{I\in\Bcal}C(I)\cong\bigoplus_{J\in\Ccal} C(J)$ så er $\Bcal\cong\Ccal$
-\end{teorem}
-\bevis{
-Anta at det ikke eksisterer en bijeksjon mellom $\Bcal$ og $\Ccal$ f.eks. 
-}
-
-I følge \cite{Bauer2015a} har vi følgende teorem
+I \cite{Bauer2015a} har vi følgende teorem
 \begin{teorem}\label{Thrm:thrm2.1}
-Enhver p.e.d. persistensmodul er intervalldekomponerbar.
+Enhver p.e.d. varighetsmodul er intervalldekomponerbar.
 \end{teorem}
-\bevis{
-La $M$ være en p.e.d. peristensmodul. Mengden $I_n = \{s\in\Rbb\;\mid\;\dim M_s=n\}$ er en disjunkt union av intervaller $I_{n_1}\sqcup I_{n_2}\sqcup\dots$, vi kan la $C(I_{n_1}\sqcup I_{n_2}\sqcup\dots)=C(I_{n_1})\oplus C(I_{n_2})\oplus\dots$ og få
-\[M\cong \bigoplus_{n,k\in\in\Nbb} C(I_{n_k}).\]
-Da blir $\Bcal_M = \{I_{n_j}\;\mid\; n,j\in\Nbb\}$, en kan la $I_{n_j}=\es$ når den ikke påvirker unionen $I_n$. 
-}
 
 Barkoder kan også gjøres om til en kategori med morfier
 kalt overlappkoblinger. For å definere en  overlappkobling
 må vi først definere hva det betyr at et intervall
 overlapper et annet intervall over og hva en parvis
 kobling av mengder er.
-\pagebreak
 \begin{definisjon}
     Et intervall $I$ overlapper et annet intervall $J$
     over (hhv. overlapper $J$  $I$ under) hvis følgende
@@ -129,6 +114,8 @@ $(J,L)\in\tau$ og $(L,K)\in\psi$ og $J$ må overlappe $K$
 over. Fordi $(I,J)\in\sigma$ og $(J,L)\in\tau$
 }
 
+\Barc er en Puppe-eksakt kategori. Dette betyr at kategorien har et nullobjekt gitt under.
+
 \begin{proposisjon}\label{prop:Ønull}
   Den tomme mengden $\empty$ er nullobjektet i $\Barc$. 
 \end{proposisjon}
@@ -140,6 +127,8 @@ over. Fordi $(I,J)\in\sigma$ og $(J,L)\in\tau$
   bare en overlappkobling $\Dcal\to\empty$. Dermed er
   $\empty$ nullobjekt.
 }
+
+I \cite{Bauer2018} \textbf{seksjon 2.5} beskriver forfatter kjernen, kokjernen og bildet til en overlappkobling som barkoder, men som beskrevet i seksjon \bref{seksjon}{Ssek:Kategoriteori} i \bref{definisjon}{def:kjernen} og \bref{definisjon}{def:kokjernen} er ikke bare (ko)kjernen av en morfi i en kategori et objekt, det er et par gitt av et objekt og en morfi. Her er konstruksjonen av kjernen, kokjernen og bildet, kjernen av kokjernen, som barkoder sammen med en overlappkobling.
 
 \begin{teorem}\label{trm:ker}
   Kjernen til en overlappkobling $\sigma:\Ccal\to\Dcal$
@@ -230,4 +219,64 @@ $\coker(\sigma,I)$ overlapper $J$ over.
   tilslutt er $I\cap J$. Dermed er $\omega_\sigma(I\cap
   J)=J$, eller sagt annerledes er $\omega_\sigma$
   multimengden av par $(I\cap,J,J)$ hvor $(I,J)\in\sigma$.
+}
+
+Som sagt i \bref{seksjon}{sek:VarMod} er det også en avstand mellom barkoder.
+
+\subsection{Flaskehalsavstanden}
+En kan definere en avstand av barkoder på to forskjellige måter gitt i \cite{Bauer2018}. En måte er å definere en type inflettingsavstand i \Barc og en annen kalt Flaskehalsavstanden. Vi starter med å definere den første type avstand.
+
+En definisjon som blir brukt senere er at et intervall $I$ er kalt $\delta$-triviell som er kortere enn $\delta$. 
+
+\begin{definisjon}\label{def:IntSkyv}
+    For et intervall $I\subset\Rbb$ og $\delta\geq 0$ definerer vi
+    \[I(\delta) = \bset{t}{t+\delta\in I}\]
+    Dette intervallet er $I$ forskjøvet en $\delta$ til venstre.
+\end{definisjon}
+
+Dette gir en funktor $(\cdot)(\delta):\Barc\to\Barc$ definert ved
+
+\begin{definisjon}
+    For en barkode $\Bcal$, lar vi
+    \[\Bcal(\delta) = \bset{I(\delta)}{I\in\Bcal}.\]
+    For en overlappkobling $\sigma:\Ccal\to\Dcal$ definerer vi
+    \[\sigma(\delta) = \bset{(I(\delta),J(\delta))}{(I,J)\in\sigma}.\]
+\end{definisjon}
+
+Fra \cite{Bauer2018} har vi for enhver barkode $\Ccal$ og $\delta\geq0$ overlappkoblingen $S^{\Ccal,\delta} = \bbag{(I,I(\delta))}{\text{$I$ ikke er $\delta$-triviell}}$. 
+
+\begin{definisjon}\label{def:InfBar}
+To barkoder $\Ccal$ og $\Dcal$ sies å være $\delta$-inflettet hvis det eksisterer overlappkoblinger $f:\Ccal\to \Dcal(\delta)$ og $g:\Dcal\to\Ccal(\delta)$ slik at $g(\delta)\bullet f = S^{\Ccal,2\delta}$ og $f(\delta)\bullet g=S^{\Dcal,2\delta}$.
+\end{definisjon}
+
+Dette gir på samme måte som i \bref{seksjon}{sek:VarMod} en inflettingsavstand gitt ved
+\[d_I(\Ccal,\Dcal) = \inf\bset{\delta\in\ropen{0}{\infty}}{\text{$\Ccal$ og $\Dcal$ $\delta$-inflettet}}.\]
+
+Den andre måten en kan definere en avstand på er gitt i \cite[seksjon 4.2]{Bauer2018}.
+
+La $U_\delta(I) = \bset{t\in\Rbb}{\text{det eksisterer en $s\in I$ slik at }|s-t|\leq\delta}$
+
+\begin{definisjon}\label{def:delta-kobling}
+En $\delta$-kobling $\sigma:\Ccal\to \Dcal$ er en parvis kobling, den trenger ikke å være en overlappkobling, med følgende egenskaper:
+\begin{enumerate}[(i)]
+    \item $\sigma$ kobler hvert intervall i $\Ccal\cup\Dcal$ som ikke er $2\delta$-trivielle
+    \item Hvis $(I,J)\in\sigma$, er $J\subset U_\delta(I)$ og $I\subset U_\delta(J)$.
+\end{enumerate}
+\end{definisjon}
+
+\begin{definisjon}\label{def:FlaskAvst}
+Gitt to barkoder $\Ccal$ og $\Dcal$ er flaskehalsavstanden
+\[d_B(\Ccal,\Dcal) = \inf\bset{\delta\geq 0}{\text{Det eksisterer en $\delta$-kobling mellom $\Ccal$ og $\Dcal$}}.\]
+\end{definisjon}
+
+Nå som vi har to typer avstander av barkoder er det naturlige spørsmålet "hvilken skal man bruke?" Heldigvis er det ikke nødvendig å velge fordi inflettingsavstanden og flaskehalsavstanden er like.
+
+
+
+\begin{teorem}\label{trm:FA_lik_IA}
+Gitt barkoder $\Ccal$ og $\Dcal$ holder følgende
+\[d_I(\Ccal,\Dcal) = d_B(\Ccal,\Dcal)\]
+\end{teorem}
+\bevis{
+
 }
