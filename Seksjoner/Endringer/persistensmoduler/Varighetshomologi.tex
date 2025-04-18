@@ -1,0 +1,66 @@
+\section{Varighetshomologi}\label{sek:VarHom}
+I denne seksjonen går vi over hvordan man gjør data fra et
+eksperiment eller en statistisk undersøkelse om til topologiske
+rom og videre om til varighetsmoduler. Vi starter med å lage
+varighetsmoduler av generelle topologiske rom, deretter går vi
+over forskjellige måter å lage topologiske rom fra data i form av
+punktskyer.
+
+\begin{definisjon}\label{def:FiltTop}
+En filtrering av et topologisk rom $X$ over en pomengde $(P,\leq)$
+er en samling $\{X_p\}_{p\in P}$ slik at når $q\leq p$ så er
+  $X_q\subset X_p$ og $\bigcup_{p\in P} X_p = X$.
+\end{definisjon}
+
+En kan også tenke på en filtrering av et rom $X$ over en pomengde
+$\Pbld$ som en funktor $X_\bullet = \Pbld\to\Top$ slik at morfien
+$q\leq p$ i $\Pbld$ blir sendt til inklusjonen $i_X(q,p):
+X_q\monicto X_p$.
+
+I denne oppgaven er en filtrering av et rom alltid over $\Rbld$
+pomengden.
+
+Gitt et topologisk rom, kan vi kalkulere homologigruppene dens.
+Vi bruker koeffisienter fra en kropp $K$ til å kalkulere
+homologigruppene, da får vi vektorrom.
+
+Vi kan lage en varighetsmodul av et rom ved å filtrere rommet og
+så ta homologien av rommene i filtreringen.
+
+\begin{definisjon}\label{def:VarHom}
+  La $X$ være et topologisk rom med filtrering $X_\bullet$ en
+  filtrering av $X$. Da er den $n$-te varighetshomologien $\Hcal(n):
+  \Rbld\to\vect_K$ definert ved $\Hcal(n)_s = H_n(X_s)$ og
+  $\p_{\Hcal(n)}(s,t) = i_X(s,t)$.
+\end{definisjon}
+
+Nå som vi har definisjonen på varighetshomologien av et rom går vi
+videre til å lage topologiske rom av data i form av en filtrering
+av et rom.
+
+I \bref{Seksjoner}{sek:Forkunnskaper} gikk vi over
+$\Delta$-komplekser. Rommene vi lager fra punktskydataen er slike
+$\Delta$-komplekser. Det er to hovedmetoder for å lage rom av
+punktskyer, kalt Čech-komplekser og Vietoris-Rips-komplekser også
+kalt Rips-komplekser.
+
+Følgende definisjoner er inspirert fra \cite{Schenck2022}
+
+\begin{definisjon}\label{def:CechKomp}
+  La $P\subset\Rbb^d$ være en punktsky og la $B_\eps(p)$ være den
+  lukkede $\eps$-ballen om et punkt $p\in P$. Čech-komplekset
+  $\Cpzc_\eps$ av $P$ inneholder $k$-simplekser som korresponderer
+  med $k+1$-tupler av punkter $p\in P$ slik at
+  \[\bigcap_{i=0}^k \overline{B_\frac{\eps}{2}(p_i)}\neq\emptyset.\]
+  Altså er en $k+1$-tuppel $(p_0,\dots,p_k)\in\Cpzc$ hvis deres
+  lukkede $\eps$-baller deler minst et punkt.
+\end{definisjon}
+
+\begin{definisjon}\label{def:RipsKomp}
+  La $P\subset\Rbb^d$ være en punktsky. Rips-komplekset
+  $\Rpzc_\eps$ av $P$ gitt ved $k$-simplekser som korresponderer
+  med $k+1$-tupler $(p_0,\dots,p_k)$ slik at $|p_i-p_j|\leq\eps$
+  for alle par $i,j$.
+\end{definisjon}
+
+
