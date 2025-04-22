@@ -1,6 +1,14 @@
 \section{Varighetsmoduler}\label{sek:VarMod}
-Et sentralt tema for å kunne forstå stabilitet og topologisk dataanalyse er ideen om varighetsmoduler. I dette kapitellet går vi gjennom en litt abstrakt introduksjon og så ser vi på hvorfor de er viktige innenfor topologisk dataanalyse. Definisjonen på en varighetsmodul er kort og enkel.
+% Et sentralt tema for å kunne forstå stabilitet og topologisk dataanalyse er ideen om varighetsmoduler. I dette kapitellet går vi gjennom en litt abstrakt introduksjon og så ser vi på hvorfor de er viktige innenfor topologisk dataanalyse. Definisjonen på en varighetsmodul er kort og enkel.
 
+
+Stabilitetsteoremet benytter to strukturer kalt
+varighetsmoduler og barkoder og mål på hvor like to
+varighetsmoduler og to barkoder er kalt
+inflettingsavstanden mellom varighetsmoduler og
+flaskehalsavstanden mellom barkoder.
+
+Denne seksjonen er basert på \citep[seksjon 2.1]{Bauer2015}
 \begin{definisjon}\label{Def:PersMod}
     En varighetsmodul $M$ er en funktor $M:\Rbld\to\vect_K$.
 \end{definisjon}
@@ -47,13 +55,30 @@ K, \quad\text{hvis } r\in I\\
 \]
 \end{eksempel}
 
-I denne kategorien kan en varighetsmodul inneholde uendeligdimensjonale vektorrom. Fra teorem 2.8 i \cite{Chazal2016} kan disse ikke bli intervalldekomponert. Dette er et problem når vi skal studere varighetsmodulene som barkodediagrammer. I topologisk dataanalyse er heldigvis vektorrommene i varighetsmodulen alltid endeligdimensjonale i praksis. Varighetsmoduler der vektorromene er alle endeligdimensjonale er kalt punktvis endelig dimensjonale varighetsmoduler eller p.e.d. varighetsmoduler tatt fra \cite{Bauer2015a}. Kategorien av endeligdimensjonale vektorrom over en kropp $k$ skriver vi som $\vect_K$ og kategorien av p.e.d. varighetsmoduler er da skrevet $\vect_K^\Rbld$.
+I denne kategorien kan en varighetsmodul inneholde
+uendeligdimensjonale vektorrom. Fra teorem 2.8
+i \cite{Chazal2016} kan disse ikke bli
+intervalldekomponert. Dette er et problem når vi skal
+studere barkodenediagrammene til varighetsmoduler.
+I denne oppgaven begrenser vi oss bare til
+varighetsmoduler hvor alle vektorrommene er
+endeligdimensjonale. Varighetsmoduler der vektorromene er alle
+endeligdimensjonale er kalt punktvis endeligdimensjonale
+varighetsmoduler eller p.e.d. varighetsmoduler tatt fra
+\cite{Bauer2015a}. Kategorien av endeligdimensjonale
+vektorrom over en kropp $K$ skriver vi som $\vect_K$,
+i motsetning til kategorien av alle vektorrom skrevet
+$\Vect_K$ og kategorien av p.e.d. varighetsmoduler er da skrevet
+$\vect_K^\Rbld$.
 
 \subsection{Inflettingsavstand}
 Stabilitet av varighetsmoduler innebærer relasjonen mellom to typer avstander, flaskehalsavstanden mellom barkoder
 og inflettingsavstanden mellom varighetsmoduler. Her definerer vi inflettingsavstanden mellom to varighetsmoduler.
 
 For å definere distansen må vi gjennom noen få steg.
+I \citep[seksjon 3.1]{Bauer2015} gir forfatter følgende
+definisjoner for forskyvingsfunktorene, inflettinger,
+inflettingsavstanden og en utvidet pseudometrikk.
 \begin{definisjon}\label{Def:DShift}
 	En $\delta$-forskyvning av en varighetsmodul er en funktor
 	\[(\cdot)(\delta): \Pers\to \Pers\]

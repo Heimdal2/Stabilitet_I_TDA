@@ -1,21 +1,34 @@
-\section{Barkoder}
-En barkode er en multimengde av intervaller.
+\section{Strekkoder}
+En strekkode er en multimengderepresentasjon av intervaller.
 
-I \cite{Bauer2015a} skriver forfatter at gitt en varighetsmodul $M$ som kan skrives på formen
-\[M\cong\bigoplus_{I\in\Bcal_M}K^I,\]
-hvor $\Bcal_M$ er en barkode.
-Da er $\Bcal_M$ unikt bestemt. Vi kaller slike varighetsmoduler intervalldekomponerbare.
+I \citep[teorem 2.4]{Bauer2018} har vi følgende teorem
 
-I \cite{Bauer2015a} har vi følgende teorem
-\begin{teorem}\label{Thrm:thrm2.1}
-Enhver p.e.d. varighetsmodul er intervalldekomponerbar.
+\begin{teorem}\label{trm:DekompBark}
+  For enhver p.e.d. varighetsmodul $M$, eksisterer det en
+  unik naturlig strekkode $\Bcal(M)$ slik at
+  \[M\cong \bigoplus_{I\in\Bcal(M)} K^I.\]
 \end{teorem}
 
-Barkoder kan også gjøres om til en kategori med morfier
-kalt overlappkoblinger. For å definere en  overlappkobling
+Forfatter kaller strekkoden $\Bcal(M)$
+dekomponeringsstrekkoden
+
+%I \cite{Bauer2015} skriver forfatter at gitt en
+%varighetsmodul $M$ som kan skrives på formen
+%\[M\cong\bigoplus_{I\in\Bcal_M}K^I,\]
+%hvor $\Bcal_M$ er en barkode.
+%Da er $\Bcal_M$ unikt bestemt. Vi kaller slike varighetsmoduler intervalldekomponerbare.
+%
+%I \cite{Bauer2015a} har vi følgende teorem
+%\begin{teorem}\label{Thrm:thrm2.1}
+%Enhver p.e.d. varighetsmodul er intervalldekomponerbar.
+%\end{teorem}
+
+Strekkoder kan også gjøres om til en kategori med morfier
+vi kaller overlappkoblinger. For å definere en overlappkobling
 må vi først definere hva det betyr at et intervall
 overlapper et annet intervall over og hva en parvis
-kobling av mengder er.
+kobling av mengder er. Fra \citep[seksjon 2.3]{Bauer2018}
+har vi følgende definisjon.
 \begin{definisjon}
     Et intervall $I$ overlapper et annet intervall $J$
     over (hhv. overlapper $J$  $I$ under) hvis følgende
@@ -40,7 +53,7 @@ kobling av mengder er.
 \end{definisjon}
 
 \begin{definisjon}\label{def:OverlappMch}
-  En parvis kobling $\sigma: \Ccal\to \Dcal$ av barkoder
+  En parvis kobling $\sigma: \Ccal\to \Dcal$ av strekkoder
   er en overlappkobling hvis gitt $\sigma(I)=J$ så
   overlapper $I$ $J$ over.
 \end{definisjon}
@@ -61,7 +74,7 @@ komposisjonen på følgende måte
 \end{definisjon}
 
 \begin{proposisjon}\label{prop:ID-OK}
-For enhver barkode $\Dcal$ eksisterer det alltid en
+For enhver strekkode $\Dcal$ eksisterer det alltid en
 overlappkobling $\sigma:\Dcal\to\Dcal$ gitt ved $\sigma
 = \bset{(I,I)}{I\in\Dcal}$.
 \end{proposisjon}
@@ -75,12 +88,12 @@ Dette betyr at $\sigma$ er en overlappkobling.
 }
 
 \begin{teorem}
-    Klassen av barkoder sammen med overlappkoblinger
+    Klassen av strekkoder sammen med overlappkoblinger
     skaper en kategori.
 \end{teorem}
 \bevis{
-Objektene er barkodene og morfiene er overlappkoblingene.
-Vi lar identiteten til en barkode være overlappkoblingen
+Objektene er strekkodene og morfiene er overlappkoblingene.
+Vi lar identiteten til en strekkode være overlappkoblingen
 $\id_\Dcal:\Dcal\to\Dcal$ gitt
 i \bref{proposisjon}{prop:ID-OK} Komposisjonen er den
 definert i \bref{definisjon}{def:OK-Komp}. Vi må vise at
@@ -120,7 +133,7 @@ over. Fordi $(I,J)\in\sigma$ og $(J,L)\in\tau$
   Den tomme mengden $\empty$ er nullobjektet i $\Barc$. 
 \end{proposisjon}
 \bevis{
-  La $\Dcal$ være en barkode. En overlappkobling $\sigma:
+  La $\Dcal$ være en strekkode. En overlappkobling $\sigma:
   \empty\to\Dcal$ er en delmengde av
   $\empty\times\Barc=\empty$, siden $\empty$ er sin eneste
   delmengde så er $\sigma=\empty$. For samme grunn er det
@@ -128,18 +141,27 @@ over. Fordi $(I,J)\in\sigma$ og $(J,L)\in\tau$
   $\empty$ nullobjekt.
 }
 
-I \cite{Bauer2018} \textbf{seksjon 2.5} beskriver forfatter kjernen, kokjernen og bildet til en overlappkobling som barkoder, men som beskrevet i seksjon \bref{seksjon}{Ssek:Kategoriteori} i \bref{definisjon}{def:kjernen} og \bref{definisjon}{def:kokjernen} er ikke bare (ko)kjernen av en morfi i en kategori et objekt, det er et par gitt av et objekt og en morfi. Her er konstruksjonen av kjernen, kokjernen og bildet, kjernen av kokjernen, som barkoder sammen med en overlappkobling.
+I \cite{Bauer2018} \textbf{seksjon 2.5} beskriver
+forfatter kjernen, kokjernen og bildet til en
+overlappkobling som strekkoder, men som beskrevet i seksjon
+\bref{seksjon}{Ssek:Kategoriteori}
+i \bref{definisjon}{def:kjernen} og
+\bref{definisjon}{def:kokjernen} er ikke bare (ko)kjernen
+av en morfi i en kategori et objekt, det er et par gitt av
+et objekt og en morfi. Her er konstruksjonen av kjernen,
+kokjernen og bildet, kjernen av kokjernen, som strekkoder
+sammen med en overlappkobling.
 
 \begin{teorem}\label{trm:ker}
   Kjernen til en overlappkobling $\sigma:\Ccal\to\Dcal$
-  er en barkode $\ker\sigma$ med overlappkobling
+  er en strekkode $\ker\sigma$ med overlappkobling
   $\kappa_\sigma:\ker\sigma\to\Ccal$
   \[\ker\sigma = \bbag{\ker(\sigma,
     I)\neq\empty}{I\in\Ccal},\quad\kappa_\sigma
   = \bset{(\ker(\sigma,I),I)}{\ker(\sigma,I)\neq\empty}\]
 \end{teorem}
 \bevis{
-  Gitt en barkode $\Bcal$ og en overlappkobling
+  Gitt en strekkode $\Bcal$ og en overlappkobling
   $\eta:\Bcal\to\Ccal$ slik at $\sigma\bullet\eta=\empty$,
   viser vi at det eksisterer en unik overlappkobling
   $\eta':\Bcal\to\ker\sigma$ slik at
@@ -156,7 +178,7 @@ I \cite{Bauer2018} \textbf{seksjon 2.5} beskriver forfatter kjernen, kokjernen o
   Her lar vi $\eta'$ koble $I\in\Bcal$ hvis $\eta$
   kobler $I$ og $I$ overlapper $\ker(\sigma,\eta(I))$
   over. Dermed for ethvert par
-  $(\Bcal,\eta:\Bcal\to\Ccal)$ av en barkode og
+  $(\Bcal,\eta:\Bcal\to\Ccal)$ av en strekkode og
   overlappkobling slik at $\sigma\bullet\eta=\empty$,
   eksisterer det en unik overlappkobling
   $\eta':\Bcal\to\Ccal$ definert som over slik at
@@ -165,7 +187,7 @@ I \cite{Bauer2018} \textbf{seksjon 2.5} beskriver forfatter kjernen, kokjernen o
 
 \begin{teorem}\label{trm:coker}
   Kokjernen til en overlappkobling er gitt som en
-  barkode $\coker\sigma$ med en overlappkobling
+  strekkode $\coker\sigma$ med en overlappkobling
   $\mu_\sigma:\Dcal\to\coker\sigma$ gitt ved
   \[\coker\sigma
   = \bbag{\coker(\sigma,J)\neq\empty}{J\in\Dcal},\quad
@@ -173,7 +195,7 @@ I \cite{Bauer2018} \textbf{seksjon 2.5} beskriver forfatter kjernen, kokjernen o
   overlapper $\coker(\sigma,J)$ over}}\]
 \end{teorem}
 \bevis{
-  Vi viser at gitt en barkode $\Bcal$ og en
+  Vi viser at gitt en strekkode $\Bcal$ og en
   overlappkobling $\eta:\Dcal\to\Bcal$ slik at
   $\eta\bullet\sigma=\empty$ eksisterer det en unik
   overlappkobling $\eta':\coker\sigma\to\Bcal$ slik at
@@ -192,14 +214,14 @@ $\coker(\sigma,I)$ overlapper $J$ over.
 
 \begin{teorem}\label{trm:im}
   Bildet av en overlappkobling $\sigma:\Ccal\to\Dcal$ er
-  en barkode $\im\sigma$ og en overlappkobling
+  en strekkode $\im\sigma$ og en overlappkobling
   $\omega_\sigma:\im\sigma\to\Dcal$ gitt ved
   \[\im\sigma = \bbag{I\cap J}{(I,J)\in\sigma},\quad
   \omega_\sigma = \bbag{(I\cap J, J)}{(I,J)\in\sigma}\]
 \end{teorem}
 \bevis{
   Siden $\Barc$ er en Puppe-eksakt kategori er bildet av
-  $\sigma$ kjernen av kokjernen av $\sigma$. Barkoden blir
+  $\sigma$ kjernen av kokjernen av $\sigma$. Strekkoden blir
   multimengden av elementer på formen
   $J-(\coker(\sigma,J))\neq\empty$. Hvis $\sigma$ ikke
   parvis kobler $J$ er $J-(\coker(\sigma,J))=J-J=\empty$,
@@ -221,13 +243,23 @@ $\coker(\sigma,I)$ overlapper $J$ over.
   multimengden av par $(I\cap,J,J)$ hvor $(I,J)\in\sigma$.
 }
 
-Som sagt i \bref{seksjon}{sek:VarMod} er det også en avstand mellom barkoder.
+Som sagt i \bref{seksjon}{sek:VarMod} er det også en
+avstand mellom strekkoder.
 
 \subsection{Flaskehalsavstanden}
-En kan definere en avstand av barkoder på to forskjellige måter gitt i \cite{Bauer2018}. En måte er å definere en type inflettingsavstand i \Barc og en annen kalt Flaskehalsavstanden. Vi starter med å definere den første type avstand.
+En kan definere en avstand av strekkoder på to
+forskjellige måter gitt i \cite{Bauer2018}. En måte er
+å definere en type inflettingsavstand i \Barc og en annen
+kalt Flaskehalsavstanden. Vi starter med å definere den
+første type avstand.
 
-En definisjon som blir brukt senere er at et intervall $I$ er kalt $\delta$-triviell som er kortere enn $\delta$. 
+En definisjon som blir brukt senere er at et intervall $I$
+er kalt $\delta$-triviell hvis den er inneholdt i et
+halv-åpent intervall som er $\delta$-lang.
 
+I \citep[seksjon 2.5]{Bauer2018} definerer forfatter en
+forskyvingsavbilding av intervaller som induserer en
+funktor $\Barc\to\Barc$.
 \begin{definisjon}\label{def:IntSkyv}
     For et intervall $I\subset\Rbb$ og $\delta\geq 0$ definerer vi
     \[I(\delta) = \bset{t}{t+\delta\in I}\]
@@ -237,16 +269,23 @@ En definisjon som blir brukt senere er at et intervall $I$ er kalt $\delta$-triv
 Dette gir en funktor $(\cdot)(\delta):\Barc\to\Barc$ definert ved
 
 \begin{definisjon}
-    For en barkode $\Bcal$, lar vi
+    For en strekkode $\Bcal$, lar vi
     \[\Bcal(\delta) = \bset{I(\delta)}{I\in\Bcal}.\]
     For en overlappkobling $\sigma:\Ccal\to\Dcal$ definerer vi
     \[\sigma(\delta) = \bset{(I(\delta),J(\delta))}{(I,J)\in\sigma}.\]
 \end{definisjon}
 
-Fra \cite{Bauer2018} har vi for enhver barkode $\Ccal$ og $\delta\geq0$ overlappkoblingen $S^{\Ccal,\delta} = \bbag{(I,I(\delta))}{\text{$I$ ikke er $\delta$-triviell}}$. 
+Fra \cite{Bauer2018} har vi for enhver strekkode $\Ccal$
+og $\delta\geq0$ overlappkoblingen $S^{\Ccal,\delta}
+= \bbag{(I,I(\delta))}{\text{$I$ ikke er
+$\delta$-triviell}}$.
 
 \begin{definisjon}\label{def:InfBar}
-To barkoder $\Ccal$ og $\Dcal$ sies å være $\delta$-inflettet hvis det eksisterer overlappkoblinger $f:\Ccal\to \Dcal(\delta)$ og $g:\Dcal\to\Ccal(\delta)$ slik at $g(\delta)\bullet f = S^{\Ccal,2\delta}$ og $f(\delta)\bullet g=S^{\Dcal,2\delta}$.
+To strekkoder $\Ccal$ og $\Dcal$ sies å være
+  $\delta$-inflettet hvis det eksisterer overlappkoblinger
+  $f:\Ccal\to \Dcal(\delta)$ og $g:\Dcal\to\Ccal(\delta)$
+  slik at $g(\delta)\bullet f = S^{\Ccal,2\delta}$ og
+  $f(\delta)\bullet g=S^{\Dcal,2\delta}$.
 \end{definisjon}
 
 Dette gir på samme måte som i \bref{seksjon}{sek:VarMod} en inflettingsavstand gitt ved
@@ -265,16 +304,19 @@ En $\delta$-kobling $\sigma:\Ccal\to \Dcal$ er en parvis kobling, den trenger ik
 \end{definisjon}
 
 \begin{definisjon}\label{def:FlaskAvst}
-Gitt to barkoder $\Ccal$ og $\Dcal$ er flaskehalsavstanden
+Gitt to strekkoder $\Ccal$ og $\Dcal$ er flaskehalsavstanden
 \[d_B(\Ccal,\Dcal) = \inf\bset{\delta\geq 0}{\text{Det eksisterer en $\delta$-kobling mellom $\Ccal$ og $\Dcal$}}.\]
 \end{definisjon}
 
-Nå som vi har to typer avstander av barkoder er det naturlige spørsmålet "hvilken skal man bruke?" Heldigvis er det ikke nødvendig å velge fordi inflettingsavstanden og flaskehalsavstanden er like.
+Nå som vi har to typer avstander av strekkoder er det
+naturlige spørsmålet "hvilken skal man bruke?" Heldigvis
+er det ikke nødvendig å velge fordi inflettingsavstanden
+og flaskehalsavstanden er like.
 
 
 
 \begin{teorem}\label{trm:FA_lik_IA}
-Gitt barkoder $\Ccal$ og $\Dcal$ holder følgende
+Gitt strekkoder $\Ccal$ og $\Dcal$ holder følgende
 \[d_I(\Ccal,\Dcal) = d_B(\Ccal,\Dcal)\]
 \end{teorem}
 \bevis{
