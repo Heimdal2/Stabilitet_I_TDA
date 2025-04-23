@@ -1,0 +1,69 @@
+\begin{thebibliography}{10}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Agore(2023)]{Agore2023}
+Ana Agore.
+\newblock \emph{A first course in category theory}.
+\newblock Springer International Publishing, Cham, 2023.
+
+\bibitem[Bauer(2018)]{Bauer2018}
+Ulrich Bauer.
+\newblock Persistent diagrams as diagrams.
+\newblock June 2018.
+
+\bibitem[Bauer and Lesnick(2015)]{Bauer2015}
+Ulrich Bauer and Michael Lesnick.
+\newblock Induced {{Matchings}} and the {{Algebraic Stability}} of
+  {{Persistence Barcodes}}.
+\newblock \emph{Journal of Computational Geometry}, pages 162--191 Pages, March
+  2015.
+\newblock \doi{10.20382/jocg.v6i2a9}.
+
+\bibitem[Chazal et~al.(2016)Chazal, {Crawley-Boevey}, and De~Silva]{Chazal2016}
+Fr{\'e}d{\'e}ric Chazal, William {Crawley-Boevey}, and Vin De~Silva.
+\newblock The observable structure of persistence modules.
+\newblock \emph{Homology, Homotopy and Applications}, 18\penalty0 (2):\penalty0
+  247--265, 2016.
+\newblock ISSN 15320073, 15320081.
+\newblock \doi{10.4310/HHA.2016.v18.n2.a14}.
+
+\bibitem[Hatcher(2001)]{Hatcher2001}
+Allen Hatcher.
+\newblock \emph{Algebraic Topology}.
+\newblock Cambridge University Press, Cambridge, England, December 2001.
+
+\bibitem[Hungerford(2012)]{Hungerford2012}
+Thomas~W Hungerford.
+\newblock \emph{Algebra}.
+\newblock Graduate texts in mathematics. Springer, New York, NY, 1974 edition,
+  December 2012.
+
+\bibitem[Lane(2010)]{Lane2010}
+Saunders~Mac Lane.
+\newblock \emph{Categories for the working mathematician}.
+\newblock Graduate texts in mathematics. Springer, New York, NY, 2 edition,
+  November 2010.
+
+\bibitem[Munkres(2013)]{Munkres2013}
+James~R Munkres.
+\newblock \emph{Topology: Pearson New International Edition}.
+\newblock Pearson custom library. Pearson Education, London, England, 2
+  edition, July 2013.
+
+\bibitem[Munkres(2018)]{MunkresJamesR.2018EOAT}
+James~R. Munkres.
+\newblock Elements of algebraic topology, 2018.
+
+\bibitem[Schenck(2022)]{Schenck2022}
+Hal Schenck.
+\newblock \emph{Algebraic {{Foundations}} for {{Applied Topology}} and {{Data
+  Analysis}}}, volume~1 of \emph{Mathematics of {{Data}}}.
+\newblock Springer International Publishing, Cham, 2022.
+\newblock ISBN 978-3-031-06663-4 978-3-031-06664-1.
+\newblock \doi{10.1007/978-3-031-06664-1}.
+
+\end{thebibliography}
