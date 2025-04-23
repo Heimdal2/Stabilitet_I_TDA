@@ -1,4 +1,4 @@
-\section{Multimengder}
+\subsection{Multimengder og parvis kobling}
 
 Mengder er ofte begrensende i og med at de ikke tillater
 repeterende elementer.
@@ -29,3 +29,22 @@ bruker vi en annen notasjon for multimengder
    definert ved
    \[\Rep(\Scal) = \bset{(x,k)}{x\in S, k\leq \mu(x)}\]
 \end{definisjon}
+
+mellom to mengder kan vi definere noe kalt en parvis
+kobling
+
+\begin{definisjon}\label{def:Parvis-Kobling}
+  En parvis kobling mellom mengder $S$ og $T$ (skrevet
+  $\sigma:S\to T$) er en bijeksjon $\sigma: S'\to T'$
+  mellom delmengder $S'\subset S$ og $T'\subset T$.
+  Formelt er $\sigma\subset S\times T$ en relasjon slik at
+  $(s,t)\in \sigma$ hvis og bare hvis $s\in S'$ og
+  $\sigma(s)=t$. Komposisjonen av to parvis koblinger
+  $\sigma: S\to T$ og $\tau: T\to U$ er definert som
+  relasjonen
+  \[\tau\circ\sigma=\bset{(s,u)}{(s,t)\in \sigma, (t,u)\in
+  \tau\;\;\text{for en $t\in T$}}.\]
+\end{definisjon}
+
+Klassen av mengder sammen med parvis koblinger gir en ny
+kategori vi kaller \Mch.

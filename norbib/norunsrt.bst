@@ -85,6 +85,7 @@ FUNCTION {output.check}
   if$
 }
 
+
 FUNCTION {output.bibitem}
 { newline$
   "\bibitem{" write$

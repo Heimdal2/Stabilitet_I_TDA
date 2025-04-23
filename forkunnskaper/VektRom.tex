@@ -1,20 +1,33 @@
 \subsection{Vektorrom}\label{Sec:Vekt}
-For å definere hva et vektorrom er må vi først gå igjennom hva en kropp er.
+For å definere hva et vektorrom er må vi først gå igjennom
+hva en kropp er. Definisjonen er inspirert av definisjonen
+i \citep[definisjon 1.1 kapittel 3]{Hungerford2012} og
+\citep[definisjon 1.5 kapittel 3]{Hungerford2012}.
 
 \begin{definisjon}\label{Def:Kropp}
-   En mengde $K$ sammen med binære operatorer $+,\cdot: K\times K\to K$ er en kropp hvis gitt $a,b,c\in K$ så holder det følgende
+   En mengde $K$ sammen med binære operatorer $+,\cdot:
+   K\times K\to K$ er en kropp hvis gitt $a,b,c\in K$ så
+   holder det følgende
    \begin{itemize}
     \item $(a+b)+c = a+(b+c)$
     \item $a+b = b+a$
     \item $a\cdot(b+c)=a\cdot b + a\cdot c$
-    \item Det eksisterer et element $0\in K$ slik at $a+0=a=0+a$
-    \item Det eksisterer et element $1\in K$ slik at $a\cdot 1 = a = 1\cdot a$
-    \item Det eksisterer et element $-a\in K$ slik at $a+ (-a) = 0$
-    \item Det eksisterer et element $a^{-1}\in K$ slik at $a\cdot a^{-1}=1$.
-   \end{itemize} 
+    \item Det eksisterer et element $0\in K$ slik at
+      $a+0=a=0+a$
+    \item Det eksisterer et element $1\in K$ slik at
+      $a\cdot 1 = a = 1\cdot a$
+    \item Det eksisterer et element $-a\in K$ slik at $a+
+      (-a) = 0$
+    \item Det eksisterer et element $a^{-1}\in K$ slik at
+      $a\cdot a^{-1}=1$.
+   \end{itemize}
 \end{definisjon}
-Ofte lar vi være å skrive $a+(-b)$ og skriver heller $a-b$ vi lar også være å skrive $a\cdot b$ og skriver heller $ab$
+Ofte lar vi være å skrive $a+(-b)$ og skriver heller $a-b$
+vi lar også være å skrive $a\cdot b$ og skriver heller
+$ab$.
 
+Følgende definisjon er basert på \citep[definisjon
+1.1 kapittel 4]{Hungerford2012}
 \begin{definisjon}\label{Def:Vektrom}
     Et vektorrom $V$ over en kropp $K$ er en mengde med binære operatorer $+:V\times V\to V$ og $\cdot: K\times
 V\to V$, kalt skalarmultiplikasjon, slik at for elementer $\vct{u},\vct{v},\vct{w}\in V$ og $a,b,c\in K$ så holder det følgende

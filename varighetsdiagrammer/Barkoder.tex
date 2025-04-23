@@ -1,16 +1,18 @@
 \section{Strekkoder}
-En strekkode er en multimengderepresentasjon av intervaller.
+En barkode $\Bcal$ er en representasjon av en multimengde
+av intervaller. Elementer i en barkode er dermed par
+$(I,k)$ der $I$ er et intervall og $k\in\N$. Ofte når
+indeksen $k$ er nødvendig skriver vi bare $I$ for et
+intervall i barkoden.
 
-I \citep[teorem 2.4]{Bauer2018} har vi følgende teorem
-
+I \citep[teorem 2.4]{Bauer2018} har vi følgende resultat.
 \begin{teorem}\label{trm:DekompBark}
   For enhver p.e.d. varighetsmodul $M$, eksisterer det en
   unik naturlig strekkode $\Bcal(M)$ slik at
   \[M\cong \bigoplus_{I\in\Bcal(M)} K^I.\]
 \end{teorem}
-
 Forfatter kaller strekkoden $\Bcal(M)$
-dekomponeringsstrekkoden
+dekomponeringsstrekkoden.
 
 %I \cite{Bauer2015} skriver forfatter at gitt en
 %varighetsmodul $M$ som kan skrives på formen
@@ -29,6 +31,7 @@ må vi først definere hva det betyr at et intervall
 overlapper et annet intervall over og hva en parvis
 kobling av mengder er. Fra \citep[seksjon 2.3]{Bauer2018}
 har vi følgende definisjon.
+
 \begin{definisjon}
     Et intervall $I$ overlapper et annet intervall $J$
     over (hhv. overlapper $J$  $I$ under) hvis følgende
@@ -38,18 +41,6 @@ har vi følgende definisjon.
         \item For enhver $s\in J$ eksisterer det en $t\in I$ slik at $t\leq s$. Vi sier at $I$ begrenser $J$ over.
         \item For enhver $s\in I$ eksisterer det en $t\in J$ slik at $t\leq s$. Vi sier at $J$ begrenser $I$ under.
     \end{itemize}
-\end{definisjon}
-
-\begin{definisjon}\label{def:Parvis-Kobling}
-  En parvis kobling mellom mengder $S$ og $T$ (skrevet
-  $\sigma:S\to T$) er en bijeksjon $\sigma: S'\to T'$
-  mellom delmengder $S'\subset S$ og $T'\subset T$.
-  Formelt er $\sigma\subset S\times T$ en relasjon slik at
-  $(s,t)\in \sigma$ hvis og bare hvis $s\in S'$ og
-  $\sigma(s)=t$. Komposisjonen av to parvis koblinger
-  $\sigma: S\to T$ og $\tau: T\to U$ er definert som
-  relasjonen
-  \[\tau\circ\sigma=\bset{(s,u)}{(s,t)\in \sigma, (t,u)\in \tau\;\;\text{for en $t\in T$}}\]
 \end{definisjon}
 
 \begin{definisjon}\label{def:OverlappMch}

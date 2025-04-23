@@ -1,68 +1,105 @@
-\subsection{Relasjoner og ordensrelasjoner}
-Noe som kommer til å være viktig gjennom oppgaven er relasjoner og spesielt ordensrelasjoner.
+\subsection{Relasjoner}
+Noe som kommer til å være viktig gjennom oppgaven er
+relasjoner.
 \begin{definisjon}\label{Def:label}
-    En relasjon $R$ på en mengde $A$ er en undermengde av $A\times A$.
+    En relasjon $R$ på en mengde $A$ er en undermengde av
+    $A\times A$.
 \end{definisjon}
-Når et element $a\in A$ er relatert til et element $b\in A$ via en relasjon $R\subset A\times A$ skriver vi ofte $aRb$.
+Når et element $a\in A$ er relatert til et element $b\in
+A$ via en relasjon $R\subset A\times A$ skriver vi ofte
+$aRb$.
 
-Noen egenskaper relasjoner kan ha er følgende:
-
-For en relasjon $R\subset A\times A$, kan den ha
+For en relasjon $R\subset A\times A$, kan den ha følgende
+egenskaper:
 \begin{itemize}
-    \item Refleksivitet: Alle elementer i $A$ er relaterte til seg selv.
-    \item Symmetri: Hvis $a$ er relatert til $b$ så er $b$ relatert til $a$.
-    \item Transitivitet: Hvis $a$ er relatert til $b$ og $b$ er relatert til $c$ så er $a$ relatert til $c$.
-    \item Antisymmetri: Hvis $a$ er relatert til $b$ og $b$ er relatert til $a$ så er $a=b$.
-    \item Strengt sammenhengendhet: $a$ er relatert til $b$ eller $b$ er relatert til $a$.
-    \item Asymmetri: Hvis $a$ er relatert til $b$ så er aldri $b$ relatert til $a$.
-    \item Irrefleksivitet: Ingen elementer er relatert til seg selv.
+    \item Refleksivitet: Alle elementer i $A$ er relaterte
+      til seg selv.
+    \item Symmetri: Hvis $a$ er relatert til $b$ så er $b$
+      relatert til $a$.
+    \item Transitivitet: Hvis $a$ er relatert til $b$ og
+      $b$ er relatert til $c$ så er $a$ relatert til $c$.
+    \item Antisymmetri: Hvis $a$ er relatert til $b$ og
+      $b$ er relatert til $a$ så er $a=b$.
+    \item Strengt sammenhengendhet: $a$ er relatert til
+      $b$ eller $b$ er relatert til $a$.
+    \item Asymmetri: Hvis $a$ er relatert til $b$ så er
+      aldri $b$ relatert til $a$.
+    \item Irrefleksivitet: Ingen elementer er relatert til
+      seg selv.
 \end{itemize}
 
 \begin{eksempel}\label{Ex:LikRel}
-    For en mengde $A$ er likhet $=$ en relasjon som er refleksiv, symmetrisk og transitiv
+  For en mengde $A$ er likhet ($=$) gitt ved mengden
+  \[\bset{(a,a)}{a\in A}\]
+  en relasjon som er refleksiv, symmetrisk og transitiv.
 \end{eksempel}
 
 \begin{eksempel}\label{Ex:MinLikRel}
-    Mindre enn eller lik $\leq$ på $\Rbb$ er refleksiv, symmetrisk, transitiv, og antisymmetrisk. Samme er sant for større enn eller likhetstegnet.
+  Mindre enn eller lik $\leq$ på $\Rbb$, gitt ved mengden
+  \[\bset{(a,b)}{\text{$a<b$ eller $a=b$}}\]
+  er refleksiv, symmetrisk, transitiv, og antisymmetrisk.
+  Samme er sant for større enn eller lik.
 \end{eksempel}
 
-Noen typer relasjoner som likhetstegnet og mindre enn eller likhetstegnet har samme egenskaper og brukes såpass ofte at de får sine egne navn
+Noen typer relasjoner som likhetstegnet og mindre enn
+eller likhetstegnet har samme egenskaper og brukes såpass
+ofte at de får sine egne navn.
 
 \begin{definisjon}\label{Def:EkvivRel}
-    En relasjon er kalt en ekvivalensrelasjon hvis den er refleksiv, symmetrisk og transitiv.
+    En relasjon er kalt en ekvivalensrelasjon hvis den er
+    refleksiv, symmetrisk og transitiv.
 \end{definisjon}
 
-En annen type relasjon er ordensrelasjoner. Det er en slik relasjon $\leq$ er. ordensrelasjoner kommer i mange former her er de tre største
+En annen type relasjon er ordensrelasjoner. Det er en slik
+relasjon $\leq$ er. ordensrelasjoner kommer i mange former
+her er de tre hovedordensrelajsonene.
 
 \begin{definisjon}\label{Def:Preord}
-    En preorden er en relasjon som er refleksiv og som er transitiv. En mengde med en preordensrelasjon er kalt en "preordnet mengde" "promengder."
+    En preorden er en relasjon som er refleksiv og som er
+    transitiv. En mengde med en preordensrelasjon er kalt
+    en "preordnet mengde" "promengder."
 \end{definisjon}
 
 \begin{definisjon}\label{Def:Partord}
-    En delvis orden er en preorden som også er antisymmetrisk. En mengde med en delvis ordensrelasjon er kalt en "devis ordnet mengde" ofte forkortet til "pomengde" fra det engelske ordet "partial order".
+    En delvis orden er en preorden som også er
+    antisymmetrisk. En mengde med en delvis ordensrelasjon
+    er kalt en "devis ordnet mengde" ofte forkortet til
+    "pomengde" fra det engelske ordet "partial order".
 \end{definisjon}
 
-Tilslutt har vi en total orden
+Tilslutt har vi en total orden.
 
 \begin{definisjon}\label{Def:Totord}
-    En total orden er en delvis orden som også er strengt sammenhengende. En mengde med en total orden er en kalt en "totalt ordnet mengde."
+    En total orden er en delvis orden som også er strengt
+    sammenhengende. En mengde med en total orden er en
+    kalt en "totalt ordnet mengde."
 \end{definisjon}
 
 \begin{definisjon}\label{Def:Strengord}
-    En relasjon er en streng ordensrelasjon hvis den er assymmetrisk, irrefleksiv og transitiv.
+    En relasjon er en streng ordensrelasjon hvis den er
+    assymmetrisk, irrefleksiv og transitiv.
 \end{definisjon}
 
 \begin{bemerk}\label{Rem:OrdRelHiriarki}
-Per definisjon er alle total ordensrelasjoner en delvis orden og alle delvis ordensrelasjoner er en preordensrelasjon.
+Per definisjon er alle total ordensrelasjoner en delvis
+  orden og alle delvis ordensrelasjoner er en
+  preordensrelasjon.
 \end{bemerk}
 
 \begin{bemerk}\label{Rem:Strengord}
-    Delvis ordensrelasjoner induserer en streng orden ved relasjonen $<$ på følgende måte for en delvis ordensrelasjoner $\leq$
-    \[a<b \text{ hvis og bare hvis } a\leq b \text{ og } a\neq b.\]
-    Denne type streng orden bruker vi nå hvor ordensrelasjonene med $\leq$ vil være delvis ordner, mens ordensrelasjonene med $<$ vil være strenger ordner.
+    Delvis ordensrelasjoner induserer en streng orden ved
+    relasjonen $<$ på følgende måte for en delvis
+    ordensrelasjoner $\leq$
+    \[a<b \text{ hvis og bare hvis } a\leq b \text{ og
+    } a\neq b.\]
+    Denne type streng orden bruker vi nå hvor
+    ordensrelasjonene med $\leq$ vil være delvis ordner,
+    mens ordensrelasjonene med $<$ vil være strenger
+    ordner.
 \end{bemerk}
 
-Et viktig eksempel for denne oppgaven er den leksikografiske ordenen.
+Et viktig eksempel for denne oppgaven er den
+leksikografiske ordenen.
 
 \begin{eksempel}\label{Ex:LeksOrd}
     For delvis ordnede mengder $A$ med orden $\leq_A$ og $B$ med orden $\leq_B$ kan vi sette den følgende ordenen $\leq$ på $A\times B$ ved å la $(a,b)\leq (a',b')$ hvis og bare hvis $a<_A a'$ eller hvis $a=a'$ og $b\leq_B b'$. 

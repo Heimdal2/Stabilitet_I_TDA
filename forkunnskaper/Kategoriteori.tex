@@ -1,0 +1,463 @@
+\subsection{Kategoriteori}\label{Ssek:Katgoriteori}
+%Et samlende rammeverk i matematikk er en vanskelig oppgave å få laget, men et rammeverk som gjør en god jobb og som brukes heletiden nå til dags er kategoriteori. Kategoriteori gir en formulering på de forskjellige områdene i matematikk som f.eks. topologi og algebra.
+
+Forfatter i \citep[introduksjon]{Lane2010} sier "Category
+theory starts with the observation that many properties of
+mathematical systems can be unified and simplified by
+a presentation with diagrams of arrows." Kategoriteori lar
+oss samle forskjellige områder innen matematikk som
+topologiske rom og vektorrom. Teorien lar oss også studere
+egenskaper i en kategori ved bruk av en annen kategori via
+spesielle piler kalt funktorer.
+
+Fra \citep[definisjon 1.2.1]{Agore2023} er definisjonen på en kategori
+følgende
+
+\begin{definisjon}\label{def:Kategori}
+  En kategori $\Ccal$ består av den følgende data:
+  \begin{enumerate}
+    \item En klasse $\Ob(\Ccal)$ med elementer kalt
+      objekter.
+    \item for ethvert par av objekter $A$, $B$ en (mulig
+      rom) mengde $\Hom_\Ccal(A,B)$ med elementer kalt
+      morfier fra $A$ til $B$. Et element
+      $f\in\Hom_\Ccal(A,B)$ denoteres $f: A\to B$, $A$ og
+      $B$ er kalt domenen og kodomenen av $f$ hhv.
+    \item for enhver trippel av objekter $A,B,C$, en
+      komposisjonslov
+      \[\Hom_\Ccal(A,B)\times\Hom_\Ccal(B,C)\to\Hom_\Ccal(A,C)\]
+      \[(f,g)\mapsto g\circ f\]
+    \item for ethvert objekt $A$ en morfi
+      $\id_A\in\Hom_\Ccal(A,A)$ kalt identiteten på $A$.
+    \item Assosiativ lov: for morfier
+      $f\in\Hom_\Ccal(A,B)$, $g\in\Hom_\Ccal(B,C)$ og
+      $h\in\Hom_\Ccal(C,D)$ holder følgende likning
+      \[h\circ(g\circ f) = (h\circ g)\circ f\]
+    \item Identitetslov: for en morfi
+      $f\in\Hom_\Ccal(A,B)$ holder likningen
+      \[\id_B\circ f = f = f\circ \id_A.\]
+  \end{enumerate}
+  En kategori hvor klassen av objekter er en mengde er
+  kalt en liten kategori og en kategori med endelig mange
+  morfier er kalt endelig.
+\end{definisjon}
+
+%\begin{definisjon}\label{Def:Kategori}
+%    En kategori $\Ccal$ er et par $(\Ob(\Ccal),\hom(\Ccal))$ av klasser. Elementene i $\Ob(\Ccal)$ er kalt objekter og elementene i $\hom(\Ccal)$ er kalt morfier. Morfiene i $\Ccal$ kan bli sett på som piler mellom objektene i $\Ccal$, en morfi $f$ mellom objekter $A$ og $B$ skrives $f:A\to B$.
+%    For morfier $f: A\to B$ og $g: B\to C$ har vi en morfi $g\circ f: A\to C$ som vi kaller komposisjonen av $f$ med $g$.
+%    For ethvert objekt $A\in\Ob(\Ccal)$ har vi en morfi $\id_A: A\to A$ som vi kaller identitetsmorfien som tilfredstiller for enhver morfi $f:A\to B$:
+%    \[f\circ\id_A = f,\quad \id_B\circ f = f.\]
+%\end{definisjon}
+
+%\begin{bemerk}\label{rem:smaakat}
+%  Objektene og morfiene til noen kategorier som f.eks. $\Set$ som
+%  vi senere snakker raskt om kan ikke være inneholdt i det vi
+%  kaller mengder og er heller elementer av en klasse. Vi kaller
+%  kategorier hvor objektene og morfiene er elementer av en mengde
+%  små kategorier eller at en kategori er liten. Disse kategoriene kommer til å bli brukt senere i definisjonen på et diagram.
+%\end{bemerk}
+
+I en kategori er det noen spesielle morfier som kalles
+isomorfier, monomorfier og epimorfier.
+Fra \citep[definisjon 1.3.1]{Agore2023} har vi følgende
+definisjoner for disse morfiene.
+\begin{definisjon}\label{Def:Iso}
+    En isomorfi i en kategori $\Ccal$ er en morfi $f:A\to B$ mellom to objekter $A,B\in\Ob(\Ccal)$ hvor det eksisterer en morfi $g:B\to A$ slik at følgende holder
+    \[f\circ g = \id_B,\quad g\circ f = \id_A.\]
+    Vi kaller $g$ inversen til $f$. Hvis to objekter $A$ og $B$ er ismorfe skriver vi $A\cong B$.
+\end{definisjon}
+
+\begin{bemerk}\label{Rem:IdIso}
+    Identitetsmorfien er en isomorfi siden $\id_A\circ\id_A = \id_A$. Altså er $\id_A$ sin egen invers.
+\end{bemerk}
+
+Andre spesielle morfier er følgende:
+\begin{definisjon}\label{Def:Epi}
+    En morfi $f: A\to B$ er kalt en epimorfi hvis for
+    ethvert par med mofier $g,h: B\to C$ så holder
+    \[g\circ f = h\circ f \implies g = h\]
+    En skriver $f:A\epito B$ for en epimorfi når det er
+    viktig å notere.
+\end{definisjon}
+
+\begin{definisjon}\label{Def:Mono}
+    En morfi $f: A\to B$ er kalt en monomorfi hvis for ethvert par $g,h: C\to A$ så holder
+    \[f\circ g = f\circ h \implies g=h\]
+    En skriver $f: A\monicto B$ for en monomorfi hvis det er viktig å notere.
+\end{definisjon}
+
+Noen eksempler på kategorier, deres isomorfier, epimorfier og monomorfier er følgende
+\begin{eksempel}\label{Ex:Set}
+    Kategorien $\Set$ har mengder som objekter og
+    funksjoner som morfier. Her er bijektive funksjoner
+    isomorfier, surjektive funksjoner epimorfier og
+    injektive funksjoner er monomorfier.
+\end{eksempel}
+
+\begin{eksempel}\label{Ex:TopKat}
+    Kategorien $\Top$ er kategorien hvor objektene er topologiske rom og morfiene er kontinuerlige funksjoner. Isomorfier i $\Top$, kalt homeomorfier, er bijektive og kontinuerlig funksjoner med en kontinuerlig invers, epimorfi er surjektive og kontinuerlige funksjoner og monomorfier er injektive og kontinuerlige funksjoner. 
+\end{eksempel}
+
+\begin{eksempel}\label{Ex:VektKat}
+    Kategorien $\Vect_K$ er kategorien av vektorrom over en kropp $K$ som objekter og lineære avbildinger som morfier. Isomorfier i $\Vect_K$, kalt vektorromisomorfier, er bijektive og lineære avbildinger, inversen vil automatisk være lineær så vi trenger ikke inverskriteriet som vi gjør i $\Top$. Epimorfiene er surjektive lineære avbildinger og monomorfiene er injektive lineære avbildinger.
+\end{eksempel}
+
+Morfiene i en kategori trenger ikke å være funksjoner, her er et eksempel på en kategori hvor morfiene ikke er funksjoner.
+\begin{eksempel}\label{Ex:RPoset}
+    Kategorien $\Rbld$ har de reelle tall $\Rbb$ som objekter og $\leq$ relasjonen som morfier. Komposisjon er gitt ved transitivitet og identitetsmorfiene er gitt ved $s=s$. Identitetsmorfiene er også de eneste isomorfiene fordi hvis $a\leq b$ er en isomorfi så er $b\leq a$ dens invers, men hvis $a\leq b$ og $b\leq a$ så er $a=b$. Her er alle morfier epimorfier og monomorfier.
+\end{eksempel}
+
+For enhver kategori kan vi alltid lage dens
+motsatte eller dualkategorien
+
+\begin{definisjon}\label{def:OpKat}
+   La $\Ccal$ være en kategori. Dualkategorien
+   $\Ccal^\op$ av $\Ccal$ er definert som følger
+  \begin{enumerate}
+    \item $\Ob(\Ccal^\op) = \Ob(\Ccal)$
+    \item $\Hom_{\Ccal^\op}(A,B) = \Hom_\Ccal(B,A)$. Vi
+      skriver $f^\op: A\to B$ for morfien i $\Ccal^\op$
+      som korresponderer med morfien $f: B\to A$
+      i $\Ccal$.
+    \item Komposisjonsavbildingen
+      \[\circ^\op:
+      \Hom_{\Ccal^\op}(A,B) \times \Hom_{\Ccal^\op}(B,C)
+      \to \Hom_{\Ccal^\op}(A,C)\]
+      er gitt ved
+      \[g^\op\circ^\op f^\op = (f\circ
+      g)^\op\quad\text{for alle
+      $f^\op\in\Hom_{\Ccal^\op}(A,B),\,
+      g^\op\in\Hom_{\Ccal^\op}(B,C)$.}\]
+    \item Identiteter er gitt ved $\id_A^\op = \id_A$ for
+      alle objekter.
+  \end{enumerate}
+\end{definisjon}
+
+%\begin{bemerk}\label{rem:OpKat}
+%  Gitt en kategori $\Ccal$ eksisterer det en kategori $\Ccal^\op$
+%  kalt den omvendte kategorien av $\Ccal$ med de samme objektene,
+%  men med alle morfiene snudd andre vei.
+%\end{bemerk}
+
+I noen kategorier er det spesielle objekter kalt initialobjekt og
+terminalobjekter. Her er definisjonene deres basert på
+\citep[definisjon 1.3.7]{Agore2023}.
+
+\begin{definisjon}\label{def:InitOb}
+  I en kategori $\Ccal$ er et initialobjekt $I$ et objekt
+  slik at for ethvert objekt $A$ i $\Ccal$ eksisterer det nøyaktig en
+  morfi $I\to A$.
+\end{definisjon}
+
+\begin{definisjon}\label{def:TermOb}
+  I en kategori $\Ccal$ er et terminalobjekt $T$ et
+  objekt slik at for ethvert objekt $A$ i $\Ccal$ eksisterer det nøyaktig en morfi $T\to A$.
+\end{definisjon}
+
+Et objekt som er både initial og terminal er kalt et nullobjekt.
+
+Vi kan også definere piler mellom kategorier. Disse pilene
+er kalt funktorer og er definert som følgende.
+I \citep[definisjon 1.5.1]{Agore2023} er en funktor gitt
+ved
+
+\begin{definisjon}\label{def:Funktor}
+  La $\Ccal$ og $\Dcal$ være to kategorier. En kovariant
+  funktor (hhv. kontravariant funktor) $F:\Ccal\to\Dcal$
+  består av følgende data:
+  \begin{enumerate}
+    \item En avbilding $A\mapsto
+      F(A):\Ob(\Ccal)\to\Ob(\Dcal)$
+    \item for ethvert par av objekter $A,B\in\Ob(\Ccal)$
+      en avbilding
+      \[f\mapsto
+      F(f):\Hom_\Ccal(A,B)\to\Hom_\Dcal(F(A),F(B))\]
+      \[(\text{hhv. } f\mapsto F(f):
+      \Hom_\Ccal(A,B)\to\Hom_\Dcal(F(B),F(A)))\]
+  \end{enumerate}
+  med følgende egenskaper
+  \begin{enumerate}
+    \item for ethvert objekt $A\in\Ob(\Ccal)$ har vi
+      $F(\id_A) = \id_{F(A)}$
+    \item for enhver
+      $f\in\Hom_\Ccal(A,B),g\in\Hom_\Ccal(B,C)$ har vi
+      \[F(g\circ f) = F(g)\circ F(f)\quad (\text{hhv.
+      } F(g\circ f) = F(f)\circ F(f)).\]
+  \end{enumerate}
+
+\end{definisjon}
+
+%\begin{definisjon}\label{Def:Funktor}
+%    La $\Ccal$ og $\Dcal$ være kategorier en funktor $F:\Ccal\to\Dcal$ er funksjoner $\Ob(\Ccal)\to\Ob(\Dcal)$ og
+%    $\hom(\Ccal)\to \hom(\Dcal)$ slik at for morfier $f: A\to B$ og $g: B\to C$ i $\Ccal$ så er $F(f): F(A)\to
+%    F(B)$, $F(g\circ f) = F(g)\circ F(f)$ og for ethvert objekt $A\in\Ob(\Ccal)$ så er $F(\id_A)=\id_{F(A)}$.
+%\end{definisjon}
+
+%\begin{definisjon}\label{def:KontraFunktor}
+%  En funktor på formen $F:\Ccal^\op\to\Dcal$ eller
+%  $F:\Ccal\to\Dcal^\op$ er kalt en kontravariant funktor fra
+%  $\Ccal$ til $\Dcal$.
+%\end{definisjon}
+
+Ofte skriver vi bare $F:\Ccal\to\Dcal$ for en kontravariant
+funktor og sier at den er kontravariant. En kovariant
+funktor kalles ofte bare en funktor.
+
+\begin{bemerk}\label{Rem:FunktorIso}
+    Gitt en funktor $F:\Ccal\to\Dcal$ og en isomorfi $f:A\to B$ i $\Ccal$ så er $F(f)$ en isomorfi i $\Dcal$. Siden $f$ er en isomorfi så eksisterer det en $g: B\to A$ med egenskapene i \bref{Definisjon}{Def:Iso}. Dette gir 
+    \[\id_{F(A)} = F(\id_A) = F(f\circ g) = F(f)\circ F(g).\]
+    På samme måte får vi $F(f\circ g) = \id_{F(B)}$. Dermed blir $F(g)$ en invers av $F(f)$ som betyr at den er en isomorfi.
+\end{bemerk}
+
+\begin{eksempel}\label{Ex:DiskFunkt}
+    Vi kan definere en funktor $F:\Set\to\Top$ som setter den diskrete topologien på en mengde $X$, her blir alle funksjoner $f: X\to Y$ sendt til $F(f)=f:(X,\Pcal(X))\to (Y,\Pcal(Y))$, den er kontinuerlig siden for enhver delmengde $A\in \Pcal(Y)$ så er $f^{-1}(A)\in\Pcal(X)$.
+\end{eksempel}
+På samme måte har vi en funktor $F:\Set\to\Top$ som setter den trivielle topologien på en mengde og bevarer funksjonene.
+
+\begin{eksempel}\label{Ex:Glemmefunktor}
+    Vi har også en funktor $F:\Top\to\Set$ definert ved $F((X,\Tcal)) = X$ og $F(f:(X,\Tcal)\to (Y,\Tcal')) = f: X\to Y$. Denne funktoren kaller vi for glemmefunktoren siden den glemmer all struktur til rommet. En kan også gjøre dette for andre kategorier som $\Vect_K$ og $\Rbld$.
+\end{eksempel}
+
+\begin{eksempel}\label{ex:Homfunkt}
+  Et eksempel på en kontravariant funktor er
+  $\Hom(\cdot,W):\Vect_K\to\Vect_K$ som sender et vektorrom
+  $V\in\Vect_K$ til vektorrommet $\Hom(V,W)$ av lineære
+  avbildinger $V\to W$ og den sender lineære avbildinger $T:U\to
+  V$ til $\Hom(T,W):\Hom(V,W)\to\Hom(U,W)$ via
+  $\Hom(T,W)(g)=g\circ T$ for en $g:V\to W$. Her kan man se at
+  funktoren snur på morfien som gjør den kontravariant.
+\end{eksempel}
+
+Man kan også definere en pil mellom to funktorer som gjort
+i \citep{Agore2023}
+\begin{definisjon}\label{def:NatTrans}
+  La $F,G:\Ccal\to\Dcal$ være to funktorer. En naturlig
+  transformasjon $\alpha: F\to G$ består av en familie av
+  morfier $\alpha_C: F(C)\to G(C)$ i $\Dcal$ indisert av
+  $C\Ob(\Ccal)$ slik at for enhver $f\in\Hom_\Ccal(C,C')$
+  har vi $\alpha_{C'}\circ F(f) = G(f)\circ\alpha_C$.
+\end{definisjon}
+
+%\begin{definisjon}\label{Def:NatTrans}
+%    La $\Ccal$ og $\Dcal$ være kategorier og la $F,G: \Ccal\to\Dcal$ funktorer. En naturlig transformasjoner er en pil $\eta: F\to G$ slik at for ethvert objekt $A\in \Ccal$ har vi en morfi $\eta_A: F(A)\to G(A)$ og for enhver morfi $f: A\to B$ i $\Ccal$ har vi at diagrammet
+%    \[\begin{tikzcd}
+%	{F(A)} && {G(A)} \\
+%	\\
+%	{F(B)} && {G(B)}
+%	\arrow["{\eta_A}", from=1-1, to=1-3]
+%	\arrow["{F(f)}"', from=1-1, to=3-1]
+%	\arrow["{G(f)}"', from=1-3, to=3-3]
+%	\arrow["{\eta_B}", from=3-1, to=3-3]
+%\end{tikzcd}\]
+%kommuterer.
+%\end{definisjon}
+
+Funktorer og naturlige transformasjoner gir oss en ny type kategori 
+\begin{definisjon}\label{Def:FunkKat}
+    For kategorier $\Ccal$ og $\Dcal$ er kategorien
+    $\Ccal^\Dcal$, med funktorer $F:\Ccal\to \Dcal$ som
+    objekter og naturlige transformasjoner som morfier,
+    kalt en funktorkategori.
+\end{definisjon}
+
+Diagrammer er viktige for å kunne studere forskjellige egenskaper til objekter og morfier i en kategori. Her er
+definisjonen på et diagram. I \citep[definisjon
+1.4.9]{Agore2023} har vi definisjonen
+
+\begin{definisjon}\label{def:Diagram}
+   La $\Ccal$ være en kategori. Et diagram i $\Ccal$ er en
+   graf med noder og kanter objekter og morfier i $\Ccal$
+   hhv. Et diagram kalles kommutativt hvis for ethvert
+   par av noder alle stier mellom dem er like som morfier.
+\end{definisjon}
+
+%\begin{definisjon}\label{def:Diagram}
+%  La $\Jcal$ være en liten kategori. Et diagram av form $\Jcal$
+%  i en kategori $\Ccal$ er en funktor $D:\Jcal\to\Ccal$.
+%\end{definisjon}
+%Dette er ikke en intuitiv definisjon, men diagrammer er ikke så
+%farlige som en skal tro her er noen illustrative eksempler
+
+Her er noen diagrammer i en gitt kategori fra
+\citep[eksempler 1.4.10]{Agore2023}
+
+\begin{eksempel}\label{eks:Diag1}
+  Diagrammet
+  \[\begin{tikzcd}
+	A && B \\
+	\\
+	&& C
+	\arrow["f", from=1-1, to=1-3]
+	\arrow["h"', from=1-1, to=3-3]
+	\arrow["g", from=1-3, to=3-3]
+  \end{tikzcd}\]
+  kommuterer når $h = g\circ f$
+\end{eksempel}
+
+\begin{eksempel}\label{eks:Diag2}
+   Diagrammet
+   \[\begin{tikzcd}
+     A && B \\
+     \\
+     C && D
+     \arrow["f", from=1-1, to=1-3]
+     \arrow["k"', from=1-1, to=3-1]
+     \arrow["g", from=1-3, to=3-3]
+     \arrow["h"', from=3-1, to=3-3]
+   \end{tikzcd}\]
+   kommuterer når $g\circ f = h\circ k$.
+\end{eksempel}
+
+%\begin{eksempel}\label{ex:Diag1}
+%  Her er en illustrasjon som viser hvordan formen på kategorien
+%  $\Jcal$ gir et diagram i en kategori $\Ccal$
+%
+%  \[\begin{tikzcd}
+%	& \Jcal &&&&&& \Ccal \\
+%	\\
+%	1 && 2 &&&& A && B \\
+%	&&&& {\stackrel{D}{\implies}} \\
+%	3 && 4 &&&& C && D
+%	\arrow["{\id_1}", from=3-1, to=3-1, loop, in=100, out=170, distance=10mm]
+%	\arrow["a", from=3-1, to=3-3]
+%	\arrow["d", from=3-1, to=5-1]
+%	\arrow["{\id_2}", from=3-3, to=3-3, loop, in=10, out=80, distance=10mm]
+%	\arrow["b", from=3-3, to=5-3]
+%	\arrow["{\id_A}", from=3-7, to=3-7, loop, in=100, out=170, distance=10mm]
+%	\arrow["f", from=3-7, to=3-9]
+%	\arrow["i", from=3-7, to=5-7]
+%	\arrow["{\id_B}", from=3-9, to=3-9, loop, in=10, out=80, distance=10mm]
+%	\arrow["g", from=3-9, to=5-9]
+%	\arrow["{\id_3}", from=5-1, to=5-1, loop, in=190, out=260, distance=10mm]
+%	\arrow["c", from=5-1, to=5-3]
+%	\arrow["{\id_4}", from=5-3, to=5-3, loop, in=280, out=350, distance=10mm]
+%	\arrow["{\id_C}", from=5-7, to=5-7, loop, in=190, out=260, distance=10mm]
+%	\arrow["h", from=5-7, to=5-9]
+%	\arrow["{\id_D}", from=5-9, to=5-9, loop, in=280, out=350, distance=10mm]
+%\end{tikzcd}\]
+
+%Funktoren $D$ sender $1$ til $A$, $2$ til $B$ osv. Siden $D$ er en funktor
+%  sender den $\id_1$ til $\id_{D(1)}=\id_A$ osv. Funktoren sender
+%  morfiene til de naturlige morfiene.
+%\end{eksempel}
+%
+%\begin{eksempel}\label{ex:Diag2}
+%  I dette eksempelet er $\Jcal$ trekantformet, dette gir
+%  diagrammet $D:\Jcal\to\Ccal$
+%
+%  \[\begin{tikzcd}
+%	& \Jcal &&&&& \Ccal \\
+%	\\
+%	1 && 2 &&& A && B \\
+%	&&&& {\stackrel{D}{\implies}} \\
+%	&& 3 &&&&& C
+%	\arrow["{\id_1}", from=3-1, to=3-1, loop, in=100, out=170, distance=10mm]
+%	\arrow["a", from=3-1, to=3-3]
+%	\arrow["c", from=3-1, to=5-3]
+%	\arrow["{\id_2}", from=3-3, to=3-3, loop, in=10, out=80, distance=10mm]
+%	\arrow["b", from=3-3, to=5-3]
+%	\arrow["{\id_A}", from=3-6, to=3-6, loop, in=100, out=170, distance=10mm]
+%	\arrow["f", from=3-6, to=3-8]
+%	\arrow["h", from=3-6, to=5-8]
+%	\arrow["{\id_B}", from=3-8, to=3-8, loop, in=10, out=80, distance=10mm]
+%	\arrow["g", from=3-8, to=5-8]
+%	\arrow["{\id_3}", from=5-3, to=5-3, loop, in=280, out=350, distance=10mm]
+%	\arrow["{\id_C}", from=5-8, to=5-8, loop, in=280, out=350, distance=10mm]
+%\end{tikzcd}\]
+%
+%Funktoren $D$ sender $1$ til $A$, $2$ til $B$ og $3$ til $C$ og
+%  morfiene blir sendt til de naturlig morfiene.
+%\end{eksempel}
+%Vi pleier aldri å faktisk tegne opp $\Jcal$ og funktoren $D$,
+%definisjonen er bare nødvendig for å være presis. Objektenes
+%identiteter er alltid tilstede i et diagram, derfor er det ikke nødvendig
+%å tegne dem i diagrammet med mindre de er viktige i diagrammet.
+
+%Vi bruker diagrammer hele tiden i matematikk og spesielt et type
+%diagram kalt et kommutativt diagram
+%
+%\begin{definisjon}\label{def:KomDiag}
+%Et diagram $D:\Jcal\to\Ccal$ er kalt kommutativt hvis alle morfier
+%som starter med samme objekt og slutter på samme objekt er like.
+%\end{definisjon}
+
+%I \bref{eksempel}{ex:Diag1} er diagrammet kommutativt hvis $g\circ
+%f = h\circ i$ og i \bref{eksempel}{ex:Diag2} er diagrammet
+%kommutativt hvis $h=g\circ f$.
+
+
+I en kategori med nullobjekt har morfier en kjerne og kokjerne.
+Her er definisjonene på kjernen fra \cite[seksjon VIII.1]{Lane2010}
+
+\begin{definisjon}\label{def:kjernen}
+    I en kategori $\Ccal$ med nullobjekt $0$, la $f: A\to B$ være en morfi. Kjernen til $f$ er et objekt $K$ sammen med en morfi $k: K\to A$ slik at $f\circ k=0$ og gitt ethvert objekt $Q$ med morfi $h: Q\to A$ slik at $f\circ h=0$, eksisterer det en unik morfi $u: Q\to K$ slik at diagrammet
+    \[\begin{tikzcd}
+	K \\
+	&& A && B \\
+	Q
+	\arrow["k", from=1-1, to=2-3]
+	\arrow["0", curve={height=-12pt}, from=1-1, to=2-5]
+	\arrow["f", from=2-3, to=2-5]
+	\arrow["{\exists!\,u}", dashed, from=3-1, to=1-1]
+	\arrow["h", from=3-1, to=2-3]
+	\arrow["0"', curve={height=12pt}, from=3-1, to=2-5]
+\end{tikzcd}\]
+kommuterer. 
+\end{definisjon}
+
+\begin{proposisjon}
+    I $\Vect_K$ er kjernen av en lineær avbilding $f: V\to
+    W$ gitt ved $U = \bset{v\in V}{f(v)=0}$ og inkusjonen
+    $k:U\to V$.
+\end{proposisjon}
+\begin{proof}[bevis]
+La $Q$ være et vektorrom med lineær avbilding $h: Q\to V$
+  med $f\circ h=0$. Vi må finne en $u:Q\to U$ slik at
+  $k\circ u=h$. Siden $f\circ h=0$, har vi for enhver
+  vektor $v\in Q$ er $f(h(v))=0$ altså er $h(v)\in U$.
+  Dermed er $h=k\circ h'$ med $h':Q\to K$ gitt ved
+  $h'(v)=h(v)$.
+\end{proof}
+
+Fra \citep[seksjon III.3]{Lane2010} har vi også kokjernen
+av en morfi.
+
+\begin{definisjon}\label{def:kokjernen}
+  I en kategori $\Ccal$ med nullobjekt, er kokjernen av en
+  morfi $f: A\to B$ en morfi $u: B\to E$ slik at
+  \begin{enumerate}
+    \item $u\circ f = 0: A\to E$
+    \item hvis $h: B\to C$ har $h\circ f = 0$, da er
+      $h=h'\circ u$ for en unik morfi $h':E\to C$.
+  \end{enumerate}
+\end{definisjon}
+
+Fra \citep[definisjon 1.3]{Bauer2018} har vi følgende
+viktig teorem for oppgaven
+
+\begin{definisjon}\label{def:trivialitet}
+   For $\Abld$ en kategori med nullobjekt og
+   $\delta\geq0$, sier vi at et diagram $M:\Rbld\to\Abld$
+   er $\delta$-triviell hvis for enhver $t\in\Rbb$, den
+   interne morfien $M_{t,t+\delta}: M_t\to M_{t+\delta}$
+   er en nullmorfi, altså den faktoriserer gjennom
+   nullobjektet.
+\end{definisjon}
+
+Kategoriene i denne oppgaven er kalt Puppe-eksakte
+kategorier. Definisjonen er gitt i \citep[definisjon
+2.1]{Bauer2018}.
+
+\begin{definisjon}\label{def:Puppe-eksakt}
+   En Puppe-eksakt kategori er en kategori med følgende
+   egenskaper:
+  \begin{enumerate}
+    \item den har et nullobjekt
+    \item den har alle kjerner og kokjerner
+    \item alle monomorfi er en kjerne og alle epimorfier
+      er en kokjerne
+    \item alle morfier har en epi-mono faktorisering.
+  \end{enumerate}
+\end{definisjon}
+
+
