@@ -1,0 +1,140 @@
+\section{Kategoriteori}
+
+Følgende er et sitat fra \textbf{"Ref til Mac Lane Her"} "Category
+theory starts with the observation that many properties of
+mathematical systems can be unified and simplified by
+a presentation with diagrams and arrows." Dette rammeverket kommer
+til å være veldig nyttig i denne oppgaven, men for å bruke det må
+vi vite bedre hva som menes med piler og diagrammer.
+
+\begin{definisjon}\label{def:Kat}
+En kategori $\Ccal$ er en tuppel
+$(\Ob(\Ccal),\hom(\Ccal),\dom,\cod,\circ)$ med følgende
+egenskaper:
+\begin{itemize}
+\item $\Ob(\Ccal)$ er en klasse av elementer vi kaller objekter
+\item $\hom(\Ccal)$ er en klasse av piler, kalt morfier, $f:a\to b$ for et par av objekter $a$ og $b$.
+\item $\dom,\cod:\hom(\Ccal)\to\Ob(\Ccal)$ er funksjoner slik at
+for en morfi $f:a\to b$, så er $\dom(f) = a$ og $\cod(f) = b$. Vi
+kaller $a$ domenen til $a$ og $b$ codomenen.
+\item For ethvert objekt $A$ i $\Ccal$ eksister det en morfi
+$\id_a:a\to a$, med egenskapen at for enhver morfi $f:a\to b$ så
+er $f\circ\id_a = f$ og forenhver $g: b\to a$ så er $\id_a\circ g=
+g$.
+\item $\circ$ er en binæroperasjon kalt en komposisjon som tar et par av morfier på
+formen $f:a\to b$ og $g: b\to c$ og gir en ny morfi $g\circ f:
+a\to c$. For å komponere en morfi $g$ med en morfi $f$ trenger vi
+at domenen til $g$ er lik kodomenen til $f$.
+\end{itemize}
+\end{definisjon}
+
+Nå ser vi på noen eksempler på noen vanlige kategorier.
+
+\begin{eksempel}\label{eks:Setkat}
+  Hvis vi lar $\Ob(\Ccal)$ være klassen av alle mengder og
+  $\hom(\Ccal)$ være de vanlige funksjonene mellom mengder, får vi
+  kategorien av mengder ofte skrevet $\Set$. Gitt to funksjoner
+  $f:A\to B$ og $g:B\to C$ er komposisjon definert punktvis ved
+  $(g\circ f)(x) = g(f(x))$. For en mengde $A$ er
+  identitetsmorfien $\id_A$ gitt ved å sende et element i $A$ til
+  seg selv.
+\end{eksempel}
+
+\begin{eksempel}\label{eks:Topkat}
+  Vi kan også la $\Ob(\Ccal)$ være klassen av topologiske rom med
+  morfier kontinuerlige funksjoner. Komposisjon er likt definert
+  som i $\Set$ og komposisjon av kontinuerlige funksjoner er også
+  kontinuerlig. Igjen likt som i $\Set$ er identitetsmorfien for
+  et topologisk rom $\id_X$ definert ved å sende et punkt til
+  seg selv. Kategorien av topologiske rom er skrevet $\Top$.
+\end{eksempel}
+
+\begin{eksempel}\label{eks:Vektkat}
+  En annen kategori er hvor objektene er vektorrom og morfiene er
+  lineære avbildinger mellom rommene. Komposisjon og
+  identitetsmorfiene er definert likt som i $\Set$ og $\Top$. Vi
+  kaller kategorien av vektorrom for $\Vect$ og vektorrom over en
+  viss kropp $\Vect_K$.
+\end{eksempel}
+
+Det er også viktig å observere at det er ingen sted i definisjonen
+til en kategori at objektene trenger å ha en underliggende
+mengdestruktur og at morfiene trenger å være funksjoner. Her er et
+eksempel på en slik kategori.
+
+\begin{eksempel}\label{eks:Posetkat}
+  La $P$ være en delvis ordnet mengde med orden $\leq$. Vi kan la
+  $\Ccal$ være en kategorien definert ved å la objektene vær
+  elementene i $P$ og vi har en morfi $a\to b$ hvis $a\leq b$ som
+  elementer i $P$. Komposisjon blir da gitt ved transitivitet,
+  hvis vi har morfier $f:a\to b$ og $g:b\to c$, da har vi at
+  $a\leq b$ og $b\leq c$ og ved transitivitet vet vi at $a\leq c$
+  som betyr at det er en morfi $a\to c$ som vi kaller $g\circ f$.
+\end{eksempel}
+
+Det er også viktig å notere at for enhver kategori $\Ccal$ har vi
+den motsatte kategorien skrevet $\Ccal^\op$.
+
+\begin{remark}\label{rem:smaakat}
+Objektene og morfiene til noen kategorier som f.eks. $\Set$ som
+vi senere snakker raskt om kan ikke være inneholdt i det vi
+kaller mengder og er heller elementer av en klasse. Vi kaller
+kategorier hvor objektene og morfiene er elementer av en mengde
+små kategorier eller en liten kategori. Disse kategoriene kommer til å bli brukt senere i definisjonen på et diagram.
+\end{remark}
+
+%DETTE ER TATT FRA
+%https://ncatlab.org/nlab/show/opposite+category MÅ ENDRES ELLER
+%REFERERES TIL.
+\begin{definisjon}\label{def:OpKat}
+  Gitt en kategori $\Ccal$ eksisterer det en kategori $\Ccal^\op$
+  hvor alle objektene $\Ccal$ er lik i $\Ccal^\op$, men alle
+  morfiene bytter retning. En morfi $f: A\to B$ i $\Ccal^\op$
+  lik en morfi $f: B\to A$ i $\Ccal^\op$. For morfier $f: A\to B$
+  og $g: B\to C$ er komposisjonen $g\circ f$ i $\Ccal^\op$
+  definert som komposisijonen $f\circ g$ i $\Ccal$. 
+\end{definisjon}
+
+Det eksisterer også piler mellom kategorier kalt funktorer.
+
+\begin{definisjon}\label{def:Funktor}
+  Gitt kategorier $\Ccal$ og $\Dcal$ er en funktor
+  $F:\Ccal\to\Dcal$ definert på følgende måte.
+  \begin{itemize}
+    \item For et objekt $A$ i $\Ccal$ er $F(A)$ et objekt
+      i $\Dcal$.
+    \item For en morfi $f:A\to B$ i $\Ccal$ er $F(f): F(A)\to
+      F(B)$ en morfi i $\Dcal$.
+    \item For et objekt $A$ i $\Ccal$ er $F(\id_A)=\id_{F(A)}$.
+    \item For morfier $f: A\to B$ og $g: B\to C$ er $F(g\circ f)
+      = F(g)\circ F(f)$.
+  \end{itemize}
+\end{definisjon}
+
+\begin{eksempel}\label{eks:GlemmeFunktor}
+  Funktoren $F:\Top\to\Set$ som sender et topologisk rom
+  $(X,\Tcal)$ til sin underliggende mengde $X$ og kontinuerlige
+  funksjoner $f:(X,\Tcal)\to(Y,\Tcal')$ blir sendt til dens
+  underliggende mengdefunksjon. Siden identitetsmorfiene i $\Top$
+  er definert likt som identitetsmorfiene i $\Set$ så er
+  $F(\id_{(X,\Tcal)})=\id_{F((X,\Tcal))}=\id_X$. Siden komposisjon
+  i $\Top$ er lik som i $\Set$ har vi at $F(g\circ f) = F(g)\circ 
+  F(f)$. Dette betyr at $F:\Top\to\Set$ er en funktor.
+\end{eksempel}
+
+En spesiell type funktor er følgende.
+\begin{definisjon}\label{def:KontraFunktor}
+En funktor $F:\Ccal^\op\to\Dcal$ eller $F:\Ccal\to\Dcal^\op$ sies
+å være kontravariant og vi skriver ofte bare $F:\Ccal\to\Dcal$ med
+tillegsinformasjonen om at den er kontravariant. Kontravariante
+funktorer har egenskapen at de bytter retning på morfier, hvis $F$
+er kontravariant og $f: A\to B$ er en morfi, da er $F(f): F(B)\to
+F(A)$.
+\end{definisjon}
+
+
+
+
+\begin{definisjon}\label{def:Diagram}
+  
+\end{definisjon}

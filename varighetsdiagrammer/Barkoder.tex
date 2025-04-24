@@ -1,11 +1,12 @@
 \section{Strekkoder}
-En barkode $\Bcal$ er en representasjon av en multimengde
-av intervaller. Elementer i en barkode er dermed par
+En strekkode $\Bcal$ er en representasjon av en multimengde
+av intervaller. Elementer i en strekkode er dermed par
 $(I,k)$ der $I$ er et intervall og $k\in\Nbb$. Ofte når
 indeksen $k$ er nødvendig skriver vi bare $I$ for et
-intervall i barkoden.
+intervall i strekkoden. Når vi ignorerer indeksene bruker vi multimengdenotasjonen for
+strekkoder og for morfiene som senere blir definert.
 
-I \citep[teorem 2.4]{Bauer2018} har vi følgende resultat.
+I \citep[teorem 2.4]{Bauer2020} har vi følgende resultat.
 \begin{teorem}\label{trm:DekompBark}
   For enhver p.e.d. varighetsmodul $M$, eksisterer det en
   unik naturlig strekkode $\Bcal(M)$ slik at
@@ -28,8 +29,8 @@ dekomponeringsstrekkoden.
 Strekkoder kan også gjøres om til en kategori med morfier
 vi kaller overlappkoblinger. For å definere en overlappkobling
 må vi først definere hva det betyr at et intervall
-overlapper et annet intervall over og hva en parvis
-kobling av mengder er. Fra \citep[seksjon 2.3]{Bauer2018}
+overlapper et annet intervall over. Fra \citep[seksjon
+2.3]{Bauer2020}
 har vi følgende definisjon.
 
 \begin{definisjon}
@@ -79,7 +80,7 @@ Dette betyr at $\sigma$ er en overlappkobling.
 }
 
 \begin{teorem}
-    Klassen av strekkoder sammen med overlappkoblinger
+    Mengden av strekkoder sammen med overlappkoblinger
     skaper en kategori.
 \end{teorem}
 \bevis{
@@ -132,7 +133,7 @@ over. Fordi $(I,J)\in\sigma$ og $(J,L)\in\tau$
   $\empty$ nullobjekt.
 }
 
-I \cite{Bauer2018} \textbf{seksjon 2.5} beskriver
+I \citep[seksjon 2.5]{Bauer2020} beskriver
 forfatter kjernen, kokjernen og bildet til en
 overlappkobling som strekkoder, men som beskrevet i seksjon
 \bref{seksjon}{Ssek:Kategoriteori}
@@ -140,7 +141,7 @@ i \bref{definisjon}{def:kjernen} og
 \bref{definisjon}{def:kokjernen} er ikke bare (ko)kjernen
 av en morfi i en kategori et objekt, det er et par gitt av
 et objekt og en morfi. Her er konstruksjonen av kjernen,
-kokjernen og bildet, kjernen av kokjernen, som strekkoder
+kokjernen og bildet, som strekkoder
 sammen med en overlappkobling.
 
 \begin{teorem}\label{trm:ker}
@@ -239,13 +240,13 @@ avstand mellom strekkoder.
 
 \subsection{Flaskehalsavstanden}
 En kan definere en avstand av strekkoder på to
-forskjellige måter gitt i \cite{Bauer2018}. En måte er
+forskjellige måter gitt i \cite{Bauer2020}. En måte er
 å definere en type inflettingsavstand i \Barc og en annen
 kalt Flaskehalsavstanden. Vi starter med å definere den
 første type avstand.
 
 \begin{bemerk}\label{bem:strek_triv}
-  Under \citep[definisjon 1.3]{Bauer2018} skriver
+  Under \citep[definisjon 1.3]{Bauer2020} skriver
   forfatter at en strekkoder er $\delta$-triviell hvis og
   bare hvis alle intervallene i strekkoden er inneholdt
   i et halv-åpent intervall av lengde $\delta$.
@@ -256,7 +257,7 @@ første type avstand.
   $\{I\}$ er $\delta$-triviell
 \end{bemerk}
 
-I \citep[seksjon 2.5]{Bauer2018} definerer forfatter en
+I \citep[seksjon 2.5]{Bauer2020} definerer forfatter en
 forskyvingsavbilding av intervaller som induserer en
 funktor $\Barc\to\Barc$.
 \begin{definisjon}\label{def:IntSkyv}
@@ -274,7 +275,7 @@ Dette gir en funktor $(\cdot)(\delta):\Barc\to\Barc$ definert ved
     \[\sigma(\delta) = \bset{(I(\delta),J(\delta))}{(I,J)\in\sigma}.\]
 \end{definisjon}
 
-Fra \cite{Bauer2018} har vi for enhver strekkode $\Ccal$
+Fra \cite{Bauer2020} har vi for enhver strekkode $\Ccal$
 og $\delta\geq0$ overlappkoblingen $S^{\Ccal,\delta}
 = \bbag{(I,I(\delta))}{\text{$I$ ikke er
 $\delta$-triviell}}$.
@@ -290,7 +291,8 @@ To strekkoder $\Ccal$ og $\Dcal$ sies å være
 Dette gir på samme måte som i \bref{seksjon}{sek:VarMod} en inflettingsavstand gitt ved
 \[d_I(\Ccal,\Dcal) = \inf\bset{\delta\in\ropen{0}{\infty}}{\text{$\Ccal$ og $\Dcal$ $\delta$-inflettet}}.\]
 
-Den andre måten en kan definere en avstand på er gitt i \cite[seksjon 4.2]{Bauer2018}.
+Den andre måten en kan definere en avstand på er gitt
+i \cite[seksjon 4.2]{Bauer2020}.
 
 La $U_\delta(I) = \bset{t\in\Rbb}{\text{det eksisterer en $s\in I$ slik at }|s-t|\leq\delta}$
 
@@ -310,7 +312,19 @@ Gitt to strekkoder $\Ccal$ og $\Dcal$ er flaskehalsavstanden
 Nå som vi har to typer avstander av strekkoder er det
 naturlige spørsmålet "hvilken skal man bruke?" Heldigvis
 er det ikke nødvendig å velge fordi inflettingsavstanden
-og flaskehalsavstanden er like.
+og flaskehalsavstanden er like. For å vise dette bruker vi
+\citep[proposisjon 4.2]{Bauer2020} og en bemerkning
+i \citep[seksjon 4.2]{Bauer2020}
+
+\begin{proposisjon}\label{prop:Prop2.4-Bauer2020}
+  I kategoriene $\vect_K^\Rbld$ og \Barc er to objekter $M$ og $N$
+  $\delta$-inflettet hvis og bare hvis det er en morfi $f: M\to
+  N(\delta)$ med $2\delta$-triviell kjerne og kokjerne.
+\end{proposisjon}
+
+\begin{bemerk}\label{bem:r_delta}
+
+\end{bemerk}
 
 \begin{teorem}\label{trm:FA_lik_IA}
 Gitt strekkoder $\Ccal$ og $\Dcal$ holder følgende

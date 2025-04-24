@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{11}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -22,6 +22,13 @@ Ulrich Bauer and Michael Lesnick.
 \newblock \emph{Journal of Computational Geometry}, pages 162--191 Pages, March
   2015.
 \newblock \doi{10.20382/jocg.v6i2a9}.
+
+\bibitem[Bauer and Lesnick(2020)]{Bauer2020}
+Ulrich Bauer and Michael Lesnick.
+\newblock Persistence {{Diagrams}} as {{Diagrams}}: {{A Categorification}} of
+  the {{Stability Theorem}}.
+\newblock volume~15, pages 67--96. 2020.
+\newblock \doi{10.1007/978-3-030-43408-3_3}.
 
 \bibitem[Chazal et~al.(2016)Chazal, {Crawley-Boevey}, and De~Silva]{Chazal2016}
 Fr{\'e}d{\'e}ric Chazal, William {Crawley-Boevey}, and Vin De~Silva.
