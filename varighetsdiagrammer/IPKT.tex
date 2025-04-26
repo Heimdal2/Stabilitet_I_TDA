@@ -1,4 +1,71 @@
 \section{Det induserte koblingsteoremet}
+For å relatere flaskehalsavstanden av strekkoder og
+inflettingsavstanden av varighetsmoduler må vi ha en måte
+å relatere en $\delta$-inflettingsmorfi av
+varighetsmoduler med en $\delta$-kobling av deres
+strekkoder. Det induserte koblingsteoremet lar oss
+relatere varighetsmodulmorfier til en korresponderende
+overlappkobling. \citep[Teorem 3.1]{Bauer2020} gir
+følgende resultat
+
+\begin{teorem}\label{trm:IKT}
+  La $f: M\to N$ være en varighetsmodulmorfi på p.e.d.
+  varighetsmoduler.
+  \begin{enumerate}
+    \item Den induserte parvis koblingen
+      $\chi(f):\Bcal(M)\to\Bcal(N)$ er en overlappkobling.
+    \item Hvis $\ker f$ er $\delta$-triviell, da har vi
+      \begin{enumerate}
+        \item for ethvert par $(I,J)\in\chi(f)$, begrenser $J$
+          $I(\delta)$ over og
+        \item ethvert intervall i $\Bcal(M)$ som ikke er
+          koblet av $\chi(f)$ er inneholdt i et halvåpent
+          intervall av lengde $\delta$.
+      \end{enumerate}
+
+    \item Hvis $\coker f$ er $\delta$-triviell, da har vi
+      \begin{enumerate}
+        \item for ethvert par $(I,J)\in\chi(f)$, begrenser
+          $I(\delta)$ $J$ under og
+        \item for ethvert intervall $\Bcal(N)$ som ikke er
+          koblet av $\chi(f)$ er inneholdt i et halvåpent
+          intervall av lengde $\delta$.
+      \end{enumerate}
 
 
+  \end{enumerate}
+\end{teorem}
 
+For å bevise dette teoremet må vi først definere hva
+$\chi(f)$ er for en varighetsmodul $f: M\to N$.
+
+\subsection{Koblinger indusert av mono- og epimorfier av
+varighetsmoduler}
+I \citep[seksjon 3.2]{Bauer2020} starter forfatter med
+å definere $\chi(f)$ for monomorfier og epimorfier av
+varighetsmoduler. Dette gjøres ved å bruke indeksene til
+intervallene i strekkodene. Forfatter definerer en
+ekvivalensrelasjon $\sim_a$ på mengden av intervaller
+$\Ical$ ved å la $I\sim_a J$ hvis $I$ og $J$ samfaller
+over, altså $I$ begrenser $J$ over og $J$ begrenser $I$
+over.
+
+\begin{bemerk}
+  La $I = \langle a,b)$ og $J = \langle a,b]$, da
+  begrenser $J$ $I$ over, men $I$ begrenser ikke $J$ over,
+  altså $I$ og $J$ samfaller ikke over.
+\end{bemerk}
+
+Denne relasjonen induserer en ekvivalensrelasjon på
+strekkoder.
+
+\begin{definisjon}\label{def:EkRelBarc}
+  For en strekkode $\Bcal$ lar vi $(I,n)\sim_a (J,k)$ hvis
+  $I\sim_a J$.
+\end{definisjon}
+
+For enhver ekvivalensklasse $e\in\Ical/\sim_a$ lar vi
+$\Bcal^e$ være den korresponderende ekvivalensklassen
+i $\Bcal/\sim_a$, altså $(I,n)\in\Bcal^e$ hvis $I\in e$.
+Hvis det ikke eksisterer intervall i $\Bcal$ som også er
+i $e$ lar vi $\Bcal^e=\emptyset$.
