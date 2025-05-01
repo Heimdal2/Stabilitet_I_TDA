@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.18)  24 APR 2025 16:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.18)  1 MAY 2025 10:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -860,19 +860,6 @@ Overfull \hbox (18.61005pt too wide) detected at line 70
  []
 
 [4]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 99.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Delta' on input line 99.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 99.
-
-
 Overfull \hbox (13.05206pt too wide) in paragraph at lines 108--110
 [][]\OT1/cmr/bx/n/10 Definisjon 1.2.6. []\OT1/cmr/m/it/10 En mengde $[]$ av pun
 kt i $\U/msb/m/n/10 R[]$ \OT1/cmr/m/it/10 er ge-ometrisk uavhengige
@@ -883,15 +870,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 128--129
 
  []
 
-[5]
-Overfull \hbox (4.67937pt too wide) in paragraph at lines 196--199
-[][]\OT1/cmr/bx/n/10 Definisjon 1.2.11. []\OT1/cmr/m/it/10 Den $\OML/cmm/m/it/1
-0 n$\OT1/cmr/m/it/10 -te ho-molo-gien av et topol-o-gisk rom med sim-plisialkom
--
+
+Overfull \hbox (2.05515pt too wide) in paragraph at lines 134--136
+[]\OT1/cmr/m/n/10 I [[]Munkres[], []2018[], sek-sjon 5] gir for-fat-ter f^^\lge
+nde defin-isjon om sim-plisialkom-
  []
 
-) (./forkunnskaper/VektRom.tex [6] [7]) (./forkunnskaper/Multimengder.tex)
-(./forkunnskaper/Kategoriteori.tex [8] [9] [10] [11]
+[5]) (./forkunnskaper/VektRom.tex [6]) (./forkunnskaper/Multimengder.tex
+[7]) (./forkunnskaper/Kategoriteori.tex [8] [9] [10]
 Overfull \hbox (10.67928pt too wide) in paragraph at lines 218--219
 [][]\OT1/cmr/bx/n/10 Eksempel 1.5.6. []\OT1/cmr/m/it/10 Vi har ogs^^Wa en funk-
 tor $\OML/cmm/m/it/10 F \OT1/cmr/m/n/10 : [] \OMS/cmsy/m/n/10 ! []$ \OT1/cmr/m/
@@ -906,7 +892,14 @@ cmm/m/it/10 V \OMS/cmsy/m/n/10 2 [][]$ \OT1/cmr/m/it/10 til vek-tor-rom-met $[]
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 V; W\OT1/cmr/m/n/10 )$
  []
 
-[12] [13])) (./varighetsdiagrammer/Varighetsmoduler.tex [14]
+[11] [12] [13]
+Overfull \hbox (4.67937pt too wide) in paragraph at lines 518--521
+[][]\OT1/cmr/bx/n/10 Definisjon 1.5.18. []\OT1/cmr/m/it/10 Den $\OML/cmm/m/it/1
+0 n$\OT1/cmr/m/it/10 -te ho-molo-gien av et topol-o-gisk rom med sim-plisialkom
+-
+ []
+
+)) (./varighetsdiagrammer/Varighetsmoduler.tex [14]
 Overfull \hbox (0.8248pt too wide) in paragraph at lines 58--73
 \OT1/cmr/m/n/10 varighetsmod-uler eller p.e.d. varighetsmod-uler tatt fra []Bau
 er and Lesnick[] [[]2015[]].
@@ -949,19 +942,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 169--169
 
  []
 
-
+[17]
 Overfull \hbox (11.46065pt too wide) in paragraph at lines 173--175
 [][]\OT1/cmr/bx/n/10 Proposisjon 2.1.2. []\OT1/cmr/m/it/10 Hvis $\OML/cmm/m/it/
 10 M [] M[]$ \OT1/cmr/m/it/10 er iso-morfe varighetsmod-uler s^^Wa er $\OML/cmm
 /m/it/10 d[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 M; N\OT1/cmr/m/n/10 ) =
  []
 
-[17]) (./varighetsdiagrammer/Barkoder.tex [18]
+) (./varighetsdiagrammer/Barkoder.tex [18] [19]
 
-LaTeX Warning: Reference `Ssek:Kategoriteori' on page 19 undefined on input lin
+LaTeX Warning: Reference `Ssek:Kategoriteori' on page 20 undefined on input lin
 e 139.
 
-[19]
 
 LaTeX Warning: Reference `OK-Komp' on page 20 undefined on input line 178.
 
@@ -990,17 +982,27 @@ y/m/n/10 6\OT1/cmr/m/n/10 =
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 302--303
+Overfull \hbox (2.0458pt too wide) in paragraph at lines 238--243
+\OT1/cmr/m/n/10 en over-lapp-kobling til ^^Wa gi tilstrekke-lige betingelser fo
+r $\OML/cmm/m/it/10 ^^N$\OT1/cmr/m/n/10 -trivialitet av (ko)kjernen
+ []
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 308--309
 
  []
 
-[21]) (./varighetsdiagrammer/Varighetshomologi.tex [22]
+
+Package natbib Warning: Citation `.' on page 22 undefined on input line 349.
+
+) (./varighetsdiagrammer/Varighetshomologi.tex [22]
 LaTeX Font Info:    Trying to load font information for OT1+pzc on input line 5
 3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pzc.fd
 File: ot1pzc.fd 2020/03/25 font definitions for OT1/pzc.
 )) (./main.bbl
+[23{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}]
 Underfull \hbox (badness 3364) in paragraph at lines 34--40
 []\OT1/cmr/m/n/10 Fr^^Sed^^Seric Chazal, William Crawley-Boevey, and Vin De Sil
 va.  The
@@ -1018,8 +1020,11 @@ Underfull \hbox (badness 3557) in paragraph at lines 34--40
 SN 15320073, 15320081.
  []
 
-[23{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}]) [24]
-(./main.aux)
+)
+
+Package natbib Warning: There were undefined citations.
+
+[24] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1136,42 +1141,55 @@ varighetsdiagrammer/Varighetshomologi.tex
 
 LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C86B277E22F172F3CCC7E4F50A96578C;1774.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: C86B277E22F172F3CCC7E4F50A96578C;1774
+(rerunfilecheck)             After:  E50447016F2E1D7C29BFC6C0A780D027;1819.
  ) 
 Here is how much of TeX's memory you used:
- 24826 strings out of 474222
- 476587 string characters out of 5748733
- 1947975 words of memory out of 5000000
- 46440 multiletter control sequences out of 15000+600000
+ 24829 strings out of 474222
+ 476641 string characters out of 5748733
+ 1946975 words of memory out of 5000000
+ 46441 multiletter control sequences out of 15000+600000
  572635 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  131i,15n,135p,537b,1116s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/pub
-lic/cm-super/sfrm1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stm
-aryrd/stmary10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfchan/uzcm
-i8a.pfb>
-Output written on main.pdf (24 pages, 342019 bytes).
+
+pdfTeX warning (dest): name{subsubsection.1.2.3} has been referenced but does n
+ot exist, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/publi
+c/cm-super/sfrm1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stmar
+yrd/stmary10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8
+a.pfb>
+Output written on main.pdf (24 pages, 343030 bytes).
 PDF statistics:
- 573 PDF objects out of 1000 (max. 8388607)
- 498 compressed objects within 5 object streams
- 174 named destinations out of 1000 (max. 500000)
+ 583 PDF objects out of 1000 (max. 8388607)
+ 507 compressed objects within 6 object streams
+ 176 named destinations out of 1000 (max. 500000)
  125 words of extra memory for PDF output out of 10000 (max. 10000000)
 

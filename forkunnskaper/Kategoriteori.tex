@@ -460,4 +460,66 @@ kategorier. Definisjonen er gitt i \citep[definisjon
   \end{enumerate}
 \end{definisjon}
 
+\subsubsection{Homologi}
+Topologiske rom kan være vanskelige å studere i seg selv.
+Heldigvis kan man overføre informasjon om rommet til en algebraisk
+struktur som er lettere å håndtere. Vi kan gjøre dette på
+forskjellige måter, men i denne oppgaven bruker vi
+homologi. 
+
+Følgende definisjoner er fra \citep[seksjon
+2.1]{Hatcher2001}.
+
+\begin{definisjon}\label{def:KjdKomp}
+  Gitt et simplisialkompleks $X$, la $\Delta_n(X)$ være
+  det frie vektorrommet over en kropp $K$ med alle
+  $n$-simpleksene i $X$ som basis.
+\end{definisjon}
+
+Vektorer i $\Delta_n(X)$ er formelle summer $\sum
+n_\alpha\sigma_\alpha$ hvor $n_\alpha\in K$ og
+$\sigma_\alpha\in X$ et $n$-simpleks. Vi kaller vektorer
+i $\Delta_n(X)$ for $n$-kjeder. 
+
+\begin{definisjon}\label{def:randhom}
+  For ethvert simplisialkompleks og enhver $n\in\Zbb^+$
+  har vi avbildingen 
+  \[\partial_n: \Delta_n(X)\to\Delta_{n-1}(X)\]
+  som sender et $n$-simpleks
+  \[[v_0,\dots,v_n]\mapsto
+  \sum_{i=0}^n(-1)^i[v_0,\dots,\hat{v}_i,\dots,v_n]\]
+  Hvor $[v_0,\dots,\hat{v}_i,\dots,v_n]$ er
+  $(n-1)$-simplekset hvor vi sletter $v_i$. Avbildingene
+  $\partial_n$ er kalt randhomomorfier.
+\end{definisjon}
+
+\begin{eksempel}\label{eks:randhom}
+  For simplisialkomplekset i \bref{eksempel}{eks:Sirkel}
+  har vi
+  \[\Delta_0(X) = \bset{a[p_0]+b[p_1]+c[p_2]}{a,b,c\in K}\]
+  \[\Delta_1(X)
+  = \bset{a[p_0,p_1]+b[p_0,p_2]+c[p_1,p_2]}{a,b,c\in K}\]
+  \[\Delta_n(X) = \{0\},\quad n>1\text{ eller } n<0\]
+  og randhomomorfiene blir
+  \[\partial_1([p_i,p_j]) = p_j-p_i\]
+  for ethvert par $i,j=0,1$ og
+  \[\partial_n = 0.\]
+\end{eksempel}
+
+Fra definisjonen av randhomomorfiene har vi at
+$\partial_n\circ\partial_{n+1}=0$. Dette betyr at
+$\im\partial_{n+1}\subset\ker\partial_n$.
+Definisjonen på homologien av et rom er gitt ved
+simplisialkomplekset til rommet. I \citep[seksjon
+2.1]{Hatcher2001} definerer forfatter den $n$-te
+  homologigruppen ved
+
+\begin{definisjon}\label{def:Homologi}
+  Den $n$-te homologien av et topologisk rom med
+  simplisialkompleks $X$ er definert
+  som $H_n(X) = \ker\partial_n/\im\partial_{n+1}$.
+\end{definisjon}
+
+I vårt tilfellet er $H_n(X)$ et vektorrom over en kropp
+$K$.
 
