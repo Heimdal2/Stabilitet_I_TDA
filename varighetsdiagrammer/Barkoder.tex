@@ -119,7 +119,7 @@ $(J,L)\in\tau$ og $(L,K)\in\psi$ og $J$ må overlappe $K$
 over. Fordi $(I,J)\in\sigma$ og $(J,L)\in\tau$
 }
 
-\Barc er en Puppe-eksakt kategori. Dette betyr at kategorien har et nullobjekt gitt under.
+$\Barc$ er en Puppe-eksakt kategori. Dette betyr at kategorien har et nullobjekt gitt under.
 
 \begin{proposisjon}\label{prop:Ønull}
   Den tomme mengden $\empty$ er nullobjektet i $\Barc$. 
@@ -127,7 +127,7 @@ over. Fordi $(I,J)\in\sigma$ og $(J,L)\in\tau$
 \bevis{
   La $\Dcal$ være en strekkode. En overlappkobling $\sigma:
   \empty\to\Dcal$ er en delmengde av
-  $\empty\times\Barc=\empty$, siden $\empty$ er sin eneste
+  $\empty\times\Dcal=\empty$, siden $\empty$ er sin eneste
   delmengde så er $\sigma=\empty$. For samme grunn er det
   bare en overlappkobling $\Dcal\to\empty$. Dermed er
   $\empty$ nullobjekt.
@@ -239,7 +239,28 @@ Forfatter i \citep{Bauer2020} bruker definisjonene av
 (ko)kjernen av en overlappkobling til å gi tilstrekkelige
 betingelser for $\delta$-trivialitet av (ko)kjernen av en
 overlappkobling. Forfatter definerer for et intervall
-$I\subset \Rbb$
+$I\subset \Rbb$ og en $\delta\geq0$ intervallet
+\[I(\delta) = \bset{t\in\Rbb}{t+\delta\in I}.\]
+
+Med denne definisjonen gir \cite{Bauer2020} resultatet
+
+\begin{proposition}
+  La $\eta: \Ccal\to\Dcal$ være en overlappkobling av strekkoder. Da er
+  \begin{enumerate}
+    \item $\ker\eta$ $\delta$-triviell hvis og bare hvis
+    \begin{enumerate}
+      \item For ethvert par $(I,J)\in\eta$, begrenser $J$ $I(\delta)$ over og
+      \item For ethvert intervall i $\Ccal$ som ikke er koblet av $\eta$ er inneholdt i et halvåpent intervall av lengde $\delta$.
+    \end{enumerate}
+    \item $\coker\eta$ $\delta$-triviell hvis og bare hvis
+    \begin{enumerate}
+      \item For ethvert par $(I,J)\in\eta$, begrenser $I(\delta)$ $J$ under.
+      \item For ethvert intervall i $\Dcal$ som ikke er koblet av $\eta$ er inneholdt i et halvåpent intervall av lengde $\delta$.
+    \end{enumerate}
+  \end{enumerate}
+\end{proposition}
+
+
 
 Som sagt i \bref{seksjon}{sek:VarMod} er det også en
 avstand mellom strekkoder.
@@ -247,7 +268,7 @@ avstand mellom strekkoder.
 \subsection{Flaskehalsavstanden}
 En kan definere en avstand av strekkoder på to
 forskjellige måter gitt i \cite{Bauer2020}. En måte er
-å definere en type inflettingsavstand i \Barc og en annen
+å definere en type inflettingsavstand i $\Barc$ og en annen
 kalt Flaskehalsavstanden. Vi starter med å definere den
 første type avstand.
 
@@ -297,6 +318,11 @@ To strekkoder $\Ccal$ og $\Dcal$ sies å være
 Dette gir på samme måte som i \bref{seksjon}{sek:VarMod} en inflettingsavstand gitt ved
 \[d_I(\Ccal,\Dcal) = \inf\bset{\delta\in\ropen{0}{\infty}}{\text{$\Ccal$ og $\Dcal$ $\delta$-inflettet}}.\]
 
+Fra \citep[proposisjon 4.2]{Bauer2020} har vi følgende resultat
+\begin{proposisjon}\label{prop:inftriv}
+  I både $\vect_K^\Rbld$ og $\Barc$ er to objekter $M$ og $N$ $\delta$-inflettet hvis og bare hvis det eksisterer en morfi $f: M\to N(\delta)$ med $2\delta$-triviell kjerne og kokjerne.
+\end{proposisjon}
+
 Den andre måten en kan definere en avstand på er gitt
 i \cite[seksjon 4.2]{Bauer2020}.
 
@@ -323,7 +349,7 @@ og flaskehalsavstanden er like. For å vise dette bruker vi
 i \citep[seksjon 4.2]{Bauer2020}
 
 \begin{proposisjon}\label{prop:Prop2.4-Bauer2020}
-  I kategoriene $\vect_K^\Rbld$ og \Barc er to objekter $M$ og $N$
+  I kategoriene $\vect_K^\Rbld$ og $\Barc$ er to objekter $M$ og $N$
   $\delta$-inflettet hvis og bare hvis det er en morfi $f: M\to
   N(\delta)$ med $2\delta$-triviell kjerne og kokjerne.
 \end{proposisjon}
@@ -345,5 +371,4 @@ Gitt strekkoder $\Ccal$ og $\Dcal$ holder følgende
   $f:\Ccal\to\Dcal(\delta)$ har $2\delta$-triviell kjerne
   og kokjerne hvis og bare hvis $r_\delta\circ f$ er en
   $\delta$-kobling.
-
 }

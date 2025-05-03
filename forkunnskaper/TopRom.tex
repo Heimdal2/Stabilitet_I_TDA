@@ -72,7 +72,6 @@ $A$.
     vi kaller $\Tcal_A$ underromstopologien på $A$.
 \end{definisjon}
 
-
 \subsubsection{Homotopi}\label{sec:Homotopi}
 Fra \citep[seksjon 51]{Munkres2013} kan man tenke at
 homotopi representerer en kontinuerlig "deformering" fra en
@@ -102,7 +101,7 @@ i \bref{seksjon}{sek:VarHom}, men kommer ikke til å bli
 brukt ellers vil disse seksjonene inneholde uformelle
 forklaringer og noen eksempler. Definisjonene er tatt fra
 \citep[seksjon 1]{MunkresJamesR.2018EOAT} og
-\citep[seksjon 2]{MunkresJamesR.2018EOAT}.
+\citep[seksjon 2]{Munkr(esJamesR.2018EOAT}.
 
 \begin{definisjon}\label{def:GeoUav}
   En mengde $\set{a_0,\dots,a_n}$ av punkt i $\Rbb^N$ er
@@ -112,13 +111,26 @@ forklaringer og noen eksempler. Definisjonene er tatt fra
   impliserer at $t_0=t_1=\dots=t_n=0$.
 \end{definisjon}
 
+\begin{eksempel}
+  Et eksempel på geometrisk uavhengige punkter er $(3,3)$, $(4,5)$ og $(6,4)$.
+  Likningene
+  \[t_0+t_1+t_2 = 0\]
+  \[3t_0+4t_1+6t_2 = 0\]
+  \[3t_0+5t_1+4t_2 = 0\]
+  gir at $t_0,t_1,t_2 = 0$
+\end{eksempel}
+
 \begin{definisjon}\label{def:n-simp} 
   La $\set{a_0,\dots,a_n}$ være en geometrisk uavhengig mengde
   i $\Rbb^N$. Vi lar $n$-simplekset $\sigma$ utspent av
   $a_0,\dots,a_n$ være mengden av punkt
   \[\sum_{i=0}^nt_ia_i\quad\text{hvor}\quad\sum_{i=0}^nt_i = 1\]
   og $t_i\geq0$ for alle $i$. Vi skriver $[a_0,\dots,a_n]$ for
-  simplekset utspent av $\set{a_0,\dots,a_n}$.
+  simplekset utspent av $\set{a_0,\dots,a_n}$. Punktene som utspenner et simpleks er kalt noder.
+\end{definisjon}
+
+\begin{definisjon}
+  En side av et simpleks $[v_0,\dots,v_n]$ er et simpleks $[v_0,\dots,\hat{v_i},\dots,v_n]$, hvor $\hat{v_i}$ indikerer at vi sletter den $i$-te noden i simplekset. 
 \end{definisjon}
 
 \begin{definisjon}\label{def:SimpKomp}
