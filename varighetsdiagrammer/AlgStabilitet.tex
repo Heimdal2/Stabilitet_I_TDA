@@ -1,12 +1,33 @@
 \section{Algebraisk stabilitet}
 Denne seksjonen inneholder resultatet som oppgaven har bevegt seg
 mot. Praktisk talt sier teoremet at barkoder og varighetsmoduler
-laget fra data er robuste mot støy. Det algebraiske stabilitetsteoremet er gitt i \cite[Teorem 1.7]{Bauer2018}
+laget fra data er robuste mot støy. Det algebraiske
+stabilitetsteoremet er gitt i \cite[Teorem 1.7]{Bauer2018}
 
 \begin{teorem}\label{trm:AlgStab}
-To p.e.d. varighetsmoduler $M$ og $N$ er $\delta$-inflettet hvis og bare hvis deres barkoder $\Bcal(M)$ og $\Bcal(N)$ er $\delta$-inflettet. Spesielt er
+To p.e.d. varighetsmoduler $M$ og $N$ er
+  $\delta$-inflettet hvis og bare hvis deres barkoder
+  $\Bcal(M)$ og $\Bcal(N)$ er $\delta$-inflettet. Spesielt
+  er
 \[d_I(M,N) = d_I(\Bcal(M),\Bcal(N)).\]
 \end{teorem}
 \bevis{
-    Beviset kommer fra \citep[Proof of Algebraic Stability]{Bauer2020}. Gitt at $M$ og $N$ er $\delta$-inflettet så eksisterer det ved 
+    Beviset kommer fra \citep[Proof of Algebraic
+    Stability]{Bauer2020}. Gitt at det eksisterer en
+    $\delta$-inflettingsmorfi $f: M\to N(\delta)$ så har
+    $f$ $2\delta$-triviell kjerne og kokjerne ved
+    \bref{proposisjon}{prop:inftriv}. Ved
+    \bref{teorem}{trm:IKT} har
+    $\chi(f):\Bcal(M)\to\Bcal(N(\delta))$ også
+    $2\delta$-triviell kjerne og kokjerne. Fra
+    \bref{lemma}{lem:VMBarcshift} har vi at
+    $\Bcal(N(\delta)) = \Bcal(N)(\delta)$. Dermed er
+    $\chi(f):\Bcal(M)\to\Bcal(N)(\delta)$ en
+    $\delta$-infletting av strekkoder fra
+    \bref{proposisjon}{prop:inftriv}. Gitt en
+    $\delta$-infletting
+    \[f:\Bcal(M)\to\Bcal(N)(\delta),\quad
+    g:\Bcal(N)\to\Bcal(M),\]
+    er $\zeta(f)$ og $\zeta(g)$ en $\delta$-infletting fra
+    \bref{proposisjon}{prop:zetafunktor}
 }

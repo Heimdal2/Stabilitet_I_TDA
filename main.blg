@@ -1,14 +1,16 @@
-This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: plainnat.bst
 Database file #1: Ref.bib
+Warning--I didn't find a database entry for "Munkr(esJamesR.2018EOAT"
+Warning--I didn't find a database entry for "."
 Warning--empty journal in Bauer2018
 Warning--empty booktitle in Bauer2020
 Warning--empty publisher in Bauer2020
 You've used 11 entries,
             2773 wiz_defined-function locations,
-            674 strings with 6343 characters,
+            677 strings with 6390 characters,
 and the built_in function-call counts, 4221 in all, are:
 = -- 386
 > -- 152
@@ -47,4 +49,4 @@ warning$ -- 3
 while$ -- 41
 width$ -- 0
 write$ -- 164
-(There were 3 warnings)
+(There were 5 warnings)

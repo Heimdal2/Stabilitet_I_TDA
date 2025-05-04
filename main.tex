@@ -138,7 +138,7 @@
 
 \newcommand{\inter}[1]{\mathring{#1}}
 
-\newcommand{\bp}[1]{\left\{#1\right\}}
+\newcommand{\bp}[1]{\left(#1\right)}
 \newcommand{\es}{\emptyset}
 \renewcommand{\empty}{\es}
 
@@ -179,7 +179,10 @@
 \newcommand{\bag}[1]{\Lbag #1\Rbag}
 \newcommand{\bbag}[2]{\bag{#1\,\mid\, #2}}
 
+\renewcommand{\span}{\text{span}}
+
 \newcommand{\Rep}{\textnormal{Rep}}
+\newcommand{\sm}{\setminus}
 
 \newtheorem{teorem}{Teorem}[subsection]
 \newtheorem{definisjon}{Definisjon}[subsection]
@@ -200,9 +203,12 @@
 \begin{document}
 \maketitle
 \tableofcontents
+\input{Introduksjon}
 \input{forkunnskaper/Forkunnskaper}
 \input{varighetsdiagrammer/Varighetsmoduler}
 \input{varighetsdiagrammer/Barkoder}
+\input{varighetsdiagrammer/IPKT}
+\input{varighetsdiagrammer/AlgStabilitet}
 \input{varighetsdiagrammer/Varighetshomologi}
 \bibliography{Ref}
 \end{document}

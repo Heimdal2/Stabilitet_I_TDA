@@ -235,6 +235,53 @@ $\coker(\sigma,I)$ overlapper $J$ over.
   multimengden av par $(I\cap,J,J)$ hvor $(I,J)\in\sigma$.
 }
 
+Disse definisjonene gir følgende resultater gitt
+i \citep[korollar 2.8]{Bauer2020}, men gitt tidligere her
+
+\begin{proposisjon}\label{prop:Barc_mono_epi}
+   En overlappkobling $\sigma:\Ccal\to\Dcal$ er en
+  \begin{enumerate}
+    \item monomorfi hvis og bare hvis
+      \begin{enumerate}
+        \item for ethvert par $(I,J)\in\sigma$
+          sammenfaller $I$ og $J$ over, og
+        \item $\sigma$ kobler ethvert intervall
+          i $\Ccal$.
+      \end{enumerate}
+    \item epimorfi hvis og bare hvis
+      \begin{enumerate}
+        \item for ethvert par $(I,J)\in\sigma$
+          sammenfaller $I$ og $J$ under.
+        \item ethvert intervall i $\Dcal$ er koblet
+      \end{enumerate}
+  \end{enumerate}
+\end{proposisjon}
+\bevis{
+  For monomorfier har vi\\\\
+  "$\implies$"\\
+  Siden $\Barc$ er Puppe-eksakt, er $\sigma$ en monomorfi
+  (hhv. epi) hvis og bare hvis den har triviell
+  (ko)kjerne. La $\sigma$ være en monomorfi, da er
+  $\ker\sigma = \emptyset$. Hvis $I\in\Ccal$ ikke er
+  koblet har vi at $\ker(\sigma,I) = I\neq\empty$. Dette
+  er en motsigelse siden $\ker\sigma=\emptyset$, dermed er
+  alle intervaller i $\Ccal$ koblet. Vi har også at for et
+  par $(I,J)\in\sigma$ er $\ker(\sigma,I)=I\sm
+  J = \emptyset$. Dermed har vi at gitt en $t\in I$ har vi
+  at $t\in J$ også. $I$ begrenser $J$ over og $J$
+  begrenser $I$ over, dette betyr at $I$ og $J$
+  sammenfaller over.\\\\
+  "$\impliedby$"\\
+  Gitt et par $(I,J)\in\sigma$ har vi at $I$ og $J$
+  sammenfaller over og siden $J$ også begrenser $I$ under
+  har vi at $J$ dekker $I$ altså $I\sm J=\emptyset$. Siden
+  ethvert intervall i $\Ccal$ er koblet har vi for ethvert
+  intervall $I\in\Ccal$ et intervall $J\in\Dcal$ slik at
+  $(I,J)\in\sigma$. Dette betyr at $\ker\sigma=\emptyset$
+  som videre betyr at $\sigma$ er en monomorfi.\\\\
+  På en lik måte får vi resultatet for en epimorfi.
+}
+
 Forfatter i \citep{Bauer2020} bruker definisjonene av
 (ko)kjernen av en overlappkobling til å gi tilstrekkelige
 betingelser for $\delta$-trivialitet av (ko)kjernen av en
@@ -242,9 +289,9 @@ overlappkobling. Forfatter definerer for et intervall
 $I\subset \Rbb$ og en $\delta\geq0$ intervallet
 \[I(\delta) = \bset{t\in\Rbb}{t+\delta\in I}.\]
 
-Med denne definisjonen gir \cite{Bauer2020} resultatet
+Med denne definisjonen gir \citep{Bauer2020} resultatet
 
-\begin{proposition}
+\begin{proposisjon}
   La $\eta: \Ccal\to\Dcal$ være en overlappkobling av strekkoder. Da er
   \begin{enumerate}
     \item $\ker\eta$ $\delta$-triviell hvis og bare hvis
@@ -258,9 +305,10 @@ Med denne definisjonen gir \cite{Bauer2020} resultatet
       \item For ethvert intervall i $\Dcal$ som ikke er koblet av $\eta$ er inneholdt i et halvåpent intervall av lengde $\delta$.
     \end{enumerate}
   \end{enumerate}
-\end{proposition}
+\end{proposisjon}
+\bevis{
 
-
+}
 
 Som sagt i \bref{seksjon}{sek:VarMod} er det også en
 avstand mellom strekkoder.
@@ -301,6 +349,45 @@ Dette gir en funktor $(\cdot)(\delta):\Barc\to\Barc$ definert ved
     For en overlappkobling $\sigma:\Ccal\to\Dcal$ definerer vi
     \[\sigma(\delta) = \bset{(I(\delta),J(\delta))}{(I,J)\in\sigma}.\]
 \end{definisjon}
+
+Denne definisjonen på en $\delta$-forskyvning gir en
+korrespondans av $\delta$-forskyvninger i $\vect^\Rbld$ og
+i $\Barc$.
+
+\begin{lemma}\label{lem:VMBarcshift}
+  For en varighetsmodul $M$ og $\delta\geq0$ er
+  \[\Bcal(M(\delta))=\Bcal(M)(\delta)\]
+\end{lemma}
+\bevis{
+  Vi har at
+  \[M(\delta) = \bigoplus_{I\in\Bcal(M(\delta))}K^I
+  = \bp{\bigoplus_{I\in\Bcal(M)}K^I}(\delta)\]
+  Ved \bref{lemma}{lem:DSShiftSplit} har vi at
+  \[\bp{\bigoplus_{I\in\Bcal(M)}K^I}(\delta)
+  = \bigoplus_{I\in\Bcal(M)}K^I(\delta).\]
+  Hvis vi ser på en $K^I(\delta)$ i en $s\in\Rbb$ får vi
+  \[K^I(\delta)_s = K^I_{s+\delta}\]
+  \[= 
+  \begin{cases}
+    K,\quad \text{hvis $s+\delta\in I$}\\
+    0,\quad \text{ellers}
+  \end{cases} =
+  \begin{cases} K,\quad\text{hvis $s\in I(\delta)$}\\
+    0,\quad \text{ellers}.
+  \end{cases}
+  \]
+    Dermed har vi at $K^I(\delta) = K^{I(\delta)}$.
+    Dette betyr at
+    \[\bigoplus_{I\in\Bcal(M)} K^I(\delta)
+    = \bigoplus_{I\in\Bcal(M)} K^{I(\delta)}\]
+    Tilslutt får vi da
+    \[\bigoplus_{I\in\Bcal(M)} K^{I(\delta)}
+    = \bigoplus_{I\in\Bcal(M)(\delta)} K^I\]
+    Dermed har vi
+    \[\bigoplus_{I\in\Bcal(M(\delta))}K^I
+    = \bigoplus_{I\in\Bcal(M)(\delta)} K^I\]
+    som betyr at $\Bcal(M(\delta))=\cong\Bcal(M)(\delta)$.
+}
 
 Fra \cite{Bauer2020} har vi for enhver strekkode $\Ccal$
 og $\delta\geq0$ overlappkoblingen $S^{\Ccal,\delta}

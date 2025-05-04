@@ -100,10 +100,63 @@ $(I,n)\in\Bcal$ slik at $I\in e$. Vi lar $(I,n)<(J,n')$
 hvis $I$ er inneholdt i $J$ eller $I=J$ og $n'<n$
 "
 
+\begin{definisjon}\label{def:zetafunktor}
+  Det eksisterer en funktor $\zeta:\Barc\to\vect^\Rbld$
+  definert som følger:
 
-\begin{proposisjon}\label{prop:IKTepi}
-  
+  Gitt en strekkode $\Ccal$ og $s\in\Rbb$ er $\zeta(\Ccal)_s$
+  vektorrommet $\span_K\bset{I\in\Ccal}{s\in I}$.
+  Overgangsavbildingene
+  \[\p_{\zeta(\Ccal)}(s,t):\zeta(\Ccal)_s\to\zeta(\Ccal)_t\]
+  for $s\leq t$, er den lineære avbildingen gitt ved
+  \[I \mapsto 
+  \begin{cases}
+    I,\quad \text{hvis $t\in I$}\\
+    0,\quad \text{ellers}
+  \end{cases}
+  \]
+  for et basiselement $I\in\zeta(\Ccal)_s$.
+
+  For en overlappkobling $\sigma:\Ccal\to\Dcal$ lar vi
+  \[\zeta(\sigma)_s(I) =
+  \begin{cases}
+    J,\quad \text{Hvis $(I,J)\in\sigma$ og $s\in I\cap
+    J$}\\
+    0,\quad\text{ellers}
+  \end{cases}.\]
+\end{definisjon}
+Denne funktoren gir en konvers versjon av det induserte
+koblingsteoremet.
+
+\begin{proposisjon}{break}\label{prop:KonvIKT}
+  \begin{enumerate}
+    \item $\zeta(\Bcal(M))\cong M$ for enhver p.e.d.
+      varighetsmodul.
+    \item Hvis $f:\Ccal\to\Dcal$ er en morfi i $\Barc$ med
+      $\delta$-triviell (ko)kjerne, da har $\zeta(f)$
+      $\delta$-triviell (ko)kjerne.
+  \end{enumerate}
 \end{proposisjon}
-\begin{proof}
+\bevis{
+  \begin{enumerate}
+    \item
+      Vi har
+      \[M_s\cong\bigoplus_{I\in\Bcal(M)}K^I_s\]
+      Hvis $s\notin I$ har vi at $K^I_s = 0$, dermed har vi
+      \[\bigoplus_{I\in\Bcal(M),\\ s\in I}K^I_s.\]
+      Dermed er $\dim M_s$ er lik antall intervaller
+      $I\in\Bcal(M)$ slik at $s\in I$. Siden
+      \[\zeta(\Bcal(M))_s
+      = \span_K\bset{I\in\Bcal(M)}{s\in I}\]
+      er dimensjonen av $\zeta(\Bcal(M))$ også antall
+      intervaller $I\in\Bcal(M)$ slik at $s\in I$. Dermed er
+      $\dim\zeta(\Bcal(M))_s = \dim M_s$, ved
+      \bref{teorem}{trm:DimIso} har vi at
+      $\zeta(\Bcal(M))_s\cong M_s$ dermed har vi
+      $\zeta(\Bcal(M))\cong M$.
+    \item
+      La $f:\Ccal\to\Dcal$ være en morfi i $\Barc$ med
+      $\delta$-triviell kjerne. 
+  \end{enumerate}
 
-\end{proof}
+}

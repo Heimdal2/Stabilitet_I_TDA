@@ -1,14 +1,18 @@
-\contentsline {section}{\numberline {1}Forkunnskaper}{1}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Relasjoner}{1}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Topologiske rom}{3}{subsection.1.2}%
-\contentsline {subsubsection}{\numberline {1.2.1}Homotopi}{5}{subsubsection.1.2.1}%
-\contentsline {subsubsection}{\numberline {1.2.2}Simplisialkomplekser}{5}{subsubsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.3}Vektorrom}{6}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}Multimengder og parvis kobling}{7}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Kategoriteori}{8}{subsection.1.5}%
-\contentsline {subsubsection}{\numberline {1.5.1}Homologi}{14}{subsubsection.1.5.1}%
-\contentsline {section}{\numberline {2}Varighetsmoduler}{15}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Inflettingsavstand}{16}{subsection.2.1}%
-\contentsline {section}{\numberline {3}Strekkoder}{18}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Flaskehalsavstanden}{21}{subsection.3.1}%
-\contentsline {section}{\numberline {4}Varighetshomologi}{23}{section.4}%
+\contentsline {section}{\numberline {1}Introduksjon}{1}{section.1}%
+\contentsline {section}{\numberline {2}Forkunnskaper}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Relasjoner}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Topologiske rom}{4}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Homotopi}{5}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Simplisialkomplekser}{6}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}Vektorrom}{7}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Multimengder og parvis kobling}{8}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Kategoriteori}{9}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Homologi}{14}{subsubsection.2.5.1}%
+\contentsline {section}{\numberline {3}Varighetsmoduler}{15}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Inflettingsavstand}{16}{subsection.3.1}%
+\contentsline {section}{\numberline {4}Strekkoder}{19}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Flaskehalsavstanden}{23}{subsection.4.1}%
+\contentsline {section}{\numberline {5}Det induserte koblingsteoremet}{25}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Koblinger indusert av mono- og epimorfier av varighetsmoduler}{26}{subsection.5.1}%
+\contentsline {section}{\numberline {6}Algebraisk stabilitet}{28}{section.6}%
+\contentsline {section}{\numberline {7}Varighetshomologi}{28}{section.7}%
