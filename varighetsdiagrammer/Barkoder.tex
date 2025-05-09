@@ -1,4 +1,4 @@
-\section{Strekkoder}
+\section{Strekkoder}\label{sek:Barc}
 En strekkode $\Bcal$ er en representasjon av en multimengde
 av intervaller. Elementer i en strekkode er dermed par
 $(I,k)$ der $I$ er et intervall og $k\in\Nbb$. Ofte når
@@ -292,28 +292,61 @@ $I\subset \Rbb$ og en $\delta\geq0$ intervallet
 Med denne definisjonen gir \citep{Bauer2020} resultatet
 
 \begin{proposisjon}
-  La $\eta: \Ccal\to\Dcal$ være en overlappkobling av strekkoder. Da er
+  La $\eta: \Ccal\to\Dcal$ være en overlappkobling av
+  strekkoder. Da er
   \begin{enumerate}
     \item $\ker\eta$ $\delta$-triviell hvis og bare hvis
     \begin{enumerate}
-      \item For ethvert par $(I,J)\in\eta$, begrenser $J$ $I(\delta)$ over og
-      \item For ethvert intervall i $\Ccal$ som ikke er koblet av $\eta$ er inneholdt i et halvåpent intervall av lengde $\delta$.
+      \item For ethvert par $(I,J)\in\eta$, begrenser $J$
+        $I(\delta)$ over og
+      \item For ethvert intervall i $\Ccal$ som ikke er
+        koblet av $\eta$ er inneholdt i et halvåpent
+        intervall av lengde $\delta$.
     \end{enumerate}
     \item $\coker\eta$ $\delta$-triviell hvis og bare hvis
     \begin{enumerate}
-      \item For ethvert par $(I,J)\in\eta$, begrenser $I(\delta)$ $J$ under.
-      \item For ethvert intervall i $\Dcal$ som ikke er koblet av $\eta$ er inneholdt i et halvåpent intervall av lengde $\delta$.
+      \item For ethvert par $(I,J)\in\eta$, begrenser
+        $I(\delta)$ $J$ under.
+      \item For ethvert intervall i $\Dcal$ som ikke er
+        koblet av $\eta$ er inneholdt i et halvåpent
+        intervall av lengde $\delta$.
     \end{enumerate}
   \end{enumerate}
 \end{proposisjon}
 \bevis{
-
+  Vi lar $\eta$ ha $\delta$-triviell kjerne. Hvis
+  $I\in\Ccal$ ikke er koblet er den $\delta$-triviell
+  altså er den inneholdt i et halvåpent intervall med
+  lengde $\delta$. Gitt $(I,J)\in\eta$ har vi at
+  $\ker(\eta, I) = I\sm J$ er $\delta$-triviell. La $s$ og
+  $t$ være de øvre endepunktene til $I$ og $J$ hhv. Siden
+  $I\sm J$ er $\delta$-triviell har vi at $t+\delta\geq s$
+  som videre betyr at $s-\delta\leq t$. Siden $s$ er det
+  øvre endepunktet til $I$ er $s-\delta$ det øvre
+  endepunktet til $I(\delta)$. Dermed begrenser $J$
+  $I(\delta)$ over. Nå viser vi det konverse utsagnet,
+  altså $\ker\eta$ eller at at alle intervaller
+  i $\ker\eta$ er $\delta$-trivielle. La
+  $I\in\Ccal$ ikke være koblet, da er $I\in\ker\eta$
+  $\delta$-triviell. Hvis $(I,J)\in\eta$ med $s$ og $t$
+  øvre endepunkt til $I$ og $J$ hhv. Vi har at
+  $\ker(\eta,I) = I\sm J$ med $t$ som nedre endepunkt og
+  $s$ øvre endepunkt. Siden $J$ begrenser $I(\delta)$ over har
+  vi at $s-\delta\leq t$ og siden $(I,J)\in\eta$
+  begrenser $I$ $J$ over altså $t\leq s$. Dette gir
+  $s-\delta\leq t\leq s$, dermed har vi $0\leq s-t\leq
+  \delta$. Lengden til $I\sm J$ er mindre enn eller lik
+  $\delta$. For å vise at $I\sm J$ er inneholdt i et
+  halvåpent intervall av lengde $\delta$ sjekker vi to
+  muligheter $t\notin I\sm J$ og $t\in I\sm J$. Hvis
+  $t\notin I\sm J$ kan vi la det halvåpne intervallet være
+  $\lopen{t}{t+\delta}$ siden $s\leq t+\delta$. 
 }
 
 Som sagt i \bref{seksjon}{sek:VarMod} er det også en
 avstand mellom strekkoder.
 
-\subsection{Flaskehalsavstanden}
+\subsection{Flaskehalsavstanden}\label{Ssek:FlaskAvstnd}
 En kan definere en avstand av strekkoder på to
 forskjellige måter gitt i \cite{Bauer2020}. En måte er
 å definere en type inflettingsavstand i $\Barc$ og en annen
@@ -347,7 +380,8 @@ Dette gir en funktor $(\cdot)(\delta):\Barc\to\Barc$ definert ved
     For en strekkode $\Bcal$, lar vi
     \[\Bcal(\delta) = \bset{I(\delta)}{I\in\Bcal}.\]
     For en overlappkobling $\sigma:\Ccal\to\Dcal$ definerer vi
-    \[\sigma(\delta) = \bset{(I(\delta),J(\delta))}{(I,J)\in\sigma}.\]
+    \[\sigma(\delta)
+    = \bset{(I(\delta),J(\delta))}{(I,J)\in\sigma}.\]
 \end{definisjon}
 
 Denne definisjonen på en $\delta$-forskyvning gir en
@@ -402,30 +436,43 @@ To strekkoder $\Ccal$ og $\Dcal$ sies å være
   $f(\delta)\bullet g=S^{\Dcal,2\delta}$.
 \end{definisjon}
 
-Dette gir på samme måte som i \bref{seksjon}{sek:VarMod} en inflettingsavstand gitt ved
-\[d_I(\Ccal,\Dcal) = \inf\bset{\delta\in\ropen{0}{\infty}}{\text{$\Ccal$ og $\Dcal$ $\delta$-inflettet}}.\]
+Dette gir på samme måte som i \bref{seksjon}{sek:VarMod}
+en inflettingsavstand gitt ved
+\[d_I(\Ccal,\Dcal)
+= \inf\bset{\delta\in\ropen{0}{\infty}}{\text{$\Ccal$ og
+$\Dcal$ $\delta$-inflettet}}.\]
 
 Fra \citep[proposisjon 4.2]{Bauer2020} har vi følgende resultat
 \begin{proposisjon}\label{prop:inftriv}
-  I både $\vect_K^\Rbld$ og $\Barc$ er to objekter $M$ og $N$ $\delta$-inflettet hvis og bare hvis det eksisterer en morfi $f: M\to N(\delta)$ med $2\delta$-triviell kjerne og kokjerne.
+  I både $\vect_K^\Rbld$ og $\Barc$ er to objekter $M$ og
+  $N$ $\delta$-inflettet hvis og bare hvis det eksisterer
+  en morfi $f: M\to N(\delta)$ med $2\delta$-triviell
+  kjerne og kokjerne.
 \end{proposisjon}
 
 Den andre måten en kan definere en avstand på er gitt
 i \cite[seksjon 4.2]{Bauer2020}.
 
-La $U_\delta(I) = \bset{t\in\Rbb}{\text{det eksisterer en $s\in I$ slik at }|s-t|\leq\delta}$
+Vi lar $U_\delta(I) = \bset{t\in\Rbb}{\text{det eksisterer en
+$s\in I$ slik at }|s-t|\leq\delta}$
 
 \begin{definisjon}\label{def:delta-kobling}
-En $\delta$-kobling $\sigma:\Ccal\to \Dcal$ er en parvis kobling, den trenger ikke å være en overlappkobling, med følgende egenskaper:
+En $\delta$-kobling $\sigma:\Ccal\to \Dcal$ er en parvis
+  kobling, den trenger ikke å være en overlappkobling, med
+  følgende egenskaper:
 \begin{enumerate}
-    \item $\sigma$ kobler hvert intervall i $\Ccal\cup\Dcal$ som ikke er $2\delta$-trivielle\\
-    \item Hvis $(I,J)\in\sigma$, er $J\subset U_\delta(I)$ og $I\subset U_\delta(J)$.
+    \item $\sigma$ kobler hvert intervall
+      i $\Ccal\cup\Dcal$ som ikke er $2\delta$-trivielle\\
+    \item Hvis $(I,J)\in\sigma$, er $J\subset U_\delta(I)$
+      og $I\subset U_\delta(J)$.
 \end{enumerate}
 \end{definisjon}
 
 \begin{definisjon}\label{def:FlaskAvst}
 Gitt to strekkoder $\Ccal$ og $\Dcal$ er flaskehalsavstanden
-\[d_B(\Ccal,\Dcal) = \inf\bset{\delta\geq 0}{\text{Det eksisterer en $\delta$-kobling mellom $\Ccal$ og $\Dcal$}}.\]
+\[d_B(\Ccal,\Dcal) = \inf\bset{\delta\geq 0}{\text{Det
+  eksisterer en $\delta$-kobling mellom $\Ccal$ og
+  $\Dcal$}}.\]
 \end{definisjon}
 
 Nå som vi har to typer avstander av strekkoder er det

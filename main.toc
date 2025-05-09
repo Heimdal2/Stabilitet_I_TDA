@@ -12,7 +12,7 @@
 \contentsline {subsection}{\numberline {3.1}Inflettingsavstand}{16}{subsection.3.1}%
 \contentsline {section}{\numberline {4}Strekkoder}{19}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Flaskehalsavstanden}{23}{subsection.4.1}%
-\contentsline {section}{\numberline {5}Det induserte koblingsteoremet}{25}{section.5}%
+\contentsline {section}{\numberline {5}Det induserte koblingsteoremet}{26}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Koblinger indusert av mono- og epimorfier av varighetsmoduler}{26}{subsection.5.1}%
-\contentsline {section}{\numberline {6}Algebraisk stabilitet}{28}{section.6}%
-\contentsline {section}{\numberline {7}Varighetshomologi}{28}{section.7}%
+\contentsline {section}{\numberline {6}Algebraisk stabilitet}{29}{section.6}%
+\contentsline {section}{\numberline {7}Varighetshomologi}{29}{section.7}%

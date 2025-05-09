@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.3.2)  4 MAY 2025 23:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.3.2)  9 MAY 2025 02:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1026,20 +1026,20 @@ Overfull \hbox (2.0458pt too wide) in paragraph at lines 285--290
 r $\OML/cmm/m/it/10 ^^N$\OT1/cmr/m/n/10 -trivialitet av (ko)kjernen
  []
 
-[22]
-Overfull \hbox (9.95204pt too wide) in paragraph at lines 353--356
+[22] [23]
+Overfull \hbox (9.95204pt too wide) in paragraph at lines 387--390
 []\OT1/cmr/m/n/10 Denne defin-isjo-nen p^^Wa en $\OML/cmm/m/it/10 ^^N$\OT1/cmr/
 m/n/10 -forskyvning gir en ko-r-re-spon-dans av $\OML/cmm/m/it/10 ^^N$\OT1/cmr/
 m/n/10 -forskyvninger
  []
 
-[23] [24]
-Underfull \hbox (badness 10000) in paragraph at lines 421--422
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 464--466
 
  []
 
 
-Package natbib Warning: Citation `.' on page 25 undefined on input line 461.
+Package natbib Warning: Citation `.' on page 25 undefined on input line 508.
 
 ) (./varighetsdiagrammer/IPKT.tex
 Overfull \hbox (37.36186pt too wide) in paragraph at lines 2--10
@@ -1047,14 +1047,14 @@ Overfull \hbox (37.36186pt too wide) in paragraph at lines 2--10
 flet-tingsav-s-tanden av varighetsmod-
  []
 
-
+[25]
 Overfull \hbox (18.64868pt too wide) in paragraph at lines 12--14
 [][]\OT1/cmr/bx/n/10 Teorem 5.0.1. []\OT1/cmr/m/it/10 La $\OML/cmm/m/it/10 f \O
 T1/cmr/m/n/10 : \OML/cmm/m/it/10 M \OMS/cmsy/m/n/10 ! \OML/cmm/m/it/10 N$ \OT1/
 cmr/m/it/10 v^^Zre en varighetsmodul-morfi p^^Wa p.e.d. varighetsmod-
  []
 
-[25]
+
 Overfull \hbox (15.22974pt too wide) in paragraph at lines 37--39
 []\OT1/cmr/m/n/10 For ^^Wa be-vise dette teo-remet m^^Wa vi f^^\rst de-finere h
 va $\OML/cmm/m/it/10 ^^_\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 )$ e
@@ -1067,22 +1067,22 @@ Overfull \hbox (34.02504pt too wide) in paragraph at lines 41--41
 d-
  []
 
-
+[26]
 Overfull \hbox (26.61179pt too wide) in paragraph at lines 89--94
-[]\OT1/cmr/m/n/10 P^^Wa en lik m^^Wate for vi det in-duserte kobling-ste-o-reme
-t for epi-mor-fier av varighetsmod-
+[]\OT1/cmr/m/n/10 P^^Wa en lik m^^Wate f^^War vi det in-duserte kobling-ste-o-r
+emet for epi-mor-fier av varighetsmod-
  []
 
-[26]
+[27]
 
-LaTeX Warning: Reference `trm:DimIso' on page 27 undefined on input line 162.
+LaTeX Warning: Reference `trm:DimIso' on page 28 undefined on input line 228.
 
-) (./varighetsdiagrammer/AlgStabilitet.tex [27]
+[28]) (./varighetsdiagrammer/AlgStabilitet.tex
 
-LaTeX Warning: Reference `prop:zetafunktor' on page 28 undefined on input line 
+LaTeX Warning: Reference `prop:zetafunktor' on page 29 undefined on input line 
 33.
 
-) (./varighetsdiagrammer/Varighetshomologi.tex [28]
+) (./varighetsdiagrammer/Varighetshomologi.tex [29]
 LaTeX Font Info:    Trying to load font information for OT1+pzc on input line 5
 3.
 
@@ -1106,11 +1106,11 @@ Underfull \hbox (badness 3557) in paragraph at lines 34--40
 SN 15320073, 15320081.
  []
 
-[29])
+[30])
 
 Package natbib Warning: There were undefined citations.
 
-[30] (./main.aux)
+[31] (./main.aux)
 
  *File List*
  article.cls    2021/10/04 v1.4n Standard LaTeX document class
@@ -1231,13 +1231,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 0ACC36170FF404D688B4CB51D434A501;2659.
  ) 
 Here is how much of TeX's memory you used:
- 24653 strings out of 478287
- 477435 string characters out of 5849290
- 736154 words of memory out of 5000000
- 42143 multiletter control sequences out of 15000+600000
+ 24754 strings out of 478287
+ 479902 string characters out of 5849290
+ 736297 words of memory out of 5000000
+ 42238 multiletter control sequences out of 15000+600000
  483825 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 129i,15n,132p,509b,1071s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 129i,17n,132p,509b,1158s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/
 fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
@@ -1260,10 +1260,10 @@ m10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm
 10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on main.pdf (30 pages, 364793 bytes).
+Output written on main.pdf (31 pages, 369642 bytes).
 PDF statistics:
- 701 PDF objects out of 1000 (max. 8388607)
- 618 compressed objects within 7 object streams
- 225 named destinations out of 1000 (max. 500000)
+ 724 PDF objects out of 1000 (max. 8388607)
+ 640 compressed objects within 7 object streams
+ 231 named destinations out of 1000 (max. 500000)
  157 words of extra memory for PDF output out of 10000 (max. 10000000)
 

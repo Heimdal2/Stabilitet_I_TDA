@@ -86,19 +86,85 @@ Hvis $f:M\to N$ er en monomorfi av varighetsmoduler, har vi at
 \end{proposisjon}
 %Vet ikke om bevis er nødvendig?
 
-På en lik måte for vi det induserte koblingsteoremet for
+På en lik måte får vi det induserte koblingsteoremet for
 epimorfier av varighetsmoduler. Vi lar $\sim_b$ være
 ekvivalensrelasjonen på $\Ical$ slik at $I\sim_b J$
 samsvarer under, altså $I$ begrenser $J$ under og $J$
 begrenser $I$ under. 
 
-
-"
 For enhver ekvivalensklasse
 $e\in\Ical/\sim_b$ lar vi $\Bcal^e$ være elementene
-$(I,n)\in\Bcal$ slik at $I\in e$. Vi lar $(I,n)<(J,n')$
-hvis $I$ er inneholdt i $J$ eller $I=J$ og $n'<n$
-"
+$(I,n)\in\Bcal$ slik at $I\in e$.
+
+
+Vi bruker \citep[lemma 3.4]{Bauer2020} og \citep[lemma
+3.5]{Bauer2020} til å vise
+\bref{teorem}{trm:IKT}.
+
+\begin{lemma}\label{lem:triv_puppe-eksakt}
+  Gitt diagrammer $M,N:\Rbld\to\Abld$ med $\Abld$
+  Puppe-eksakt og en en morfi $f: M\to N$ med epi-mono
+  faktorisering
+  \[M\epito\im f\monicto N\]
+  er det følgende ekvivalent:
+  \begin{enumerate}
+    \item $\ker f$ er $\delta$-triviell
+    \item Bilde-epimorfien $r: M\epito\im S^{M,\delta}$
+      faktoriseres som
+      \[\begin{tikzcd}
+	M && {\im S^{M,\delta}} \\
+	\\
+	{\im f}
+	\arrow["r", two heads, from=1-1, to=1-3]
+	\arrow["q"', two heads, from=1-1, to=3-1]
+	\arrow["p"', dashed, two heads, from=3-1, to=1-3]
+\end{tikzcd}\]
+      for en epimorfi $p: \im f\epito\im S^{M,\delta}$
+  \end{enumerate}
+  Dualt er følgende ekvivalent:
+  \begin{enumerate}
+    \item $\coker f$ er $\delta$-triviell
+    \item bilde-monomorfien
+      $h:\im(S^{N(-\delta),\delta})\monicto N$
+      faktoriseress som 
+      \[\begin{tikzcd}
+	{\im S^{N(-\delta),\delta}} && N \\
+	\\
+	&& {\im f}
+	\arrow["h", hook, from=1-1, to=1-3]
+	\arrow["j"', dashed, hook, from=1-1, to=3-3]
+	\arrow["i"', hook, from=3-3, to=1-3]
+\end{tikzcd}\]
+  for en monomorfi $h:\im S^{N(-\delta),\delta}\monicto\im
+      f$.
+  \end{enumerate}
+\end{lemma}\bevis{
+  Se bevis i \citep[lemma 3.4]{Bauer2020}
+}
+
+
+Vi har en ekvivalens mellom $\Barc$ og funktorkategorien
+$\Mch^\Rbld$ med objekter funktorer $\Rbld\to\Mch$. Siden
+$\Mch$ er en Puppe-eksakt kategori holder lemmaet for
+$\Barc$.
+
+For en strekkode $\Bcal$ i $\Barc$ lar vi
+$S^{\Bcal,\delta}$ være definert som overlappkoblingen fra
+\bref{seksjon}{Ssek:FlaskAvstnd}
+
+\citep[Lemma 3.5]{Bauer2020} gir
+
+\begin{lemma}\label{lem:Lem3.5}
+  For enhver p.e.d. varighetsmodul $M$, har vi
+  $S^{\Bcal(M),\delta} = \chi(S^{M,\delta})$.
+\end{lemma}
+\bevis{
+  Har ikke bevis enda (IPKT.tex)
+}
+
+\begin{proof}[Bevis teorem \ref{trm:IKT}]
+  Bevis \bref{teorem}{trm:IKT}.
+\end{proof}
 
 \begin{definisjon}\label{def:zetafunktor}
   Det eksisterer en funktor $\zeta:\Barc\to\vect^\Rbld$
@@ -128,7 +194,7 @@ hvis $I$ er inneholdt i $J$ eller $I=J$ og $n'<n$
 Denne funktoren gir en konvers versjon av det induserte
 koblingsteoremet.
 
-\begin{proposisjon}{break}\label{prop:KonvIKT}
+\begin{proposisjon}\label{prop:KonvIKT}
   \begin{enumerate}
     \item $\zeta(\Bcal(M))\cong M$ for enhver p.e.d.
       varighetsmodul.
@@ -142,7 +208,7 @@ koblingsteoremet.
     \item
       Vi har
       \[M_s\cong\bigoplus_{I\in\Bcal(M)}K^I_s\]
-      Hvis $s\notin I$ har vi at $K^I_s = 0$, dermed har vi
+      Hvis $s\notin I$ har vi at $K^I_s = 0$, dermed er
       \[\bigoplus_{I\in\Bcal(M),\\ s\in I}K^I_s.\]
       Dermed er $\dim M_s$ er lik antall intervaller
       $I\in\Bcal(M)$ slik at $s\in I$. Siden
