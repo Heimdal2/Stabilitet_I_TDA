@@ -1,0 +1,31 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node  (2) at (0, 1) {};
+		\node  (3) at (7.25, 1) {};
+		\node  (4) at (0, 2) {};
+		\node  (5) at (7.25, 2) {};
+		\node [CoolGreen] (6) at (-1, 1) {$H_0$};
+		\node [CoolBlue] (7) at (-1, 4) {$H_1$};
+		\node  (8) at (7.25, 4) {};
+		\node  (9) at (10, 4) {};
+		\node  (11) at (0, 5) {};
+		\node  (12) at (0, 3) {};
+		\node  (13) at (10, 3) {};
+		\node  (14) at (0, 0) {};
+		\node  (15) at (7.25, 0) {};
+		\node  (16) at (10, 0) {};
+		\node  (17) at (0, -2) {$t=0$};
+		\node  (18) at (10, -2) {t=1};
+		\node  (19) at (0, -1) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [ultra thick, CoolGreen] (2.center) to (3.center);
+		\draw [ultra thick, CoolGreen] (4.center) to (5.center);
+		\draw [ultra thick, CoolBlue] (8.center) to (9.center);
+		\draw [ultra thick] [dashed] (12.center) to (13.center);
+		\draw [ultra thick, CoolGreen] (14.center) to (15.center);
+		\draw [ultra thick, CoolGreen] (15.center) to (16.center);
+		\draw [ultra thick] (11.center) to (19.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+

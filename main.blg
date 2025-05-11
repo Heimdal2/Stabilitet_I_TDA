@@ -4,49 +4,48 @@ The top-level auxiliary file: main.aux
 The style file: plainnat.bst
 Database file #1: Ref.bib
 Warning--I didn't find a database entry for "Munkr(esJamesR.2018EOAT"
-Warning--I didn't find a database entry for "."
 Warning--empty journal in Bauer2018
 Warning--empty booktitle in Bauer2020
 Warning--empty publisher in Bauer2020
-You've used 11 entries,
+You've used 12 entries,
             2773 wiz_defined-function locations,
-            677 strings with 6390 characters,
-and the built_in function-call counts, 4221 in all, are:
-= -- 386
-> -- 152
-< -- 14
-+ -- 56
-- -- 45
-* -- 290
-:= -- 656
-add.period$ -- 42
-call.type$ -- 11
-change.case$ -- 45
-chr.to.int$ -- 11
-cite$ -- 25
-duplicate$ -- 235
-empty$ -- 396
-format.name$ -- 60
-if$ -- 901
+            687 strings with 6719 characters,
+and the built_in function-call counts, 4985 in all, are:
+= -- 462
+> -- 200
+< -- 15
++ -- 72
+- -- 60
+* -- 355
+:= -- 767
+add.period$ -- 48
+call.type$ -- 12
+change.case$ -- 53
+chr.to.int$ -- 12
+cite$ -- 27
+duplicate$ -- 268
+empty$ -- 448
+format.name$ -- 76
+if$ -- 1070
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 16
-newline$ -- 68
-num.names$ -- 44
-pop$ -- 108
+missing$ -- 17
+newline$ -- 75
+num.names$ -- 48
+pop$ -- 124
 preamble$ -- 1
-purify$ -- 37
+purify$ -- 44
 quote$ -- 0
-skip$ -- 162
+skip$ -- 189
 stack$ -- 0
-substring$ -- 121
-swap$ -- 34
-text.length$ -- 4
+substring$ -- 155
+swap$ -- 45
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 91
+type$ -- 102
 warning$ -- 3
-while$ -- 41
+while$ -- 47
 width$ -- 0
-write$ -- 164
-(There were 5 warnings)
+write$ -- 183
+(There were 4 warnings)

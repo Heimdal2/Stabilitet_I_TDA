@@ -1,0 +1,38 @@
+\begin{tikzpicture}
+\pgfdeclarelayer{nodelayer}
+\pgfdeclarelayer{edgelayer}
+\pgfsetlayers{nodelayer,edgelayer}
+
+\begin{pgfonlayer}{nodelayer}
+		\node  (0) at (8, 0) {};
+		\node  (1) at (6, 0) {};
+		\node  (2) at (9, 1) {};
+		\node  (3) at (7, 1) {};
+		\node  (4) at (2, 2) {};
+		\node  (5) at (1, 2) {};
+		\node  (6) at (10, 3) {};
+		\node  (7) at (4, 3) {};
+		\node  (8) at (2, 4) {};
+		\node  (9) at (1, 4) {};
+		\node  (10) at (1.5, 4) {};
+		\node  (11) at (1.5, 0) {};
+		\node  (12) at (1.5, 0) {};
+		\node  (13) at (1.5, 5) {t=1,5};
+		\node  (14) at (5, 3) {};
+		\node  (15) at (5, 0) {};
+		\node  (16) at (5, 4) {t=5};
+		\node  (17) at (7.5, 3) {};
+		\node  (18) at (7.5, 0) {};
+		\node  (19) at (7.5, 4) {t=7,5};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [ultra thick]  (1.center) to (0.center);
+		\draw [ultra thick] (3.center) to (2.center);
+		\draw [ultra thick] (5.center) to (4.center);
+		\draw [ultra thick] (7.center) to (6.center);
+		\draw [ultra thick] (9.center) to (8.center);
+		\draw [dashed, very thick] (10.center) to (12.center);
+		\draw [dashed, very thick] (14.center) to (15.center);
+		\draw [dashed, very thick] (17.center) to (18.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

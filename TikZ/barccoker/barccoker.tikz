@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+\pgfdeclarelayer{nodelayer}
+\pgfdeclarelayer{edgelayer}
+\pgfsetlayers{nodelayer,edgelayer}
+	\begin{pgfonlayer}{nodelayer}
+		\node  (0) at (0, 0) {};
+		\node  (1) at (4, 0) {};
+		\node  (2) at (3, 1) {};
+		\node  (3) at (6, 1) {};
+		\node  (4) at (0, 2) {};
+		\node  (5) at (3, 2) {};
+		\node [Lavender] (6) at (8, 2) {$J\setminus I$};
+		\node [CoolGreen] (7) at (8, 1) {$I$};
+		\node [CoolBlue] (8) at (8, 0) {$J$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [CoolBlue,ultra thick] (0.center) to (1.center);
+		\draw [CoolGreen,ultra thick] (2.center) to (3.center);
+		\draw [Lavender,ultra thick] (4.center) to (5.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

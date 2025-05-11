@@ -12,10 +12,17 @@
 \usepackage{titlesec}
 \usepackage{mathtools}
 \usepackage{quiver}
-\usepackage{tikz,pgf,tikz-cd,graphicx}
+\usepackage{tikz,pgf,graphicx}
 \usepackage{natbib,doi}
 \usepackage{stmaryrd}
 
+\definecolor{CoolBlue}{HTML}{135984}
+\definecolor{CoolGreen}{HTML}{8aa21a}
+\definecolor{Lavender}{HTML}{b39def}
+
+\pgfdeclarelayer{nodelayer}
+\pgfdeclarelayer{edgelayer}
+\pgfsetlayers{nodelayer,edgelayer}
 %\bibliographystyle{unsrtnat}
 \bibliographystyle{plainnat}
 %%\bibliographystyle{norbib/norunsrt}
@@ -23,6 +30,7 @@
 \newcommand{\bref}[2]{\textbf{#1 \ref{#2}}}
 
 \renewcommand{\contentsname}{Innhold}
+\renewcommand{\figurename}{Figur}
 
 \newcommand{\Acal}{\mathcal{A}}
 \newcommand{\Bcal}{\mathcal{B}}
@@ -152,6 +160,12 @@
 \newcommand{\monicto}{\hookrightarrow}
 \newcommand{\epito}{\twoheadrightarrow}
 \newcommand{\xto}[1]{\xrightarrow{#1}}
+\newcommand{\xmonicto}[1]{\xhookrightarrow{#1}}
+
+\newcommand{\xepito}[2][]{%
+  \xrightarrow[#1]{#2}\mathrel{\mkern-14mu}\rightarrow
+}
+
 \newcommand{\id}{\textnormal{id}}
 
 \newcommand{\Ob}{\textnormal{Ob}}
@@ -192,7 +206,7 @@
 \newtheorem{bemerk}{Bemerk}[subsection]
 \newtheorem{lemma}{Lemma}[subsection]
 
-\newcommand{\bevis}[1]{\begin{proof}[bevis] #1 \end{proof}}
+\newcommand{\bevis}[1]{\begin{proof}[Bevis] #1 \end{proof}}
 
 \newcommand{\eps}{\varepsilon}
 
@@ -204,11 +218,16 @@
 \maketitle
 \tableofcontents
 \input{Introduksjon}
+\[\begin{tikzcd}
+	\bullet && \bullet
+	\arrow[from=1-1, to=1-3]
+\end{tikzcd}\]
 \input{forkunnskaper/Forkunnskaper}
 \input{varighetsdiagrammer/Varighetsmoduler}
 \input{varighetsdiagrammer/Barkoder}
 \input{varighetsdiagrammer/IPKT}
 \input{varighetsdiagrammer/AlgStabilitet}
 \input{varighetsdiagrammer/Varighetshomologi}
+\input{Diskusjon}
 \bibliography{Ref}
 \end{document}

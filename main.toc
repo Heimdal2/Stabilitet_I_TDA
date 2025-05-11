@@ -7,12 +7,13 @@
 \contentsline {subsection}{\numberline {2.3}Vektorrom}{7}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Multimengder og parvis kobling}{8}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Kategoriteori}{9}{subsection.2.5}%
-\contentsline {subsubsection}{\numberline {2.5.1}Homologi}{14}{subsubsection.2.5.1}%
-\contentsline {section}{\numberline {3}Varighetsmoduler}{15}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Inflettingsavstand}{16}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {2.5.1}Homologi}{15}{subsubsection.2.5.1}%
+\contentsline {section}{\numberline {3}Varighetsmoduler}{16}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Inflettingsavstand}{17}{subsection.3.1}%
 \contentsline {section}{\numberline {4}Strekkoder}{19}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Flaskehalsavstanden}{23}{subsection.4.1}%
-\contentsline {section}{\numberline {5}Det induserte koblingsteoremet}{26}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Koblinger indusert av mono- og epimorfier av varighetsmoduler}{26}{subsection.5.1}%
-\contentsline {section}{\numberline {6}Algebraisk stabilitet}{29}{section.6}%
-\contentsline {section}{\numberline {7}Varighetshomologi}{29}{section.7}%
+\contentsline {subsection}{\numberline {4.1}Flaskehalsavstanden}{26}{subsection.4.1}%
+\contentsline {section}{\numberline {5}Det induserte koblingsteoremet}{29}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Koblinger indusert av mono- og epimorfier av varighetsmoduler}{30}{subsection.5.1}%
+\contentsline {section}{\numberline {6}Algebraisk stabilitet}{33}{section.6}%
+\contentsline {section}{\numberline {7}Varighetshomologi}{33}{section.7}%
+\contentsline {section}{\numberline {8}Konklusjon}{34}{section.8}%

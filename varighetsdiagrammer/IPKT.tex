@@ -49,7 +49,8 @@ over, altså $I$ begrenser $J$ over og $J$ begrenser $I$
 over.
 
 \begin{bemerk}
-  La $I = \langle a,b)$ og $J = \langle a,b]$, da
+  La $I = \langle a,b)$ og $J = \langle a,b]$, hvor
+  $\langle$ betyr enten $[$ eller $($, da
   begrenser $J$ $I$ over, men $I$ begrenser ikke $J$ over,
   altså $I$ og $J$ samfaller ikke over.
 \end{bemerk}
@@ -148,6 +149,11 @@ $\Mch^\Rbld$ med objekter funktorer $\Rbld\to\Mch$. Siden
 $\Mch$ er en Puppe-eksakt kategori holder lemmaet for
 $\Barc$.
 
+Fra \citep[teorem 1.1]{Bauer2020} for enhver
+varighetsmodulmorfi $f: M\to N$ av p.e.d. varighetsmoduler
+med epi-mono faktorisering $M\xepito{q}\im f\xmonicto{i}
+N$ lar vi $\chi(f) = \chi(i)\bullet\chi(f)$.
+
 For en strekkode $\Bcal$ i $\Barc$ lar vi
 $S^{\Bcal,\delta}$ være definert som overlappkoblingen fra
 \bref{seksjon}{Ssek:FlaskAvstnd}
@@ -159,12 +165,35 @@ $S^{\Bcal,\delta}$ være definert som overlappkoblingen fra
   $S^{\Bcal(M),\delta} = \chi(S^{M,\delta})$.
 \end{lemma}
 \bevis{
-  Har ikke bevis enda (IPKT.tex)
+  Vi viser dette for intervallmodulen $K^I$ for et
+  intervall $I\subset\Rbb$ og teoremet gjelder for enhver
+  intervalldekomponering. Vi har at
+  \[S^{K^I,\delta} = 
+  \begin{cases}
+    \id_K,\quad \text{Hvis $t\in I\cap I(\delta)$}\\
+    0,\quad \text{ellers}
+  \end{cases}
+  \]
+  Dette faktoriseres som $K^I\xepito{q} K^{I\cap
+  I(\delta)}\xmonicto{i} I(\delta)$ med
+  \[q_t =
+  \begin{cases}
+    K,\quad \text{Hvis $s\in I\cap I(\delta)$}\\
+    0,\quad \text{ellers}
+  \end{cases}
+  \]
+  og $i$ er gitt ved punktvis inklusjon. Vi har at $I\cap
+  I(\delta)$ og $I$ samfaller under altså sender $\chi(q)$
+  $I$ til $I\cap I(\delta)$. Vi har også at $I\cap
+  I(\delta)$ samfaller $I(\delta)$ over, som betyr at
+  $\chi(i)$ sender $I\cap I(\delta)$ til $I(\delta)$.
+  Dette betyr at $\chi(S^{K^I,\delta})$ sender $I$ til
+  $I(\delta)$ som $S^{\Bcal(K^I),\delta}$ også gjør.
 }
 
-\begin{proof}[Bevis teorem \ref{trm:IKT}]
-  Bevis \bref{teorem}{trm:IKT}.
-\end{proof}
+Med dette lemmaet får vi beviset for
+\bref{teorem}{trm:IKT} som er gitt i \citep{Bauer2020}
+under \textbf{lemma 3.5}.
 
 \begin{definisjon}\label{def:zetafunktor}
   Det eksisterer en funktor $\zeta:\Barc\to\vect^\Rbld$
@@ -224,5 +253,4 @@ koblingsteoremet.
       La $f:\Ccal\to\Dcal$ være en morfi i $\Barc$ med
       $\delta$-triviell kjerne. 
   \end{enumerate}
-
 }

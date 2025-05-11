@@ -9,11 +9,22 @@ strekkoder og for morfiene som senere blir definert.
 I \citep[teorem 2.4]{Bauer2020} har vi følgende resultat.
 \begin{teorem}\label{trm:DekompBark}
   For enhver p.e.d. varighetsmodul $M$, eksisterer det en
-  unik naturlig strekkode $\Bcal(M)$ slik at
+  unik strekkode $\Bcal(M)$ slik at
   \[M\cong \bigoplus_{I\in\Bcal(M)} K^I.\]
 \end{teorem}
 Forfatter kaller strekkoden $\Bcal(M)$
-dekomponeringsstrekkoden.
+dekomponeringsstrekkoden. Unikheten av strekkoden kommer
+fra \citep[teorem 2.7]{Schenck2022}.
+
+Vi visualiserer strekkoder på følgende måte
+\begin{figure}[h]
+  \centering
+  \scalebox{0.5}{
+    \input{~/Stabilitet_I_TDA/TikZ/VMStrekkode/VMStrekkode.tikz}}
+  \caption{Strekkode av varighetsmodulen $M$ fra
+  \bref{eksempel}{eks:varighetsmodul}}
+  \label{fig:varmodstrek}
+\end{figure}
 
 %I \cite{Bauer2015} skriver forfatter at gitt en
 %varighetsmodul $M$ som kan skrives på formen
@@ -65,6 +76,16 @@ komposisjonen på følgende måte
     koblinger.
 \end{definisjon}
 
+Her er en visualisering av et intervall $I$ som overlapper
+et intervall $J$ over
+\begin{figure}[h]
+  \centering
+  \input{~/Stabilitet_I_TDA/TikZ/OverKob/OverKob.tikz}
+  \caption{Intervallet $I$ overlapper $J$ over}
+  \label{fig:overkob}
+\end{figure}
+
+
 \begin{proposisjon}\label{prop:ID-OK}
 For enhver strekkode $\Dcal$ eksisterer det alltid en
 overlappkobling $\sigma:\Dcal\to\Dcal$ gitt ved $\sigma
@@ -78,6 +99,9 @@ overlapper seg selv over. Velg en $s\in I$ da har vi
 $s\leq s$ dermed begrenser $I$ seg selv over og under.
 Dette betyr at $\sigma$ er en overlappkobling.
 }
+
+Sett inn bildet for overlappkoblinger som ikke komponeres
+til en overlappkobling
 
 \begin{teorem}
     Mengden av strekkoder sammen med overlappkoblinger
@@ -110,13 +134,31 @@ vise at $\sigma = \id_\Dcal\bullet\sigma$.
 
 La $\sigma:\Bcal\to\Ccal$, $\tau:\Ccal\to\Dcal$ og
 $\psi:\Dcal\to\Ecal$. La $(I,K)$ være et par
-i komposisjonen $(\psi\bullet\tau)\bullet\sigma$. Dette
-betyr at det eksisterer et intervall $J\in\Ccal$ slik at
-$(I,J)\in\sigma$ og $(J,K)\in\psi\bullet\tau$ og at $I$
-overlapper $K$ over. Siden $(J,K)\in\psi\bullet\tau$ må
-det også finnes et intervall $L\in\Dcal$ slik at
-$(J,L)\in\tau$ og $(L,K)\in\psi$ og $J$ må overlappe $K$
-over. Fordi $(I,J)\in\sigma$ og $(J,L)\in\tau$
+i komposisjonen $(\psi\bullet\tau)\bullet\sigma$. 
+Dette betyr at 
+\[(\psi\bullet\tau)\bullet\sigma(I)
+= (\psi\bullet\tau)\circ\sigma(I)\]
+\[= \psi\bullet\tau(J),\quad\text{for
+$(I,J)\in\sigma$}\]
+\[=\psi\circ\tau(J) = \psi(L),\quad\text{for
+$(J,L)\in\tau$}\]
+\[=K,\quad\text{for $(L,K)\in\psi$}\]
+
+Nå ser vi på komposisjonen
+$\psi\bullet(\tau\bullet\sigma)$.
+\[\psi\bullet(\tau\bullet\sigma)(I)
+= \psi\circ(\tau\bullet\sigma)(I).\]
+Vi får at
+\[\tau\bullet\sigma(I) = \tau\circ\sigma(I)\]
+\[\tau(J) = L.\]
+Dermed har vi
+\[\psi\circ(\tau\bullet\sigma)(I)=\psi(L)=K.\]
+Dermed har vi at 
+\[(\psi\bullet\tau)\bullet\sigma=\psi\bullet(\tau\bullet\sigma).\]
+For en strekkode $\sigma:\Bcal\to\Ccal$ er domenen $\Bcal$
+og $\Ccal$ kodomenen. Klassen $\Hom(\Bcal,\Ccal)$ mellom
+to strekkoder er gitt ved alle overlappkoblinger fra
+$\Bcal$ til $\Ccal$.
 }
 
 $\Barc$ er en Puppe-eksakt kategori. Dette betyr at kategorien har et nullobjekt gitt under.
@@ -133,7 +175,8 @@ $\Barc$ er en Puppe-eksakt kategori. Dette betyr at kategorien har et nullobjekt
   $\empty$ nullobjekt.
 }
 
-I \citep[seksjon 2.5]{Bauer2020} beskriver
+Nullobjektet lar oss definere kjernen og kokjernen av en
+overlappkobling. I \citep[seksjon 2.5]{Bauer2020} beskriver
 forfatter kjernen, kokjernen og bildet til en
 overlappkobling som strekkoder, men som beskrevet i seksjon
 \bref{seksjon}{Ssek:Kategoriteori}
@@ -143,6 +186,26 @@ av en morfi i en kategori et objekt, det er et par gitt av
 et objekt og en morfi. Her er konstruksjonen av kjernen,
 kokjernen og bildet, som strekkoder
 sammen med en overlappkobling.
+
+For en overlappkobling $\sigma:\Ccal\to\Dcal$ definerer
+forfatter i \citep[seksjon 2.5]{Bauer2020} følgende
+intervaller:
+
+For et intervall $I\in\Ccal$ lar vi
+\[\ker(\sigma,I) =
+\begin{cases}
+  I,\quad\text{Hvis $\sigma$ ikke kobler $I$}\\
+  I\setminus J,\quad\text{Hvis $(I,J)\in\sigma$}
+\end{cases}
+\]
+
+For et intervall $J\in\Dcal$ lar vi
+\[\coker(\sigma,J) = 
+\begin{cases}
+  J,\quad\text{Hvis $\sigma$ ikke kobler $J$}\\
+  J\setminus I,\quad\text{Hvis $(I,J)\in\sigma$}
+\end{cases}
+\]
 
 \begin{teorem}\label{trm:ker}
   Kjernen til en overlappkobling $\sigma:\Ccal\to\Dcal$
@@ -161,7 +224,7 @@ sammen med en overlappkobling.
   $\eta'$ eksisterer og finner et uttrykk for
   overlappkobling. La $(I,J)\in\eta$ altså er
   $(I,J)\in\kappa_\sigma\bullet\eta'$. Fra
-  \bref{definisjon}{OK-Komp} betyr dette at det
+  \bref{definisjon}{def:OK-Komp} betyr dette at det
   eksisterer et intervall $K\in\Ccal$ slik at
   $(I,K)\in\eta'$ og $(K,J)\in\kappa_\sigma$. Siden
   $(K,J)\in\kappa_\sigma$ må $K = \ker(\sigma,J)$. Dermed
@@ -177,14 +240,26 @@ sammen med en overlappkobling.
   $\kappa_\sigma\bullet\eta' = \eta$.
 }
 
+Her et eksempel på kjerneelementet $\ker(\sigma,I)$ av to
+intervaller $I$ og $J$ som kunne vært overlappkoblet av en
+overlappkobling $\sigma$
+
+\begin{figure}[h]
+  \centering
+  \scalebox{0.5}{
+  \input{~/Stabilitet_I_TDA/TikZ/barcker/barcker.tikz}
+}
+  \caption{Her er $\ker(\sigma,I)=I\setminus J$}
+  \label{fig:barcker}
+\end{figure}
+
 \begin{teorem}\label{trm:coker}
   Kokjernen til en overlappkobling er gitt som en
   strekkode $\coker\sigma$ med en overlappkobling
   $\mu_\sigma:\Dcal\to\coker\sigma$ gitt ved
   \[\coker\sigma
   = \bbag{\coker(\sigma,J)\neq\empty}{J\in\Dcal},\quad
-  \mu_\sigma = \bbag{(J,\coker(\sigma,J))}{\text{$J$
-  overlapper $\coker(\sigma,J)$ over}}\]
+  \mu_\sigma = \bbag{(J,\coker(\sigma,J))}{\coker(\sigma,J)\neq\emptyset}\]
 \end{teorem}
 \bevis{
   Vi viser at gitt en strekkode $\Bcal$ og en
@@ -203,6 +278,17 @@ $(\coker(\sigma,I),J)\in\eta'$. Vi lar dermed
 $\eta'(\coker(\sigma,I)) = J$ hvor $(I,J)\in\eta$ og
 $\coker(\sigma,I)$ overlapper $J$ over.
 }
+
+Her et eksempel av kokjerneelementet av et par $(I,J)$
+i en potensiell overlapp kobling $\sigma$
+\begin{figure}[h]
+  \centering
+  \scalebox{0.5}{
+  \input{~/Stabilitet_I_TDA/TikZ/barccoker/barccoker.tikz}
+}
+  \caption{Her er $\coker(\sigma,J)=J\setminus I$}
+  \label{fig:barccoker}
+\end{figure}
 
 \begin{teorem}\label{trm:im}
   Bildet av en overlappkobling $\sigma:\Ccal\to\Dcal$ er
@@ -234,6 +320,18 @@ $\coker(\sigma,I)$ overlapper $J$ over.
   J)=J$, eller sagt annerledes er $\omega_\sigma$
   multimengden av par $(I\cap,J,J)$ hvor $(I,J)\in\sigma$.
 }
+
+Her et eksempel av bildeelementet av et par $(I,J)$
+i en potensiell overlapp kobling $\sigma$
+
+\begin{figure}[h]
+  \centering
+  \scalebox{0.5}{
+    \input{~/Stabilitet_I_TDA/TikZ/barcim/barcim.tikz}
+  }
+  \caption{Her er $I\cap I(\delta)$ bildeelementet}
+  \label{fig:barcim}
+\end{figure}
 
 Disse definisjonene gir følgende resultater gitt
 i \citep[korollar 2.8]{Bauer2020}, men gitt tidligere her
@@ -291,7 +389,7 @@ $I\subset \Rbb$ og en $\delta\geq0$ intervallet
 
 Med denne definisjonen gir \citep{Bauer2020} resultatet
 
-\begin{proposisjon}
+\begin{proposisjon}\label{prop:triv.(co)ker}
   La $\eta: \Ccal\to\Dcal$ være en overlappkobling av
   strekkoder. Da er
   \begin{enumerate}
@@ -449,12 +547,66 @@ Fra \citep[proposisjon 4.2]{Bauer2020} har vi følgende resultat
   en morfi $f: M\to N(\delta)$ med $2\delta$-triviell
   kjerne og kokjerne.
 \end{proposisjon}
+\bevis{
+  La $f:\Bcal\to\Dcal(\delta)$ være en
+  $\delta$-inflettingsmorfi, da eksisterer det også en
+  inflettingsmorfi $g:\Dcal\to\Bcal(\delta)$ slik at
+  $f(\delta)\bullet g = S^{\Dcal,2\delta}$ og
+  $g(\delta)\bullet f = S^{\Bcal,2\delta}$. Hvis
+  $I\in\Bcal$ er ikke koblet av $f$ er den heller ikke da
+  koblet av $g(\delta)\bullet f = S^{\Bcal,2\delta}$ altså
+  er $I$ $2\delta$-triviell per definisjon av
+  $S^{\Bcal,2\delta}$. Hvis $I$ er koblet av $f$ er den
+  ikke $2\delta$-triell dermed har vi parene
+  $(I,J(\delta))\in f$ og $(I,I(2\delta))\in
+  S^{\Bcal,2\delta}$. Ved likningen
+  $S^{\Bcal,2\delta}=g(\delta)\bullet f$ har vi at
+  $(J(\delta),I(2\delta))\in g(\delta)$ dermed overlapper
+  $J(\delta)$ $I(2\delta)$ over altså begrenser
+  $J(\delta)$ $I(2\delta)$ over. Liknende bevis for
+  $f(\delta)\circ g = S^{\Dcal,2\delta}$ gir at $f$ har
+  $2\delta$-triviell kokjerne. Dermed har vi ved
+  \bref{proposisjon}{prop:triv.(co)ker}. La
+  $f:\Bcal\to\Dcal(\delta)$ ha $2\delta$-triviell kjerne
+  og kokjerne. For andre veien definerer vi for en morfi
+  $f:\Bcal\to\Dcal(\delta)$ med $2\delta$-triviell kjerne
+  og kokjerne, en morfi $g:\Dcal\to\Bcal(\delta)$. For
+  paret $(I,J(\delta))\in f$ lar vi $(J, I(\delta))\in g$.
+  Vi viser at $g$ er en overlappkobling og at
+  $g(\delta)\bullet f = S^{\Bcal,2\delta}$ og
+  $f(\delta)\bullet g = S^{\Dcal,2\delta}$. Siden $\ker f$ er
+  $2\delta$-triviell begrenser $J(\delta)$ $I(2\delta)$
+  over altså begrenser $J$ $I(\delta)$ over. For lik grunn
+  begrenser $I(\delta)$ $J$ under siden $\coker f$ er
+  $2\delta$-triviell. La $s\in I\cap J(\delta)$, da har vi
+  at $s\in I$ og $s+\delta\in J$. Hvis vi lar $t
+  = s+\delta$ har vi at $t-\delta=s\in I$, dermed er
+  $t\in I(\delta)$ og $t=s+\delta\in J$. Da har vi at
+  $t\in I(\delta)\cap J$ som videre betyr at
+  $I(\delta)\cap J\neq\emptyset$.
+  Beviset i $\vect_K^\Rbld$ er gitt i beviset for \citep[proposisjon
+  4.2]{Bauer2020}.
+}
 
 Den andre måten en kan definere en avstand på er gitt
 i \cite[seksjon 4.2]{Bauer2020}.
 
-Vi lar $U_\delta(I) = \bset{t\in\Rbb}{\text{det eksisterer en
-$s\in I$ slik at }|s-t|\leq\delta}$
+For et intervall $I\subset\Rbb$ lar vi $U_\delta(I)
+= \bset{t\in\Rbb}{\text{det eksisterer en $s\in I$ slik at
+}|s-t|\leq\delta}$. $U_\delta(I)$ kan tenkes på som
+å tykne intervallet $I$ med $\delta$.
+
+Sett inn bildet for en $\delta$-tykning av et intervall.
+Her er en visualisering av en $\delta$-tykning for et
+intervall $I$.
+
+\begin{figure}[h]
+  \centering
+  \scalebox{0.5}{\input{~/Stabilitet_I_TDA/TikZ/delta-tykk/delta_tykk.tikz}}
+  \caption{Her er et eksempel på en $\delta$-tykning av et
+  intervall.}
+  \label{fig:delta-tykk}
+\end{figure}
 
 \begin{definisjon}\label{def:delta-kobling}
 En $\delta$-kobling $\sigma:\Ccal\to \Dcal$ er en parvis
@@ -501,8 +653,40 @@ Gitt strekkoder $\Ccal$ og $\Dcal$ holder følgende
 \end{teorem}
 \bevis{
   Vi beviser utsagnet i siste del av beviset for
-  \citep[proposisjon 4.2]. Vi viser at en overlappkobling
+  \citep[proposisjon 4.2]{Bauer2020}. Vi viser at en overlappkobling
   $f:\Ccal\to\Dcal(\delta)$ har $2\delta$-triviell kjerne
   og kokjerne hvis og bare hvis $r_\delta\circ f$ er en
-  $\delta$-kobling.
+  $\delta$-kobling. La $(I,J(\delta))\in f$, siden $f$ er
+  en overlappkobling begrenser $I$ $J(\delta)$ over. Hvis
+  vi lar $s,t\in\mathbb{R}$ være de øvre endepunktene til
+  $I$ og $J$ hhv. har vi at $t-\delta\leq s$. Siden $\ker
+  f$ er $2\delta$ triviell begrenser $J(\delta)$
+  $I(2\delta)$ over, dermed har vi også at $s-2\delta\leq
+  t-\delta$ som betyr $s\leq t+\delta$, dermed har vi
+  $|s-t|\leq \delta$. La $x,y\in\mathbb{R}$ være de nedre
+  endepunktene til $I$ og $J$ hhv. Siden $I$ overlapper
+  $J(\delta)$ over har vi at $J(\delta)$ begrenser $I$
+  under, altså $y-\delta\leq x$. Siden $\coker f$ er
+  $2\delta$-triviell har vi at $I(2\delta)$ begrenser
+  $J(\delta)$ under, dermed er $x-2\delta\leq y-\delta$,
+  altså $x\leq y+\delta$. Da har vi også at
+  $|x-y|\leq\delta$. Avstanden mellom de øvre og nedre
+  endepunktene er $\leq\delta$ er $I\subset U_\delta(J)$
+  og $J\subset U_\delta(I)$ altså er $r_\delta\circ f$ en
+  $\delta$-kobling. Vi lar $r_\delta\circ f$ være en
+  $\delta$-kobling. Hvis $I$ ikke er koblet av
+  $r_\delta\circ f$ er den $2\delta$-triviell, intervallet
+  er også ikke koblet av $f$. La $(I,J)\in r_\delta\circ
+  f$, da er $I\subset U_\delta(J)$ og $J\subset
+  U_\delta(I)$. Igjen lar vi $s,t\in\Rbb$ være de øvre
+  endepunktene til $I$ og $J$ hhv. Siden $I\subset
+  U_\delta(J)$ har vi at
+  \[-\delta\leq s-t\leq \delta\]
+  som gir $s\leq t+\delta$ og videre $s-2\delta\leq
+  t-\delta$. Siden $s$ og $t$ er de øvre endepunktene til
+  $I$ og $J$, er $s-2\delta$ og $t-\delta$ de øvre
+  endepunktene til $I(2\delta)$ og $J(\delta)$. Dermed
+  begrenser $J(\delta)$ $I(2\delta)$ over. Dermed er $\ker
+  f$ $2\delta$-triviell. På samme måte er $\coker f$
+  $2\delta$-triviell.
 }

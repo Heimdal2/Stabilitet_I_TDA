@@ -60,7 +60,18 @@ K, \quad\text{hvis } r\in I\\
   deres definert punktvis
 \end{definisjon}
 
-
+\begin{eksempel}\label{eks:varighetsmodul}
+  For intervaller $(6,8]$, $[7,9]$, $[1,2)$, $(4,10)$ og
+  $(1,2]$ har vi varighetsmodulen 
+  \[M = K^{(6,8]}\oplus
+  K^{[7,9]}\oplus K^{[1,2)}\oplus K^{(4,10)}\oplus
+  K^{(1,2]}.\]
+  I $t = 1,5$ har vi $M_t = K\oplus K$ siden $t\in[1,2)$
+  og $t\in (1,2]$. I $t=5$ er $M_t = K$ siden $t\in
+  (4,10)$ og ingen andre intervaller. I $t=7,5$ er $M_t
+  = K\oplus K\oplus K$ siden $t\in (4,10)$, $t\in [7,9]$
+  og $t\in(6,8]$.
+\end{eksempel}
 
 I denne kategorien kan en varighetsmodul inneholde
 uendeligdimensjonale vektorrom. Fra \citep[teorem
@@ -210,7 +221,7 @@ f)(2\delta')\circ\p_L^{2\delta'}
 \[=\p_L^{2\delta+2\delta'}\circ
 \p_L^{2\delta'}=\p_L^{2\delta'+2\delta}.\]
 På samme måte har vi at $F(\delta+\delta')\circ
-G)=\p_N^{2\delta+2\delta'}$.
+G=\p_N^{2\delta+2\delta'}$.
 }
 
 \begin{teorem}\label{trm:Utvidet-Metrikk}
@@ -229,9 +240,23 @@ G)=\p_N^{2\delta+2\delta'}$.
 
     La $L$, $M$ og $N$ være varighetsmoduler slik at $L$
     og $M$ er $\delta$-inflettet og $M$ og $N$ er
-    $\delta'$-inflettet. Vi lar $f: L\to M(\delta)$, $g:
-    M\to L(\delta)$, $h:M\to N(\delta')$ og $i:N\to
-    M(\delta')$ være $\delta$-inflettingsmorfiene.
+    $\delta'$-inflettet. Da er $L$ og $N$
+    $(\delta+\delta')$-inflettet. Ved definisjonen av
+    $d_I$ har vi $d_I(L,M)\leq\delta$ og
+    $d_I(M,N)\leq\delta'$, dermed får vi $d_I(L,N)\leq
+    d_I(L,M)+d_I(M,N)\leq \delta+\delta'$.
+}
+
+\begin{lemma}\label{lem:d_I-Iso}
+  Hvis $M$ og $M'$ er isomorfe er $d_I(M,M')=0$
+\end{lemma}
+\bevis{
+  Siden $M\cong M'$ har vi isomorfier $f: M\to M'$ og $g:
+  M'\to M$. Dette gir
+  \[g\circ f = g(0)\circ f = \id_M\quad\text{og}\quad
+  f\circ g = f(0)\circ g = \id_{M'}.\]
+  Siden $\p_M^0 = \id_M$ og $\p_{M'}^0=\id_{M'}$ er $f$ og
+  $g$ $0$-inflettingsmorfier. Dermed er $d_I(M,M')=0$.
 }
 
 \begin{proposisjon}\label{prop:InfAvs_Metrikk}
@@ -242,7 +267,7 @@ G)=\p_N^{2\delta+2\delta'}$.
   Siden $d_I$ er en utvidet metrikk betyr det at den
   oppfyller den trekantulikheten $d_I(M,N)\leq
   d_I(M,M')+d_I(M',N)$. Ved
-  \bref{proposisjon}{prop:d_I-Iso} er $d_I(M,M')=0$ altså
+  \bref{lemma}{lem:d_I-Iso} er $d_I(M,M')=0$ altså
   er $d_I(M,N)\leq d_I(M',N)$. Ved samme argument er
   $d_I(M',N)\leq d_I(M,N)$. Dermed er
   $d_I(M,N)=d_I(M',N)$.

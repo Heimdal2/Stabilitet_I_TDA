@@ -1,4 +1,4 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{12}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -29,6 +29,16 @@ Ulrich Bauer and Michael Lesnick.
   the {{Stability Theorem}}.
 \newblock volume~15, pages 67--96. 2020.
 \newblock \doi{10.1007/978-3-030-43408-3_3}.
+
+\bibitem[Chazal et~al.(2009)Chazal, {Cohen-Steiner}, Glisse, Guibas, and
+  Oudot]{Chazal2009}
+Fr{\'e}d{\'e}ric Chazal, David {Cohen-Steiner}, Marc Glisse, Leonidas~J.
+  Guibas, and Steve~Y. Oudot.
+\newblock Proximity of persistence modules and their diagrams.
+\newblock In \emph{Proceedings of the Twenty-Fifth Annual Symposium on
+  {{Computational}} Geometry}, pages 237--246, Aarhus Denmark, June 2009. ACM.
+\newblock ISBN 978-1-60558-501-7.
+\newblock \doi{10.1145/1542362.1542407}.
 
 \bibitem[Chazal et~al.(2016)Chazal, {Crawley-Boevey}, and De~Silva]{Chazal2016}
 Fr{\'e}d{\'e}ric Chazal, William {Crawley-Boevey}, and Vin De~Silva.

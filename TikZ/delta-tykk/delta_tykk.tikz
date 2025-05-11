@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node (0) at (2, 0) {};
+		\node (1) at (6, 0) {};
+		\node (2) at (1, 1) {};
+		\node (3) at (7, 1) {};
+		\node [CoolBlue] (4) at (8, 1) {$U_\delta(I)$};
+		\node [CoolGreen] (5) at (8, 0) {$I$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [CoolBlue, ultra thick](2.center) to (3.center);
+		\draw [CoolGreen, ultra thick](0.center) to (1.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

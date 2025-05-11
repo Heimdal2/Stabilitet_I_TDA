@@ -1,0 +1,54 @@
+\begin{tikzpicture}
+\pgfdeclarelayer{nodelayer}
+\pgfdeclarelayer{edgelayer}
+\pgfsetlayers{nodelayer, edgelayer}
+\definecolor{Green}{HTML}{39f153}
+\definecolor{Red}{HTML}{af5672}
+\definecolor{Brown}{HTML}{bc9378}
+\definecolor{Blue}{HTML}{3a26c9}
+\definecolor{Yellow}{HTML}{e6fa7e}
+
+
+\begin{pgfonlayer}{nodelayer}
+		\node (0) at (0, -0.5) {};
+		\node (1) at (5, -0.5) {};
+		\node (2) at (2, 0) {};
+		\node (3) at (6, 0) {};
+		\node [Blue] (5) at (8, 0) {$I$};
+		\node [Red] (6) at (8, -0.5) {$J$};
+		\node (7) at (5, 0.5) {};
+		\node (8) at (6, 0.5) {};
+		\node [Brown] (10) at (8, 0.5) {$I\setminus J$};
+		\node (11) at (5, -1) {};
+		\node (12) at (1, -1) {};
+		\node [Green] (13) at (8, -1) {$I(\delta)$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [Red, very thick] [in=180, out=0] (0.center) to (1.center);
+		\draw [Blue, very thick] (2.center) to (3.center);
+		\draw [Brown, very thick] (7.center) to (8.center);
+		\draw [Green, very thick] (12.center) to (11.center);
+	\end{pgfonlayer}
+
+
+%	\begin{pgfonlayer}{nodelayer}
+%		\node  (0) at (0, 0) {};
+%		\node  (1) at (5, 0) {};
+%		\node  (2) at (2, 1) {};
+%		\node  (3) at (6, 1) {};
+%		\node  (5) at (8, 1) {$I$};
+%		\node  (6) at (8, 0) {$J$};
+%		\node  (7) at (5, 2) {};
+%		\node  (8) at (6, 2) {};
+%		\node  (10) at (8, 2) {$I\setminus J$};
+%		\node  (11) at (5, -1) {};
+%		\node  (12) at (1, -1) {};
+%		\node  (13) at (8, -1) {$I(\delta)$};
+%	\end{pgfonlayer}
+%	\begin{pgfonlayer}{edgelayer}
+%		\draw [Red, very thick] [in=180, out=0] (0.center) to (1.center);
+%		\draw [Blue, very thick] (2.center) to (3.center);
+%		\draw [Brown, very thick] (7.center) to (8.center);
+%		\draw [Green, very thick] (12.center) to (11.center);
+%	\end{pgfonlayer}
+\end{tikzpicture}

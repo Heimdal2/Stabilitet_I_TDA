@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.3.2)  9 MAY 2025 02:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.3.2)  11 MAY 2025 20:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -738,6 +738,10 @@ Package: stmaryrd 1994/03/03 St Mary's Road symbol package
 LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
 (Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
 )
+\pgf@layerbox@nodelayer=\box71
+\pgf@layerboxsaved@nodelayer=\box72
+\pgf@layerbox@edgelayer=\box73
+\pgf@layerboxsaved@edgelayer=\box74
 \c@teorem=\count339
 \c@definisjon=\count340
 \c@korollar=\count341
@@ -748,30 +752,30 @@ LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 203.
-LaTeX Font Info:    ... okay on input line 203.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 203.
-LaTeX Font Info:    ... okay on input line 203.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 203.
-LaTeX Font Info:    ... okay on input line 203.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 203.
-LaTeX Font Info:    ... okay on input line 203.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 203.
-LaTeX Font Info:    ... okay on input line 203.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 203.
-LaTeX Font Info:    ... okay on input line 203.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 203.
-LaTeX Font Info:    ... okay on input line 203.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 203.
-LaTeX Font Info:    ... okay on input line 203.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 203.
-LaTeX Font Info:    ... okay on input line 203.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 217.
+LaTeX Font Info:    ... okay on input line 217.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 217.
+LaTeX Font Info:    ... okay on input line 217.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 217.
+LaTeX Font Info:    ... okay on input line 217.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 217.
+LaTeX Font Info:    ... okay on input line 217.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 217.
+LaTeX Font Info:    ... okay on input line 217.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 217.
+LaTeX Font Info:    ... okay on input line 217.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 217.
+LaTeX Font Info:    ... okay on input line 217.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 217.
+LaTeX Font Info:    ... okay on input line 217.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 217.
+LaTeX Font Info:    ... okay on input line 217.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count346
 \scratchdimen=\dimen297
-\scratchbox=\box71
+\scratchbox=\box75
 \nofMPsegments=\count347
 \nofMParguments=\count348
 \everyMPshowfont=\toks44
@@ -789,7 +793,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 203.
+Package hyperref Info: Link coloring OFF on input line 217.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -802,38 +806,38 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count352
 )
-LaTeX Info: Redefining \ref on input line 203.
-LaTeX Info: Redefining \pageref on input line 203.
-LaTeX Info: Redefining \nameref on input line 203.
+LaTeX Info: Redefining \ref on input line 217.
+LaTeX Info: Redefining \pageref on input line 217.
+LaTeX Info: Redefining \nameref on input line 217.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 205
+LaTeX Font Info:    Trying to load font information for U+msa on input line 219
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 205
+LaTeX Font Info:    Trying to load font information for U+msb on input line 219
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 2
-05.
+19.
 
 (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd) (./main.toc)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
 
-(./Introduksjon.tex) (./forkunnskaper/Forkunnskaper.tex [1
+(./Introduksjon.tex) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./forkunnskaper/Rel.tex [
-2] [3]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+(./forkunnskaper/Forkunnskaper.tex (./forkunnskaper/Rel.tex [2] [3]
 Underfull \hbox (badness 10000) in paragraph at lines 130--130
 
  []
@@ -873,7 +877,7 @@ kt i $\U/msb/m/n/10 R[]$ \OT1/cmr/m/it/10 er ge-ometrisk uavhengige
  []
 
 
-Overfull \hbox (26.12936pt too wide) in paragraph at lines 133--134
+Overfull \hbox (26.12936pt too wide) in paragraph at lines 140--141
 [][]\OT1/cmr/bx/n/10 Definisjon 2.2.8. []\OT1/cmr/m/it/10 En side av et sim-ple
 ks $\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 v[]; [] ; v[]\OT1/cmr/m/n/10 ]$ \OT1/cmr/
 m/it/10 er et sim-pleks $\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 v[]; [] ; []; [] ; v
@@ -881,18 +885,18 @@ m/it/10 er et sim-pleks $\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 v[]; [] ; []; [] ; v
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--141
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
 
-Overfull \hbox (2.05515pt too wide) in paragraph at lines 146--148
+Overfull \hbox (2.05515pt too wide) in paragraph at lines 153--155
 []\OT1/cmr/m/n/10 I [[]Munkres[], []2018[], sek-sjon 5] gir for-fat-ter f^^\lge
 nde defin-isjon om sim-plisialkom-
  []
 
-) (./forkunnskaper/VektRom.tex [6] [7]) (./forkunnskaper/Multimengder.tex)
-(./forkunnskaper/Kategoriteori.tex [8] [9] [10] [11]
+[6]) (./forkunnskaper/VektRom.tex [7]) (./forkunnskaper/Multimengder.tex
+[8]) (./forkunnskaper/Kategoriteori.tex [9] [10] [11]
 Overfull \hbox (10.67928pt too wide) in paragraph at lines 218--219
 [][]\OT1/cmr/bx/n/10 Eksempel 2.5.6. []\OT1/cmr/m/it/10 Vi har ogs^^Wa en funk-
 tor $\OML/cmm/m/it/10 F \OT1/cmr/m/n/10 : [] \OMS/cmsy/m/n/10 ! []$ \OT1/cmr/m/
@@ -908,32 +912,32 @@ cmm/m/it/10 V \OMS/cmsy/m/n/10 2 [][]$ \OT1/cmr/m/it/10 til vek-tor-rom-met $[]
  []
 
 [12] [13] [14]
-Overfull \hbox (4.67937pt too wide) in paragraph at lines 518--521
+Overfull \hbox (4.67937pt too wide) in paragraph at lines 524--527
 [][]\OT1/cmr/bx/n/10 Definisjon 2.5.18. []\OT1/cmr/m/it/10 Den $\OML/cmm/m/it/1
 0 n$\OT1/cmr/m/it/10 -te ho-molo-gien av et topol-o-gisk rom med sim-plisialkom
 -
  []
 
 )) (./varighetsdiagrammer/Varighetsmoduler.tex [15]
-Overfull \hbox (0.5192pt too wide) in paragraph at lines 65--80
+Overfull \hbox (0.5192pt too wide) in paragraph at lines 76--91
 \OT1/cmr/m/n/10 vek-tor-rom. Fra [[]Chazal et al.[], []2016[], teo-rem 2.8] kan
  disse ikke bli in-ter-valldekom-
  []
 
 
-Overfull \hbox (0.8248pt too wide) in paragraph at lines 65--80
+Overfull \hbox (0.8248pt too wide) in paragraph at lines 76--91
 \OT1/cmr/m/n/10 varighetsmod-uler eller p.e.d. varighetsmod-uler tatt fra []Bau
 er and Lesnick[] [[]2015[]].
  []
 
-
-Overfull \hbox (14.58412pt too wide) in paragraph at lines 82--87
+[16]
+Overfull \hbox (14.58412pt too wide) in paragraph at lines 93--98
 \OT1/cmr/m/n/10 flaske-hal-sav-s-tanden mel-lom barkoder og in-flet-tingsav-s-t
 anden mel-lom varighetsmod-
  []
 
-[16]
-Overfull \hbox (5.03958pt too wide) in paragraph at lines 94--100
+
+Overfull \hbox (5.03958pt too wide) in paragraph at lines 105--111
 \OT1/cmr/m/it/10 Som tar en varighetsmodul $\OML/cmm/m/it/10 M$ \OT1/cmr/m/it/1
 0 til $\OML/cmm/m/it/10 M\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^N\OT1/cmr/m/n/10 )
 $ \OT1/cmr/m/it/10 hvor $\OML/cmm/m/it/10 M\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^
@@ -942,112 +946,100 @@ odul-
  []
 
 
-LaTeX Warning: Reference `def:DS' on page 17 undefined on input line 114.
+LaTeX Warning: Reference `def:DS' on page 17 undefined on input line 125.
 
-[17]
-Overfull \hbox (27.83644pt too wide) in paragraph at lines 235--235
+[17] [18]
+Overfull \hbox (30.78645pt too wide) in paragraph at lines 248--248
 []\OT1/cmr/m/n/10 Vi starter med f^^\rste punk-tet i \OT1/cmr/bx/n/10 defin-isj
 on []3.1.3[]\OT1/cmr/m/n/10 . La $\OML/cmm/m/it/10 M$ \OT1/cmr/m/n/10 v^^Zre en
  varighetsmodul.
  []
 
 
-Overfull \hbox (11.46065pt too wide) in paragraph at lines 238--240
+Overfull \hbox (11.46065pt too wide) in paragraph at lines 263--265
 [][]\OT1/cmr/bx/n/10 Proposisjon 3.1.2. []\OT1/cmr/m/it/10 Hvis $\OML/cmm/m/it/
 10 M [] M[]$ \OT1/cmr/m/it/10 er iso-morfe varighetsmod-uler s^^Wa er $\OML/cmm
 /m/it/10 d[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 M; N\OT1/cmr/m/n/10 ) =
  []
 
+) (./varighetsdiagrammer/Barkoder.tex [19]
+(/home/andreas/Stabilitet_I_TDA/TikZ/VMStrekkode/VMStrekkode.tikz)
+(/home/andreas/Stabilitet_I_TDA/TikZ/OverKob/OverKob.tikz)
 
-LaTeX Warning: Reference `prop:d_I-Iso' on page 18 undefined on input line 249.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-
-Overfull \hbox (10.63745pt too wide) in paragraph at lines 249--249
-\OT1/cmr/m/n/10 likheten $\OML/cmm/m/it/10 d[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10
- M; N\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^T \OML/cmm/m/it/10 d[]\OT1/cmr/m/n/10
- (\OML/cmm/m/it/10 M; M[]\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 d[]\OT1/cmr/m/n/1
-0 (\OML/cmm/m/it/10 M[]; N\OT1/cmr/m/n/10 )$. Ved \OT1/cmr/bx/n/10 propo-sisjon
- [] \OT1/cmr/m/n/10 er $\OML/cmm/m/it/10 d[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 M
-; M[]\OT1/cmr/m/n/10 ) =
- []
-
-[18]) (./varighetsdiagrammer/Barkoder.tex [19]
-
-LaTeX Warning: Reference `Ssek:Kategoriteori' on page 20 undefined on input lin
-e 139.
-
-[20]
-
-LaTeX Warning: Reference `OK-Komp' on page 21 undefined on input line 178.
-
-
-Overfull \hbox (0.40698pt too wide) in paragraph at lines 181--184
+[20] [21] [22] (/home/andreas/Stabilitet_I_TDA/TikZ/barcker/barcker.tikz)
+Overfull \hbox (0.40698pt too wide) in paragraph at lines 257--260
 [][]\OT1/cmr/bx/n/10 Teorem 4.0.4. []\OT1/cmr/m/it/10 Kok-jer-nen til en over-l
 app-kobling er gitt som en strekkode $[] \OML/cmm/m/it/10 ^^[$
  []
 
 
-Overfull \hbox (68.7173pt too wide) detected at line 187
+Overfull \hbox (6.56084pt too wide) detected at line 262
 [] \OML/cmm/m/it/10 ^^[ \OT1/cmr/m/n/10 = \U/stmry/m/n/10 H[] \OT1/cmr/m/n/10 (
 \OML/cmm/m/it/10 ^^[; J\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 6\OT1/cmr/m/n/10 = \O
 MS/cmsy/m/n/10 ;  j  \OML/cmm/m/it/10 J \OMS/cmsy/m/n/10 2 D\U/stmry/m/n/10 I\O
 ML/cmm/m/it/10 ;  ^^V[] \OT1/cmr/m/n/10 = \U/stmry/m/n/10 H\OT1/cmr/m/n/10 (\OM
 L/cmm/m/it/10 J; [] \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^[; J\OT1/cmr/m/n/10 )) 
- \OMS/cmsy/m/n/10 j  []\U/stmry/m/n/10 I
+ \OMS/cmsy/m/n/10 j  [] \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^[; J\OT1/cmr/m/n/10
+ ) \OMS/cmsy/m/n/10 6\OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ;\U/stmry/m/n/10 I
  []
 
-
-Overfull \hbox (13.53983pt too wide) in paragraph at lines 236--236
+(/home/andreas/Stabilitet_I_TDA/TikZ/barccoker/barccoker.tikz)
+Overfull \hbox (13.53983pt too wide) in paragraph at lines 322--322
 \OT1/cmr/m/n/10 nen av $\OML/cmm/m/it/10 ^^[$\OT1/cmr/m/n/10 . Strekko-den blir
  mul-ti-meng-den av el-e-menter p^^Wa for-men $\OML/cmm/m/it/10 J \OMS/cmsy/m/n
 /10 ^^@ \OT1/cmr/m/n/10 ([] (\OML/cmm/m/it/10 ^^[; J\OT1/cmr/m/n/10 )) \OMS/cms
 y/m/n/10 6\OT1/cmr/m/n/10 =
  []
 
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 283--283
+[23] (/home/andreas/Stabilitet_I_TDA/TikZ/barcim/barcim.tikz)
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--283
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--283
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
 
  []
 
-
-Overfull \hbox (2.0458pt too wide) in paragraph at lines 285--290
+[24]
+Overfull \hbox (2.0458pt too wide) in paragraph at lines 383--388
 \OT1/cmr/m/n/10 en over-lapp-kobling til ^^Wa gi tilstrekke-lige betingelser fo
 r $\OML/cmm/m/it/10 ^^N$\OT1/cmr/m/n/10 -trivialitet av (ko)kjernen
  []
 
-[22] [23]
-Overfull \hbox (9.95204pt too wide) in paragraph at lines 387--390
+[25]
+Overfull \hbox (9.95204pt too wide) in paragraph at lines 485--488
 []\OT1/cmr/m/n/10 Denne defin-isjo-nen p^^Wa en $\OML/cmm/m/it/10 ^^N$\OT1/cmr/
 m/n/10 -forskyvning gir en ko-r-re-spon-dans av $\OML/cmm/m/it/10 ^^N$\OT1/cmr/
 m/n/10 -forskyvninger
  []
 
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 464--466
+[26] [27]
+Overfull \hbox (47.23314pt too wide) in paragraph at lines 594--598
+[]\OT1/cmr/m/n/10 For et in-ter-vall $\OML/cmm/m/it/10 I \OMS/cmsy/m/n/10 ^^Z \
+U/msb/m/n/10 R$ \OT1/cmr/m/n/10 lar vi $\OML/cmm/m/it/10 U[]\OT1/cmr/m/n/10 (\O
+ML/cmm/m/it/10 I\OT1/cmr/m/n/10 ) = []$.
+ []
+
+(/home/andreas/Stabilitet_I_TDA/TikZ/delta-tykk/delta_tykk.tikz)
+Underfull \hbox (badness 10000) in paragraph at lines 616--618
 
  []
 
-
-Package natbib Warning: Citation `.' on page 25 undefined on input line 508.
-
-) (./varighetsdiagrammer/IPKT.tex
+[28]) (./varighetsdiagrammer/IPKT.tex
 Overfull \hbox (37.36186pt too wide) in paragraph at lines 2--10
 \OT1/cmr/m/n/10 For ^^Wa re-latere flaske-hal-sav-s-tanden av strekkoder og in-
 flet-tingsav-s-tanden av varighetsmod-
  []
 
-[25]
+
 Overfull \hbox (18.64868pt too wide) in paragraph at lines 12--14
 [][]\OT1/cmr/bx/n/10 Teorem 5.0.1. []\OT1/cmr/m/it/10 La $\OML/cmm/m/it/10 f \O
 T1/cmr/m/n/10 : \OML/cmm/m/it/10 M \OMS/cmsy/m/n/10 ! \OML/cmm/m/it/10 N$ \OT1/
@@ -1061,56 +1053,82 @@ va $\OML/cmm/m/it/10 ^^_\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 )$ e
 r for en varighetsmodul
  []
 
-
+[29]
 Overfull \hbox (34.02504pt too wide) in paragraph at lines 41--41
 |[]\OT1/cmr/bx/n/12 Koblinger in-dusert av mono- og epi-mor-fier av varighetsmo
 d-
  []
 
-[26]
-Overfull \hbox (26.61179pt too wide) in paragraph at lines 89--94
+
+Overfull \hbox (26.61179pt too wide) in paragraph at lines 90--95
 []\OT1/cmr/m/n/10 P^^Wa en lik m^^Wate f^^War vi det in-duserte kobling-ste-o-r
 emet for epi-mor-fier av varighetsmod-
  []
 
-[27]
+[30] [31]
 
-LaTeX Warning: Reference `trm:DimIso' on page 28 undefined on input line 228.
+LaTeX Warning: Reference `trm:DimIso' on page 32 undefined on input line 256.
 
-[28]) (./varighetsdiagrammer/AlgStabilitet.tex
+[32]) (./varighetsdiagrammer/AlgStabilitet.tex
 
-LaTeX Warning: Reference `prop:zetafunktor' on page 29 undefined on input line 
+LaTeX Warning: Reference `prop:zetafunktor' on page 33 undefined on input line 
 33.
 
-) (./varighetsdiagrammer/Varighetshomologi.tex [29]
+) (./varighetsdiagrammer/Varighetshomologi.tex [33]
 LaTeX Font Info:    Trying to load font information for OT1+pzc on input line 5
-3.
+6.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pzc.fd
 File: ot1pzc.fd 2020/03/25 font definitions for OT1/pzc.
-)) (./main.bbl
-Underfull \hbox (badness 3364) in paragraph at lines 34--40
+)
+<~/Python-skript/Bachelor/Bilder/bilde_0.png, id=608, 462.528pt x 346.896pt>
+File: ~/Python-skript/Bachelor/Bilder/bilde_0.png Graphic file (type png)
+<use ~/Python-skript/Bachelor/Bilder/bilde_0.png>
+Package pdftex.def Info: ~/Python-skript/Bachelor/Bilder/bilde_0.png  used on i
+nput line 72.
+(pdftex.def)             Requested size: 86.25pt x 64.68289pt.
+<~/Python-skript/Bachelor/Bilder/bilde_22.png, id=610, 462.528pt x 346.896pt>
+File: ~/Python-skript/Bachelor/Bilder/bilde_22.png Graphic file (type png)
+<use ~/Python-skript/Bachelor/Bilder/bilde_22.png>
+Package pdftex.def Info: ~/Python-skript/Bachelor/Bilder/bilde_22.png  used on 
+input line 73.
+(pdftex.def)             Requested size: 86.25pt x 64.68289pt.
+<~/Python-skript/Bachelor/Bilder/bilde_30.png, id=611, 462.528pt x 346.896pt>
+File: ~/Python-skript/Bachelor/Bilder/bilde_30.png Graphic file (type png)
+<use ~/Python-skript/Bachelor/Bilder/bilde_30.png>
+Package pdftex.def Info: ~/Python-skript/Bachelor/Bilder/bilde_30.png  used on 
+input line 74.
+(pdftex.def)             Requested size: 86.25pt x 64.68289pt.
+
+(/home/andreas/Stabilitet_I_TDA/TikZ/Cech/VHStrekkode.tikz)) (./Diskusjon.tex
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[34 </home/andreas/Python-skript/Bachelor/Bilder/bilde_0.png> </home/andreas/Py
+thon-skript/Bachelor/Bilder/bilde_22.png> </home/andreas/Python-skript/Bachelor
+/Bilder/bilde_30.png>]) (./main.bbl
+Underfull \hbox (badness 3364) in paragraph at lines 44--50
 []\OT1/cmr/m/n/10 Fr^^Sed^^Seric Chazal, William Crawley-Boevey, and Vin De Sil
 va.  The
  []
 
 
-Underfull \hbox (badness 3568) in paragraph at lines 34--40
+Underfull \hbox (badness 3568) in paragraph at lines 44--50
 \OT1/cmr/m/n/10 ob-serv-able struc-ture of per-sis-tence mod-ules.  \OT1/cmr/m/
 it/10 Ho-mol-ogy, Ho-mo-topy
  []
 
 
-Underfull \hbox (badness 3557) in paragraph at lines 34--40
+Underfull \hbox (badness 3557) in paragraph at lines 44--50
 \OT1/cmr/m/it/10 and Ap-pli-ca-tions\OT1/cmr/m/n/10 , 18(2):247--265, 2016.  IS
 SN 15320073, 15320081.
  []
 
-[30])
+[35])
 
 Package natbib Warning: There were undefined citations.
 
-[31] (./main.aux)
+[36] (./main.aux)
 
  *File List*
  article.cls    2021/10/04 v1.4n Standard LaTeX document class
@@ -1217,10 +1235,21 @@ forkunnskaper/Multimengder.tex
 forkunnskaper/Kategoriteori.tex
 varighetsdiagrammer/Varighetsmoduler.tex
 varighetsdiagrammer/Barkoder.tex
+~/Stabilitet_I_TDA/TikZ/VMStrekkode/VMStrekkode.tikz
+~/Stabilitet_I_TDA/TikZ/OverKob/OverKob.tikz
+~/Stabilitet_I_TDA/TikZ/barcker/barcker.tikz
+~/Stabilitet_I_TDA/TikZ/barccoker/barccoker.tikz
+~/Stabilitet_I_TDA/TikZ/barcim/barcim.tikz
+~/Stabilitet_I_TDA/TikZ/delta-tykk/delta_tykk.tikz
 varighetsdiagrammer/IPKT.tex
 varighetsdiagrammer/AlgStabilitet.tex
 varighetsdiagrammer/Varighetshomologi.tex
   ot1pzc.fd    2020/03/25 font definitions for OT1/pzc.
+~/Python-skript/Bachelor/Bilder/bilde_0.png
+~/Python-skript/Bachelor/Bilder/bilde_22.png
+~/Python-skript/Bachelor/Bilder/bilde_30.png
+~/Stabilitet_I_TDA/TikZ/Cech/VHStrekkode.tikz
+Diskusjon.tex
     main.bbl
  ***********
 
@@ -1228,13 +1257,13 @@ varighetsdiagrammer/Varighetshomologi.tex
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0ACC36170FF404D688B4CB51D434A501;2659.
+(rerunfilecheck)             Checksum: 8022D04666263D3F5190FF12062F3E3F;2753.
  ) 
 Here is how much of TeX's memory you used:
- 24754 strings out of 478287
- 479902 string characters out of 5849290
- 736297 words of memory out of 5000000
- 42238 multiletter control sequences out of 15000+600000
+ 25061 strings out of 478287
+ 486477 string characters out of 5849290
+ 734329 words of memory out of 5000000
+ 42484 multiletter control sequences out of 15000+600000
  483825 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  129i,17n,132p,509b,1158s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1260,10 +1289,10 @@ m10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm
 10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on main.pdf (31 pages, 369642 bytes).
+Output written on main.pdf (36 pages, 419129 bytes).
 PDF statistics:
- 724 PDF objects out of 1000 (max. 8388607)
- 640 compressed objects within 7 object streams
- 231 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 794 PDF objects out of 1000 (max. 8388607)
+ 699 compressed objects within 7 object streams
+ 248 named destinations out of 1000 (max. 500000)
+ 180 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -50,7 +50,7 @@ Følgende definisjoner er inspirert fra \cite{Schenck2022}
 \begin{definisjon}\label{def:CechKomp}
   La $P\subset\Rbb^d$ være en punktsky og la $B_\eps(p)$ være den
   lukkede $\eps$-ballen om et punkt $p\in P$. Čech-komplekset
-  $\Cpzc_\eps$ av $P$ inneholder $k$-simplekser som korresponderer
+  $\Ccal_\eps$ av $P$ inneholder $k$-simplekser som korresponderer
   med $k+1$-tupler av punkter $p\in P$ slik at
   \[\bigcap_{i=0}^k \overline{B_\frac{\eps}{2}(p_i)}\neq\emptyset.\]
   Altså er en $k+1$-tuppel $(p_0,\dots,p_k)\in\Cpzc$ hvis deres
@@ -59,9 +59,29 @@ Følgende definisjoner er inspirert fra \cite{Schenck2022}
 
 \begin{definisjon}\label{def:RipsKomp}
   La $P\subset\Rbb^d$ være en punktsky. Rips-komplekset
-  $\Rpzc_\eps$ av $P$ gitt ved $k$-simplekser som korresponderer
+  $\Rcal_\eps$ av $P$ gitt ved $k$-simplekser som korresponderer
   med $k+1$-tupler $(p_0,\dots,p_k)$ slik at $|p_i-p_j|\leq\eps$
   for alle par $i,j$.
 \end{definisjon}
 
+Sett inn bilder av topologiske rom og varighetshomologistrekkoden.
 
+Her er et eksempel på et Čech-kompleks av en punktsky
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.25\linewidth]{~/Python-skript/Bachelor/Bilder/bilde_0.png}
+  \includegraphics[width=0.25\linewidth]{~/Python-skript/Bachelor/Bilder/bilde_22.png}
+  \includegraphics[width=0.25\linewidth]{~/Python-skript/Bachelor/Bilder/bilde_30.png}
+  \caption{Her er et eksempel på et Čech-kompleks}
+  \label{fig:cechkomp}
+\end{figure}
+
+Čech-komplekset i \bref{figur}{fig:cechkomp} gir en
+varighetshomologi med følgende strekkode.
+\begin{figure}[h!]
+  \centering
+  \scalebox{0.5}{\input{~/Stabilitet_I_TDA/TikZ/Cech/VHStrekkode.tikz}}
+  \caption{Strekkoden av varighetshomologien til
+  Čech-komplekset i \bref{figur}{fig:cechkomp}}
+  \label{fig:chechstrek}
+\end{figure}
